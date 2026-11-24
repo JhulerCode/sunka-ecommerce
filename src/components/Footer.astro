@@ -1,5 +1,6 @@
 ---
 import logo from '../assets/logo-sunka-white.webp'
+import logoNiubiz from '../assets/icons/niubiz-white.svg'
 import imgLibroReclamaciones from '../assets/libro-reclamaciones.webp'
 import BrandFacebookIcon from '../assets/icons/brand-facebook.astro'
 import BrandInstagramIcon from '../assets/icons/brand-instagram.astro'
@@ -137,6 +138,18 @@ const columnas = [
                         />
                     </a>
                 </div>
+            </div>
+
+            <div
+                class="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-sunka-white/10 pt-5"
+            >
+                <p class="text-[10px] font-semibold uppercase tracking-[0.14em] text-sunka-white/55">
+                    Pagos seguros con
+                </p>
+                <img src={logoNiubiz.src} alt="Niubiz" class="h-5 w-auto" />
+                <p class="text-[11px] text-sunka-white/52">
+                    Visa · Mastercard · American Express · Diners Club
+                </p>
             </div>
 
             <div

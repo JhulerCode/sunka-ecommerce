@@ -109,6 +109,12 @@
                                             <h3 class="font-heading text-base font-medium leading-5">
                                                 {{ item.name }}
                                             </h3>
+                                            <p
+                                                v-if="item.short_description"
+                                                class="mt-1 line-clamp-2 text-xs leading-5 text-sunka-stone"
+                                            >
+                                                {{ item.short_description }}
+                                            </p>
                                             <p v-if="item.unit" class="mt-1 text-xs text-sunka-stone">
                                                 {{ item.unit }}
                                             </p>
@@ -204,6 +210,14 @@
                                 @click="checkout"
                             >
                                 Proceder a la compra
+                            </button>
+
+                            <button
+                                type="button"
+                                class="mt-2 flex w-full cursor-pointer items-center justify-center py-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-sunka-stone underline decoration-sunka-stone/40 underline-offset-4 transition-colors hover:text-sunka-ink"
+                                @click="close"
+                            >
+                                ← Seguir comprando
                             </button>
 
                             <p v-if="error" class="mt-2 text-center text-xs text-red-700">

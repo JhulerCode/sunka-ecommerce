@@ -527,7 +527,15 @@
                             />
                         </div>
 
-                        <p class="text-sm font-medium text-sunka-ink">Pago con tarjeta</p>
+                        <div class="flex flex-wrap items-center justify-between gap-3">
+                            <p class="text-sm font-medium text-sunka-ink">Pago con tarjeta</p>
+                            <img
+                                v-if="isNiubiz"
+                                :src="logoNiubizUrl"
+                                alt="Niubiz"
+                                class="h-5 w-auto"
+                            />
+                        </div>
 
                         <div class="space-y-4 bg-gray-50 p-4 rounded-xl">
                             <!-- Si el método es TARJETA -->
@@ -632,6 +640,20 @@
 
                         </div>
 
+                        <JdCheckBox v-model="acceptTerms" :error="errors.terminos">
+                            <span>
+                                He leído y acepto los
+                                <a
+                                    href="/terminos-y-condiciones"
+                                    target="_blank"
+                                    class="underline hover:text-gray-900"
+                                >
+                                    Términos y Condiciones
+                                </a>
+                                de SUNKA.
+                            </span>
+                        </JdCheckBox>
+
                         <div class="checkout-panel-back">
                             <JdButton text="Volver" tipo="2" @click="prevStep">
                                 <template v-slot:iLeft>
@@ -681,8 +703,12 @@
             <!-- Totales -->
             <div class="checkout-totals">
                 <div class="flex justify-between">
-                    <span>Subtotal</span>
-                    <span>S/ {{ subtotal.toFixed(2) }}</span>
+                    <span>Subtotal (sin IGV)</span>
+                    <span>S/ {{ netSubtotal.toFixed(2) }}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>IGV (18%)</span>
+                    <span>S/ {{ igv.toFixed(2) }}</span>
                 </div>
                 <div class="flex justify-between">
                     <span>Costo de envío</span>
@@ -797,6 +823,7 @@ import visaUrl from '../assets/icons/visa.svg?url'
 import mastercardUrl from '../assets/icons/mastercard.svg?url'
 import dinersUrl from '../assets/icons/diners-club.svg?url'
 import amexUrl from '../assets/icons/american-express.svg?url'
+import logoNiubizUrl from '../assets/icons/niubiz.svg?url'
 import genericUrl from '../assets/icons/card-generic.svg?url'
 import logoSunkaUrl from '../assets/logo-sunka-black.webp?url&no-inline'
 import logoSunkaInline from '../assets/logo-sunka-black.webp?inline'
@@ -868,6 +895,7 @@ export default defineComponent({
             },
             errors: {},
             items: [],
+            acceptTerms: false,
 
             ubigeos: [],
             ubigeosLoading: false,
@@ -889,6 +917,7 @@ export default defineComponent({
             minimumDeliveryDate: getMinimumDeliveryDate(),
             deliveryTimeRange: DELIVERY_TIME_RANGE,
             pickupLocations: PICKUP_LOCATIONS,
+            logoNiubizUrl,
         }
     },
     computed: {
@@ -903,6 +932,12 @@ export default defineComponent({
         },
         subtotal() {
             return this.items.reduce((acc, item) => acc + item.pu * item.cantidad, 0)
+        },
+        netSubtotal() {
+            return this.subtotal / 1.18
+        },
+        igv() {
+            return this.subtotal - this.netSubtotal
         },
         promotionQuote() {
             return evaluateCheckoutPromotions(toPromotionItems(this.items), {
@@ -973,6 +1008,9 @@ export default defineComponent({
         },
         step() {
             this.scheduleDraftSave()
+        },
+        acceptTerms(value: boolean) {
+            if (value && this.errors.terminos) this.errors.terminos = ''
         },
         paymentSuccess(value) {
             if (!value) return
@@ -1364,6 +1402,9 @@ export default defineComponent({
 
             if (!this.isNiubiz && !this.form.paymentMethodToken)
                 this.errors.paymentMethodToken = 'Seleccione una tarjeta.'
+
+            if (!this.acceptTerms)
+                this.errors.terminos = 'Debes aceptar los Términos y Condiciones para continuar.'
 
             return Object.values(this.errors).every((e) => !e)
         },

@@ -75,10 +75,14 @@ export const Cart = {
             if (producto.club_price !== undefined && producto.club_price !== null) {
                 existing.club_price = producto.club_price;
             }
+            if (producto.short_description && !existing.short_description) {
+                existing.short_description = producto.short_description;
+            }
         } else {
             cart.push({
                 articulo,
                 name: producto.name,
+                short_description: producto.short_description,
                 unit: producto.unit,
                 has_fv: producto.has_expiry,
 
@@ -135,6 +139,7 @@ export const Cart = {
         const missing = cart.filter(
             (item: CartItem) =>
                 !item.line_name ||
+                item.short_description === undefined ||
                 !Array.isArray(item.presentation) ||
                 item.club_price === undefined ||
                 item.regular_price === undefined,
@@ -155,6 +160,7 @@ export const Cart = {
                 ...item,
                 linea: product.linea,
                 line_name: product.line?.name,
+                short_description: product.short_description ?? '',
                 presentation: product.presentation,
                 regular_price: product.price,
                 club_price: product.club_price,
