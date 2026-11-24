@@ -1,0 +1,175 @@
+{
+    "article_id": "8977694d-de6e-47f2-81f8-71ae3e84b6bf",
+    "slug": "raspberry",
+    "published": true,
+    "sort_order": 18,
+    "featured": true,
+    "featured_order": 17,
+    "name": "Raspberry",
+    "badge": "Blend de autor",
+    "price": 13.9,
+    "origin": "Single Origin Sri Lanka",
+    "photos": [
+        {
+            "id": "1787256310186-Producto_destacado_Raspberry.webp",
+            "url": "https://minio.divergecore.com/sunka/1787256310186-Producto_destacado_Raspberry.webp",
+            "name": "Producto destacado Raspberry.webp",
+            "orden": 1
+        }
+    ],
+    "benefits": [
+        {
+            "id": "0845e60f-2056-41cf-8c62-ee12e8d91439",
+            "name": "Beneficio 1"
+        },
+        {
+            "id": "b6eceaa7-8234-4501-a8f4-468939678df8",
+            "name": "Beneficio 2"
+        }
+    ],
+    "club_price": 12.9,
+    "description": "Té negro de Ceylán con un exquisito sabor natural a frambuesa, de perfil frutal, intenso y equilibrado. Su filtrante de doble cámara favorece una mejor infusión, mientras el sobre laminado preserva su frescura y aroma. Elaborado bajo estándares ISO 9001 y con sello Rainforest Alliance, garantiza calidad y origen responsable en cada taza.",
+    "ingredients": [
+        {
+            "id": "75975b24-3d77-4c99-a1a0-b9a385f33969",
+            "name": "Ingrediente 1"
+        },
+        {
+            "id": "b5c215c7-e410-4b33-8e95-9c38a80fe2b7",
+            "name": "Ingrediente 2"
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0ebdca-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0ebdd0-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0ebdd8-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con quesos cremosos, charcutería suave y postres de vainilla o chocolate blanco"
+    },
+    "presentation": [
+        {
+            "id": "ab0ebcc8-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0ebcd0-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "2 g"
+        },
+        {
+            "id": "ab0ebcdb-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Doble cámara"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0ebd94-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0ebd9b-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0ebda4-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [
+        {
+            "id": "ab0ebcff-8d2b-11f1-b155-02420a000124",
+            "name": "Rainforest Alliance Certified"
+        },
+        {
+            "id": "e9d6c596-df75-443d-bc67-34edab0c113f",
+            "name": "Pure ceylon tea"
+        }
+    ],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0ebd10-8d2b-11f1-b155-02420a000124",
+                "name": "Té negro de Ceylán intenso"
+            },
+            {
+                "id": "acde5e52-f2a6-4611-a9ed-607ce772a509",
+                "name": "Frambuesa dulce y ligeramente ácida"
+            },
+            {
+                "id": "3b06615b-6522-499c-80f0-21298e926c53",
+                "name": "Final frutal persistente"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "7d367cdc-06d7-4741-a5d7-743262535278",
+                "name": "Para la oficina"
+            },
+            {
+                "id": "e36e33a5-37ef-4cbc-a619-9b44c0e3d730",
+                "name": "Para compartir"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0ebd3f-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0ebd47-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0ebd4d-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0ebd55-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Raspberry despliega un aroma frutal y delicadamente dulce, donde la frambuesa realza el carácter profundo del té negro de Ceylán. En boca presenta un equilibrio entre intensidad, frescura y una sutil acidez. Su cuerpo envolvente culmina en un final elegante, frutal y persistente."
+    },
+    "related_products": [
+        {
+            "id": "a3471eb0-ffbc-488c-b256-911d78592241"
+        },
+        {
+            "id": "b123560d-bfce-4c8a-996f-9db13f682358"
+        },
+        {
+            "id": "8b40851b-e6c6-4607-936d-81be73a8f845"
+        }
+    ],
+    "short_description": "Un blend Superior de té negro de Ceylán y sabor a frambuesa, en filtrante de doble cámara y con sello Rainforest Alliance, de sabor frutal, exquisito y equilibrado.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

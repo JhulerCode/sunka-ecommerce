@@ -1,0 +1,178 @@
+{
+    "article_id": "3baf320d-3389-4778-bb72-9dcd44bfb8ae",
+    "slug": "te-verde-20-sobres",
+    "published": true,
+    "sort_order": 23,
+    "featured": true,
+    "featured_order": 22,
+    "name": "Te verde 20 sobres",
+    "badge": "Blend de autor",
+    "price": 8.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1767023043368-FOTO1.jpg",
+            "url": "https://minio.divergecore.com/sunka/1767023043368-FOTO1.jpg",
+            "name": "FOTO1.jpg",
+            "orden": 1
+        },
+        {
+            "id": "1767023043403-FOTO2.jpg",
+            "url": "https://minio.divergecore.com/sunka/1767023043403-FOTO2.jpg",
+            "name": "FOTO2.jpg",
+            "orden": 2
+        },
+        {
+            "id": "1767023043423-FOTO3.jpg",
+            "url": "https://minio.divergecore.com/sunka/1767023043423-FOTO3.jpg",
+            "name": "FOTO3.jpg",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762783412722859",
+            "name": "Clásico antioxidante natural."
+        },
+        {
+            "id": "1762783418450772",
+            "name": "Estimula la concentración y ayuda a mantener un estilo de vida equilibrado."
+        }
+    ],
+    "club_price": 7.9,
+    "description": "Elaborado exclusivamente con té verde seleccionado, este producto conserva el carácter y la pureza natural de sus hojas. Ofrece un sabor exquisito, delicado y agradable, acompañado de frescos matices vegetales. Una infusión ligera y equilibrada para disfrutar en cualquier momento del día.",
+    "ingredients": [
+        {
+            "id": "1762783405180605",
+            "name": "Té verde (Camellia sinensis)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0e458c-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0e4593-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0e459a-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con sushi, pescados suaves, ensaladas frescas, quesos ligeros y postres cítricos o de vainilla"
+    },
+    "presentation": [
+        {
+            "id": "ab0e448c-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0e4497-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1.2 g"
+        },
+        {
+            "id": "ab0e44a3-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0e4555-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0e455e-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0e4567-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0e44d4-8d2b-11f1-b155-02420a000124",
+                "name": "Té verde fresco"
+            },
+            {
+                "id": "ab0e44d9-8d2b-11f1-b155-02420a000124",
+                "name": "Notas vegetales"
+            },
+            {
+                "id": "ab0e44df-8d2b-11f1-b155-02420a000124",
+                "name": "Matices herbales"
+            },
+            {
+                "id": "ab0e44e4-8d2b-11f1-b155-02420a000124",
+                "name": "Final limpio y refrescante"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0e4537-8d2b-11f1-b155-02420a000124",
+                "name": "Para la oficina"
+            },
+            {
+                "id": "ab0e453b-8d2b-11f1-b155-02420a000124",
+                "name": "Para empezar el dia"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0e44ff-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0e4505-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0e450b-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0e4514-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Té Verde despliega un aroma fresco y vegetal, acompañado de delicados matices herbales. En boca ofrece un sabor suave y equilibrado, con una sutil astringencia. De cuerpo ligero, culmina en un final limpio, agradable y refrescante."
+    },
+    "related_products": [
+        {
+            "id": "037dca50-0325-44af-8791-c9bdcae7ca60"
+        },
+        {
+            "id": "813930db-c2b2-4ba4-8ee3-e5feaf2dd06e"
+        },
+        {
+            "id": "9a62d294-7338-4dc7-8c88-197b2d8c1c47"
+        }
+    ],
+    "short_description": "Té verde cuidadosamente seleccionado, natural y sin colorantes ni preservantes, para llevar lo mejor de nuestros insumos a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

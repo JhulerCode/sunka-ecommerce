@@ -1,0 +1,186 @@
+{
+    "article_id": "182ed6a1-38e7-48e3-ac41-78a82d97bf47",
+    "slug": "curcuma-canela-y-clavo-20-sobres",
+    "published": true,
+    "sort_order": 38,
+    "featured": true,
+    "featured_order": 36,
+    "name": "Cúrcuma, canela y clavo 20 sobres",
+    "badge": "Blend de autor",
+    "price": 8.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1766422814296-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1766422814296-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1766422815016-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1766422815016-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1766422815282-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1766422815282-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762782028758703",
+            "name": "Combinación cálida y aromática que refuerza el sistema inmune."
+        },
+        {
+            "id": "1762782151726880",
+            "name": "Reduce la inflamación y equilibra la energía corporal."
+        }
+    ],
+    "club_price": 7.9,
+    "description": "Elaborada con cúrcuma, canela y clavo cuidadosamente seleccionados, esta infusión reúne ingredientes naturales en una mezcla intensa y deliciosa. Su sabor combina el carácter terroso de la cúrcuma con la calidez de la canela y el toque aromático del clavo. Una taza equilibrada, especiada y reconfortante para disfrutar en cualquier momento.",
+    "ingredients": [
+        {
+            "id": "1762781995678594",
+            "name": "Curcuma (Curcuma longa)."
+        },
+        {
+            "id": "1762782005480148",
+            "name": "Canela (Cinnamomum verum)."
+        },
+        {
+            "id": "1762782010374779",
+            "name": "Clavo (Syzygium aromaticum)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0e0e27-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0e0e34-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0e0e44-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con vegetales asados, arroces especiados, quesos semimaduros y postres de manzana, naranja o frutos secos"
+    },
+    "presentation": [
+        {
+            "id": "ab0e0c3e-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0e0c5b-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1.2 g"
+        },
+        {
+            "id": "ab0e0c6c-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0e0dc7-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0e0dda-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0e0df0-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0e0ce0-8d2b-11f1-b155-02420a000124",
+                "name": "Cúrcuma terrosa"
+            },
+            {
+                "id": "ab0e0cf0-8d2b-11f1-b155-02420a000124",
+                "name": "Canela cálida y aromática"
+            },
+            {
+                "id": "ab0e0d00-8d2b-11f1-b155-02420a000124",
+                "name": "Clavo intenso y especiado"
+            },
+            {
+                "id": "ab0e0d0b-8d2b-11f1-b155-02420a000124",
+                "name": "Final envolvente y persistente"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0e0d96-8d2b-11f1-b155-02420a000124",
+                "name": "Para una pausa de noche"
+            },
+            {
+                "id": "ab0e0d9e-8d2b-11f1-b155-02420a000124",
+                "name": "Para relajarte"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0e0d36-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0e0d49-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0e0d54-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0e0d5d-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Cúrcuma, Canela y Clavo despliega un aroma cálido y especiado, donde la intensidad terrosa de la cúrcuma armoniza con la dulzura aromática de la canela. El clavo aporta profundidad y un matiz ligeramente picante. De cuerpo medio, culmina en un final envolvente, especiado y persistente."
+    },
+    "related_products": [
+        {
+            "id": "079abd48-0241-4fac-9a90-8c6be2fa5a23"
+        },
+        {
+            "id": "8d04068a-b9a8-4605-a6ec-b84279a056fc"
+        },
+        {
+            "id": "b123560d-bfce-4c8a-996f-9db13f682358"
+        }
+    ],
+    "short_description": "Una combinación de cúrcuma, canela y clavo elaborada con insumos naturales, sin colorantes ni preservantes, que lleva lo mejor de sus ingredientes a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

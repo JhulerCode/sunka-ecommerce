@@ -1,19 +1,15 @@
 ---
 import ProductosCarrusel from '@/components/ProductosCarrusel.vue'
-import { formatProductos } from '@/lib/api'
 import { getProductPrice } from '@/lib/pricing'
-import { serverGet as get } from '@/lib/server/public-api'
+import { getFeaturedStoreProducts } from '@/lib/server/product-catalog'
 
 const isAuthenticated = Astro.locals.session?.status === 'authenticated'
 
-const res2 = await get('productos', { featured: 'true' })
-const productos = formatProductos(res2.ok ? res2.data : [])
-    .filter((producto) => producto.is_featured)
-    .map((producto) => ({
-        ...producto,
-        regular_price: producto.price,
-        price: getProductPrice(producto, isAuthenticated),
-    }))
+const productos = (await getFeaturedStoreProducts()).map((producto) => ({
+    ...producto,
+    regular_price: producto.price,
+    price: getProductPrice(producto, isAuthenticated),
+}))
 ---
 
 <section class="bg-white py-24 md:py-32">

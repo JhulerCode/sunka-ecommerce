@@ -1,0 +1,175 @@
+{
+    "article_id": "b123560d-bfce-4c8a-996f-9db13f682358",
+    "slug": "acai-berry",
+    "published": true,
+    "sort_order": 40,
+    "featured": true,
+    "featured_order": 38,
+    "name": "Acaí berry",
+    "badge": "Blend de autor",
+    "price": 13.9,
+    "origin": "Single Origin Sri Lanka",
+    "photos": [
+        {
+            "id": "1785500976487-Producto_destacado_AcaÃ­_berry.webp",
+            "url": "https://minio.divergecore.com/sunka/1785500976487-Producto_destacado_AcaÃ­_berry.webp",
+            "name": "Producto destacado AcaÃ­ berry.webp",
+            "orden": 1
+        }
+    ],
+    "benefits": [
+        {
+            "id": "0845e60f-2056-41cf-8c62-ee12e8d91439",
+            "name": "Beneficio 1"
+        },
+        {
+            "id": "b6eceaa7-8234-4501-a8f4-468939678df8",
+            "name": "Beneficio 2"
+        }
+    ],
+    "club_price": 12.9,
+    "description": "Té negro de Ceylán con un exquisito sabor natural a Açaí Berry, de perfil frutal, intenso y equilibrado. Su filtrante de doble cámara favorece una óptima infusión, mientras el sobre laminado preserva su frescura y aroma. Elaborado bajo estándares ISO 9001 y con sello Rainforest Alliance, ofrece calidad y origen responsable en cada taza.",
+    "ingredients": [
+        {
+            "id": "75975b24-3d77-4c99-a1a0-b9a385f33969",
+            "name": "Ingrediente 1"
+        },
+        {
+            "id": "b5c215c7-e410-4b33-8e95-9c38a80fe2b7",
+            "name": "Ingrediente 2"
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0f03de-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0f03e4-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0f03eb-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con quesos suaves, carnes blancas a la parrilla y postres de chocolate negro o frutos rojos"
+    },
+    "presentation": [
+        {
+            "id": "ab0f02f7-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0f02fe-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "2 g"
+        },
+        {
+            "id": "ab0f0304-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Doble cámara"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0f03aa-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0f03b0-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0f03b8-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [
+        {
+            "id": "ab0f0327-8d2b-11f1-b155-02420a000124",
+            "name": "Rainforest Alliance Certified"
+        },
+        {
+            "id": "feb6a48e-6472-418b-bd05-562445504653",
+            "name": "Pure ceylon tea"
+        }
+    ],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0f0335-8d2b-11f1-b155-02420a000124",
+                "name": "Té negro de Ceylán profundo"
+            },
+            {
+                "id": "ab0f0339-8d2b-11f1-b155-02420a000124",
+                "name": "Acaí Berry frutal"
+            },
+            {
+                "id": "ab0f033f-8d2b-11f1-b155-02420a000124",
+                "name": " Frutos oscuros dulces y ligeramente ácidos"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0f0396-8d2b-11f1-b155-02420a000124",
+                "name": "Para la oficina"
+            },
+            {
+                "id": "ab0f039a-8d2b-11f1-b155-02420a000124",
+                "name": "Para compartir"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0f035f-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0f0367-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0f036d-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0f0373-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Açaí Berry despliega un aroma frutal intenso, con matices de frutos oscuros que realzan el carácter profundo del té negro de Ceylán. En boca ofrece un delicado equilibrio entre dulzura, frescura y una sutil acidez. De cuerpo envolvente, culmina en un final elegante, frutal y persistente."
+    },
+    "related_products": [
+        {
+            "id": "d0377d65-0335-4eb9-93ad-a7fcca89a752"
+        },
+        {
+            "id": "1497aff4-23b8-4c90-8b48-c976ca81060e"
+        },
+        {
+            "id": "b9eb31f9-4159-4267-a52d-77444e392562"
+        }
+    ],
+    "short_description": "Un blend Superior de té negro de Ceylán con sabor natural a Açaí Berry, en filtrante de doble cámara y con sello Rainforest Alliance, frutal, exquisito y equilibrado.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

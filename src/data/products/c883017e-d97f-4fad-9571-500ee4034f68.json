@@ -1,0 +1,178 @@
+{
+    "article_id": "c883017e-d97f-4fad-9571-500ee4034f68",
+    "slug": "muna-20-sobres",
+    "published": true,
+    "sort_order": 11,
+    "featured": true,
+    "featured_order": 10,
+    "name": "Muña 20 sobres",
+    "badge": "Blend de autor",
+    "price": 8.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1766423370772-FOtO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1766423370772-FOtO1.webp",
+            "name": "FOtO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1766423371345-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1766423371345-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1766423371499-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1766423371499-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762782787554819",
+            "name": "Hierba andina digestiva y relajante."
+        },
+        {
+            "id": "1762782793017363",
+            "name": "Ideal para aliviar cólicos, gases o indigestión de forma natural."
+        }
+    ],
+    "club_price": 7.9,
+    "description": "Elaborada exclusivamente con muña seleccionada, esta infusión conserva la esencia y pureza natural de sus hojas. Ofrece un sabor exquisito, herbal y refrescante, acompañado de un aroma intenso y característico. Una taza ligera, auténtica y agradable para disfrutar en cualquier momento del día.",
+    "ingredients": [
+        {
+            "id": "1762782780866811",
+            "name": "Muña (Minthostachys mollis)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0f1e49-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0f1e4f-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0f1e56-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con quesos frescos, panes artesanales, preparaciones a base de papa o maíz y postres de chocolate amargo o limón."
+    },
+    "presentation": [
+        {
+            "id": "ab0f1d0c-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0f1d1d-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1.2 g"
+        },
+        {
+            "id": "ab0f1d28-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0f1e0d-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0f1e15-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0f1e21-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0f1d6d-8d2b-11f1-b155-02420a000124",
+                "name": "Muña fresca y herbal"
+            },
+            {
+                "id": "ab0f1d74-8d2b-11f1-b155-02420a000124",
+                "name": "Matices mentolados"
+            },
+            {
+                "id": "ab0f1d7c-8d2b-11f1-b155-02420a000124",
+                "name": "Sensación aromática"
+            },
+            {
+                "id": "ab0f1d84-8d2b-11f1-b155-02420a000124",
+                "name": "Final limpio y persistente"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0f1dec-8d2b-11f1-b155-02420a000124",
+                "name": "Despues de comer"
+            },
+            {
+                "id": "ab0f1df1-8d2b-11f1-b155-02420a000124",
+                "name": "Para relajarte"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0f1da7-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0f1daf-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0f1db7-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0f1dc0-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Muña despliega un aroma herbal, fresco y penetrante, con delicados matices mentolados. En boca ofrece un sabor intenso y equilibrado, acompañado de una agradable sensación refrescante. De cuerpo ligero, culmina en un final limpio, aromático y persistente."
+    },
+    "related_products": [
+        {
+            "id": "2170beba-88e0-416f-8431-9c65fc79fe6e"
+        },
+        {
+            "id": "88fe4118-3d47-43d7-8bc3-da4c2e06f96d"
+        },
+        {
+            "id": "3864d15c-7d75-45c7-bab2-c60501fe09da"
+        }
+    ],
+    "short_description": "Muña cuidadosamente seleccionada, natural y sin colorantes ni preservantes, para llevar lo mejor de nuestros insumos a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

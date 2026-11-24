@@ -1,0 +1,178 @@
+{
+    "article_id": "4ca59bee-c0f0-4d64-9163-7453eff89802",
+    "slug": "digeste-20-sobres",
+    "published": true,
+    "sort_order": 42,
+    "featured": true,
+    "featured_order": 40,
+    "name": "Digesté 20 sobres",
+    "badge": "Blend de autor",
+    "price": 8.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1767023113152-FOTO1_(1).jpg",
+            "url": "https://minio.divergecore.com/sunka/1767023113152-FOTO1_(1).jpg",
+            "name": "FOTO1 (1).jpg",
+            "orden": 1
+        },
+        {
+            "id": "1767023113251-FOTO2.jpg",
+            "url": "https://minio.divergecore.com/sunka/1767023113251-FOTO2.jpg",
+            "name": "FOTO2.jpg",
+            "orden": 2
+        },
+        {
+            "id": "1767023113271-FOTO3.jpg",
+            "url": "https://minio.divergecore.com/sunka/1767023113271-FOTO3.jpg",
+            "name": "FOTO3.jpg",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762783745005836",
+            "name": "Alivia la pesadez estomacal y equilibra la digestión con una mezcla de hierbas naturales."
+        }
+    ],
+    "club_price": 7.9,
+    "description": "Elaborada con hojas naturales de culén y muña, dos plantas tradicionalmente valoradas por sus propiedades digestivas. El culén acompaña el proceso digestivo, mientras la frescura aromática de la muña la convierte en una infusión ideal para disfrutar después de las comidas. Una alternativa natural, funcional y reconfortante para contribuir al bienestar digestivo cotidiano.",
+    "ingredients": [
+        {
+            "id": "1762783731622815",
+            "name": "Culén (Psoralea glandulosa)."
+        },
+        {
+            "id": "1762783737358806",
+            "name": "Muña (Minthostachys mollis)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0e559f-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0e55a8-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0e55af-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": ""
+    },
+    "presentation": [
+        {
+            "id": "ab0e54b0-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0e54bc-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1 g"
+        },
+        {
+            "id": "ab0e54c6-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0e556d-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0e5574-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0e557e-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0e54f7-8d2b-11f1-b155-02420a000124",
+                "name": "Culén herbal y terroso"
+            },
+            {
+                "id": "ab0e54fa-8d2b-11f1-b155-02420a000124",
+                "name": "Muña fresca y aromática"
+            },
+            {
+                "id": "ab0e5500-8d2b-11f1-b155-02420a000124",
+                "name": "Matices mentolados"
+            },
+            {
+                "id": "ab0e5507-8d2b-11f1-b155-02420a000124",
+                "name": "Final limpio y persistente"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0e5553-8d2b-11f1-b155-02420a000124",
+                "name": "Despues de comer"
+            },
+            {
+                "id": "ab0e5557-8d2b-11f1-b155-02420a000124",
+                "name": "Para relajarte"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0e551d-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0e5524-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0e5529-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0e5534-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Digestivo despliega un aroma herbal y penetrante, donde el carácter del culén se equilibra con la frescura de la muña. En boca ofrece un sabor intenso, ligeramente terroso y acompañado de delicados matices mentolados. De cuerpo ligero, culmina en un final limpio, refrescante y persistentemente herbal."
+    },
+    "related_products": [
+        {
+            "id": "f724c3a9-e699-45d8-9b9d-85ea115846ac"
+        },
+        {
+            "id": "6c760f4f-755a-4233-b233-62e8025f2eac"
+        },
+        {
+            "id": "bde961ff-e8fa-4c22-95fd-010119112033"
+        }
+    ],
+    "short_description": "Una combinación natural de culén y muña, sin colorantes ni preservantes, creada para acompañar la digestión y llevar bienestar a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

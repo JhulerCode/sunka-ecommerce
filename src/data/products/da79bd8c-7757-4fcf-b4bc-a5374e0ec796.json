@@ -1,0 +1,182 @@
+{
+    "article_id": "da79bd8c-7757-4fcf-b4bc-a5374e0ec796",
+    "slug": "mate-de-coca-100-sobres",
+    "published": true,
+    "sort_order": 33,
+    "featured": true,
+    "featured_order": 31,
+    "name": "Mate de coca 100 sobres",
+    "badge": "Blend de autor",
+    "price": 22.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1767794441384-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1767794441384-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1767794441471-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1767794441471-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1767794441497-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1767794441497-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762783023386360",
+            "name": "Tradicional y estimulante."
+        },
+        {
+            "id": "1762783025177922",
+            "name": "Ayuda a combatir la fatiga."
+        },
+        {
+            "id": "1762783029105230",
+            "name": "Mejora la oxigenación y aporta energía natural."
+        }
+    ],
+    "club_price": 21.9,
+    "description": "Elaborado con hojas de coca cuidadosamente seleccionadas, este producto conserva la esencia y pureza de sus insumos naturales. Ofrece un sabor exquisito, herbal y agradable, con un aroma característico y reconfortante. Una infusión auténtica, equilibrada y naturalmente deliciosa para disfrutar en cualquier momento del día.",
+    "ingredients": [
+        {
+            "id": "1762783012170188",
+            "name": "Coca (Erythroxylum coca)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0f2bc5-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0f2bcc-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0f2bd3-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con quesos frescos, panes artesanales, preparaciones ligeras a base de papa o maíz y postres de chocolate amargo."
+    },
+    "presentation": [
+        {
+            "id": "ab0f2aa9-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "100"
+        },
+        {
+            "id": "ab0f2ab8-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1 g"
+        },
+        {
+            "id": "ab0f2ac4-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0f2b8d-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "productos de calidad",
+            "description": "Infusiones elaboradas con cuidado para ofrecer un sabor agradable y consistente en cada taza."
+        },
+        {
+            "id": "ab0f2b96-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Insumos naturales",
+            "description": " Una selección de hierbas, hojas, flores y especias para disfrutar todos los días."
+        },
+        {
+            "id": "ab0f2b9f-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Sin colorantes ni saborizantes",
+            "description": "El sabor y el aroma provienen naturalmente de los ingredientes de cada infusión."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0f2b01-8d2b-11f1-b155-02420a000124",
+                "name": "Hoja de coca herbal"
+            },
+            {
+                "id": "ab0f2b06-8d2b-11f1-b155-02420a000124",
+                "name": "Matices terrosos"
+            },
+            {
+                "id": "ab0f2b0c-8d2b-11f1-b155-02420a000124",
+                "name": "Notas vegetales"
+            },
+            {
+                "id": "ab0f2b13-8d2b-11f1-b155-02420a000124",
+                "name": "Final limpio y agradable"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0f2b6b-8d2b-11f1-b155-02420a000124",
+                "name": "Para empezar el dia"
+            },
+            {
+                "id": "ab0f2b70-8d2b-11f1-b155-02420a000124",
+                "name": "Para la oficina"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0f2b31-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0f2b39-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0f2b40-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0f2b47-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Mate de Coca despliega un aroma herbal y terroso, característico de sus hojas cuidadosamente seleccionadas. En boca ofrece un sabor auténtico, suave y equilibrado, con delicados matices vegetales. De cuerpo ligero, culmina en un final limpio, agradable y ligeramente persistente."
+    },
+    "related_products": [
+        {
+            "id": "615ad62c-a2a6-46bc-b4f4-89ce251c1442"
+        },
+        {
+            "id": "aa98502e-1ef5-48b9-b786-cd1afe1586e7"
+        },
+        {
+            "id": "be75c5a9-7b3d-498e-99ad-3dc8cec43458"
+        }
+    ],
+    "short_description": "Mate de coca elaborado con hojas seleccionadas, naturalmente puro y sin colorantes ni preservantes, para llevar lo mejor de nuestros insumos a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

@@ -1,0 +1,178 @@
+{
+    "article_id": "521639ea-ff0e-431d-b084-b61c1dd435f8",
+    "slug": "jengibre-naranja-20-sobres",
+    "published": true,
+    "sort_order": 3,
+    "featured": true,
+    "featured_order": 3,
+    "name": "Jengibre naranja 20 sobres",
+    "badge": "Blend de autor",
+    "price": 8.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1766422655525-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1766422655525-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1766422657271-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1766422657271-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1766422657546-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1766422657546-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762782616054364",
+            "name": "Refuerza tu sistema inmune y renueva la energía corporal con su fusión cítrica y estimulante."
+        }
+    ],
+    "club_price": 7.9,
+    "description": "Elaborada con jengibre y naranja cuidadosamente seleccionados, esta infusión reúne ingredientes naturales en una mezcla cítrica y deliciosa. Su sabor equilibra la frescura ligeramente dulce de la naranja con el carácter cálido y especiado del jengibre. Una taza aromática y refrescante para disfrutar caliente o fría.",
+    "ingredients": [
+        {
+            "id": "1762782602871963",
+            "name": "Jengibre (Zingiber officinale)."
+        },
+        {
+            "id": "1762782610182740",
+            "name": "Naranja (Citrus x sinensis)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0e640b-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0e640f-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0e6415-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con pescados, ensaladas frescas, preparaciones de inspiración asiática y postres de chocolate amargo o vainilla."
+    },
+    "presentation": [
+        {
+            "id": "ab0e633c-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0e6344-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1.2 g"
+        },
+        {
+            "id": "ab0e634c-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0e63df-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0e63e5-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0e63ec-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0e6373-8d2b-11f1-b155-02420a000124",
+                "name": "Naranja fresca y cítrica"
+            },
+            {
+                "id": "ab0e6379-8d2b-11f1-b155-02420a000124",
+                "name": "Jengibre cálido y especiado"
+            },
+            {
+                "id": "ab0e637e-8d2b-11f1-b155-02420a000124",
+                "name": "Ligera acidez frutal"
+            },
+            {
+                "id": "ab0e6384-8d2b-11f1-b155-02420a000124",
+                "name": "Final refrescante y persistente"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0e63c8-8d2b-11f1-b155-02420a000124",
+                "name": "Para empezar el dia"
+            },
+            {
+                "id": "ab0e63cc-8d2b-11f1-b155-02420a000124",
+                "name": "Para la oficina"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0e639a-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0e639f-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0e63a5-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0e63ab-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Jengibre y Naranja despliega un aroma cítrico y fresco, acompañado por el carácter cálido y especiado del jengibre. En boca ofrece un agradable equilibrio entre notas frutales, una ligera acidez y un sutil toque picante. De cuerpo ligero, culmina en un final refrescante, cálido y persistentemente cítrico."
+    },
+    "related_products": [
+        {
+            "id": "9ebcfe0a-36f7-4da4-bdcf-56e2cf1b9d33"
+        },
+        {
+            "id": "2bbbced5-62e2-4d2d-89f8-aa6373ff3904"
+        },
+        {
+            "id": "64d85e33-243c-4036-8030-bf9b3e141682"
+        }
+    ],
+    "short_description": "Una combinación de jengibre y naranja elaborada con insumos naturales, sin colorantes ni preservantes, que lleva lo mejor de sus ingredientes a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

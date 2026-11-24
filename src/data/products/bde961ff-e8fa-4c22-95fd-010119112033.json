@@ -1,0 +1,179 @@
+{
+    "article_id": "bde961ff-e8fa-4c22-95fd-010119112033",
+    "slug": "green-tea-red-fruits",
+    "published": true,
+    "sort_order": 49,
+    "featured": true,
+    "featured_order": 45,
+    "name": "Green tea Red fruits",
+    "badge": "Blend de autor",
+    "price": 13.9,
+    "origin": "Single Origin Sri Lanka",
+    "photos": [
+        {
+            "id": "1787256235786-Producto_destacado_Te_verde_Frutos_rojos.webp",
+            "url": "https://minio.divergecore.com/sunka/1787256235786-Producto_destacado_Te_verde_Frutos_rojos.webp",
+            "name": "Producto destacado Te verde Frutos rojos.webp",
+            "orden": 1
+        }
+    ],
+    "benefits": [
+        {
+            "id": "0845e60f-2056-41cf-8c62-ee12e8d91439",
+            "name": "Beneficio 1"
+        },
+        {
+            "id": "b6eceaa7-8234-4501-a8f4-468939678df8",
+            "name": "Beneficio 2"
+        }
+    ],
+    "club_price": 12.9,
+    "description": "Té verde de Sri Lanka con un exquisito sabor a frutos rojos, de perfil fresco, frutal y equilibrado. Su filtrante de doble cámara favorece una óptima infusión, mientras el sobre laminado preserva su aroma y frescura. Elaborado bajo estándares ISO 9001 y con sello Rainforest Alliance, ofrece calidad y origen responsable en cada taza.",
+    "ingredients": [
+        {
+            "id": "75975b24-3d77-4c99-a1a0-b9a385f33969",
+            "name": "Ingrediente 1"
+        },
+        {
+            "id": "b5c215c7-e410-4b33-8e95-9c38a80fe2b7",
+            "name": "Ingrediente 2"
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0ee684-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0ee68a-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0ee691-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con sushi, quesos suaves, ensaladas frescas y postres de frutos rojos o chocolate blanco"
+    },
+    "presentation": [
+        {
+            "id": "ab0ee560-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0ee56a-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "2 g"
+        },
+        {
+            "id": "ab0ee575-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Doble cámara"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0ee648-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0ee650-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0ee659-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [
+        {
+            "id": "ab0ee5a2-8d2b-11f1-b155-02420a000124",
+            "name": "Rainforest Alliance Certified"
+        },
+        {
+            "id": "c32a42f0-daf8-49b6-9888-59441d3253c2",
+            "name": "Pure ceylon tea"
+        }
+    ],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0ee5b6-8d2b-11f1-b155-02420a000124",
+                "name": "Té verde fresco"
+            },
+            {
+                "id": "ab0ee5bd-8d2b-11f1-b155-02420a000124",
+                "name": "Frutos rojos dulces y ligeramente ácidos"
+            },
+            {
+                "id": "ab0ee5c5-8d2b-11f1-b155-02420a000124",
+                "name": "Matices vegetales"
+            },
+            {
+                "id": "ab0ee5cc-8d2b-11f1-b155-02420a000124",
+                "name": "Final frutal y refrescante"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0ee629-8d2b-11f1-b155-02420a000124",
+                "name": "Para la oficina"
+            },
+            {
+                "id": "ab0ee62d-8d2b-11f1-b155-02420a000124",
+                "name": "Para empezar el dia"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0ee5ea-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0ee5f2-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0ee5f9-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0ee601-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Té Verde con Frutos Rojos despliega un aroma fresco y frutal, donde los frutos rojos se entrelazan con el carácter vegetal del té verde. En boca ofrece una delicada dulzura, sutil acidez y ligera astringencia. De cuerpo ligero y equilibrado, culmina en un final limpio, refrescante y persistentemente frutal."
+    },
+    "related_products": [
+        {
+            "id": "8977694d-de6e-47f2-81f8-71ae3e84b6bf"
+        },
+        {
+            "id": "a3471eb0-ffbc-488c-b256-911d78592241"
+        },
+        {
+            "id": "b9eb31f9-4159-4267-a52d-77444e392562"
+        }
+    ],
+    "short_description": "Un blend Superior de té verde con sabor natural a frutos rojos, en filtrante de doble cámara y con sello Rainforest Alliance, fresco, frutal y exquisitamente equilibrado.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

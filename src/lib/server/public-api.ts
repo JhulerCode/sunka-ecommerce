@@ -7,7 +7,6 @@ type PublicParams = {
     ids?: string | string[]
     linea?: string
     categoria?: string
-    featured?: string
     keys?: string | string[]
     id?: string
     department?: string
@@ -31,7 +30,6 @@ export function integrationPublicPath(endpoint: PublicEndpoint, params: PublicPa
         setParam(search, 'ids', params.ids)
         setParam(search, 'linea', params.linea)
         setParam(search, 'categoria', params.categoria)
-        setParam(search, 'featured', params.featured)
         return `productos${search.size ? `?${search}` : ''}`
     }
     for (const key of ['id', 'department', 'province', 'district', 'search'] as const) {

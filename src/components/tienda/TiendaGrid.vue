@@ -590,7 +590,6 @@ export default defineComponent({
         getProductMoments(producto) {
             const sources = [
                 producto.sensory_profile?.moments,
-                producto.ecommerce_data?.sensory_profile?.moments,
                 producto.momentos,
                 producto.momento,
                 producto.tags,

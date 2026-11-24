@@ -1,0 +1,202 @@
+{
+    "article_id": "b9eb31f9-4159-4267-a52d-77444e392562",
+    "slug": "celestial-tea-10-sobres",
+    "published": true,
+    "sort_order": 31,
+    "featured": true,
+    "featured_order": 30,
+    "name": "Celestial Tea 10 sobres",
+    "badge": "Blend de autor",
+    "price": 24.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1766424852194-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1766424852194-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1766424852884-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1766424852884-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1766424853042-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1766424853042-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762786035365862",
+            "name": "Infusión divina de flores y frutas que eleva tus sentidos, aporta serenidad y equilibrio espiritual."
+        }
+    ],
+    "club_price": 23.9,
+    "description": "Una refinada selección de manzana, pétalos de hibisco y aciano se realza con canela, cardamomo, clavo y pimienta. Su malla piramidal compostable permite que cada ingrediente despliegue plenamente sus aromas y matices. Una creación Luxury de carácter floral, especiado y envolvente, con un equilibrio exquisito.",
+    "ingredients": [
+        {
+            "id": "1762785812477639",
+            "name": "Manzana (Malus domestica)."
+        },
+        {
+            "id": "1762786004638353",
+            "name": "Canela (Cinnamomum loureirii)."
+        },
+        {
+            "id": "1762786009038702",
+            "name": "Pétalos de hibisco (Hibiscus sabdariffa)."
+        },
+        {
+            "id": "1762786012646528",
+            "name": "Cardamomo (Elettaria cardamomum)."
+        },
+        {
+            "id": "1762786016541944",
+            "name": "Clavo (Syzygium aromaticum)."
+        },
+        {
+            "id": "1762786020862830",
+            "name": "Pétalos de aciano (Centaurea cyanus)."
+        },
+        {
+            "id": "1762786025170789",
+            "name": "Pimienta (Piper nigrum)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0f0d34-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0f0d3a-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0f0d41-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con quesos semimaduros, carnes blancas especiadas y postres de manzana o frutos secos."
+    },
+    "presentation": [
+        {
+            "id": "ab0f0c22-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "10"
+        },
+        {
+            "id": "ab0f0c31-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "3 g"
+        },
+        {
+            "id": "ab0f0c3d-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Piramidal"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0f0d01-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "3 g de intensidad superior",
+            "description": "Mayor gramaje para una infusión profunda, aromática y envolvente."
+        },
+        {
+            "id": "ab0f0d0a-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Malla piramidal compostable",
+            "description": "Permite que cada ingrediente se expanda y revele plenamente sus aromas y matices."
+        },
+        {
+            "id": "ab0f0d12-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Ingredientes excepcionales",
+            "description": "Una selección de hojas, frutas, flores y especias para crear blends refinados y memorables."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0f0c76-8d2b-11f1-b155-02420a000124",
+                "name": "Manzana dulce"
+            },
+            {
+                "id": "ab0f0c7b-8d2b-11f1-b155-02420a000124",
+                "name": "Hibisco floral"
+            },
+            {
+                "id": "ab0f0c82-8d2b-11f1-b155-02420a000124",
+                "name": "Aciano delicado"
+            },
+            {
+                "id": "ab0f0c89-8d2b-11f1-b155-02420a000124",
+                "name": "Especias cálidas"
+            },
+            {
+                "id": "9f4b3945-f5d1-4bb0-88a3-468c050042b5",
+                "name": "Pimienta sutil"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0f0ce3-8d2b-11f1-b155-02420a000124",
+                "name": "Para una pausa de noche"
+            },
+            {
+                "id": "ab0f0ce8-8d2b-11f1-b155-02420a000124",
+                "name": "Para relajarte"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0f0ca4-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0f0cae-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0f0cb6-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0f0cbd-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Celestial Tea despliega un aroma frutal y floral, donde la manzana se entrelaza con el hibisco y el aciano. La canela, el cardamomo y el clavo aportan una calidez especiada, realzada por un sutil toque de pimienta. De cuerpo envolvente y acidez equilibrada, culmina en un final elegante, cálido y persistente."
+    },
+    "related_products": [
+        {
+            "id": "b123560d-bfce-4c8a-996f-9db13f682358"
+        },
+        {
+            "id": "a3471eb0-ffbc-488c-b256-911d78592241"
+        },
+        {
+            "id": "8977694d-de6e-47f2-81f8-71ae3e84b6bf"
+        }
+    ],
+    "short_description": "Una creación Luxury en formato piramidal, donde la manzana, los pétalos florales y una selecta mezcla de especias se unen en una exquisita armonía cálida y envolvente.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

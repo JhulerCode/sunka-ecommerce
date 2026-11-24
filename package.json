@@ -14,7 +14,9 @@
     "test:e2e": "playwright test",
     "contract:check": "node scripts/check-integration-contract.mjs",
     "contract:update": "node scripts/check-integration-contract.mjs --update",
-    "verify": "pnpm typecheck && pnpm test && pnpm build"
+    "verify": "pnpm typecheck && pnpm test && pnpm build",
+    "import:products": "node --env-file=.env --experimental-strip-types scripts/import-product-content.mjs",
+    "check:products": "node --env-file=.env scripts/check-product-content.mjs"
   },
   "dependencies": {
     "@astrojs/node": "^9.4.1",

@@ -7,8 +7,26 @@ import nightImage from '@/assets/rituales/night.webp'
 import morningImage from '@/assets/rituales/morning.webp'
 import shareImage from '@/assets/rituales/share.webp'
 import pauseImage from '@/assets/rituales/pause.webp'
+import { getProductContentById } from '@/lib/server/product-content'
 
-const moments = [
+const ritualProductIds = [
+    '3baf320d-3389-4778-bb72-9dcd44bfb8ae',
+    'a3d94dff-f781-4389-9475-45979324b919',
+    '623f2b51-f181-4085-9ee3-f9036198f774',
+    '2bbbced5-62e2-4d2d-89f8-aa6373ff3904',
+]
+
+const ritualProductHrefs = new Map(
+    ritualProductIds.map((articleId) => {
+        const content = getProductContentById(articleId)
+        return [
+            articleId,
+            content?.published ? `/productos/${content.slug}` : `/productos/${articleId}`,
+        ]
+    }),
+)
+
+const baseMoments = [
     {
         key: 'morning',
         label: '6:00 – 9:00',
@@ -18,7 +36,7 @@ const moments = [
         copy: 'Para despertar con ligereza y claridad.',
         product: 'Té verde · 20 sobres',
         notes: 'Fresco, frutal y aromático.',
-        productHref: '/productos/3baf320d-3389-4778-bb72-9dcd44bfb8ae',
+        productId: '3baf320d-3389-4778-bb72-9dcd44bfb8ae',
         image: morningImage,
         alt: 'Ritual SUNKA para empezar la mañana',
     },
@@ -31,7 +49,7 @@ const moments = [
         copy: 'Cinco minutos para ordenar las ideas y volver a tu ritmo.',
         product: 'Jamaica y Piña · 20 sobres',
         notes: 'Frutal, intenso y aromático.',
-        productHref: '/productos/a3d94dff-f781-4389-9475-45979324b919',
+        productId: 'a3d94dff-f781-4389-9475-45979324b919',
         image: pauseImage,
         alt: 'Preparación de una infusión durante una pausa SUNKA',
     },
@@ -44,7 +62,7 @@ const moments = [
         copy: 'Para conversar, acompañar y disfrutar sin mirar el reloj.',
         product: 'Passion Tea Luxury · 10 sobres',
         notes: 'Vibrante, dulce y ligeramente ácido.',
-        productHref: '/productos/623f2b51-f181-4085-9ee3-f9036198f774',
+        productId: '623f2b51-f181-4085-9ee3-f9036198f774',
         image: shareImage,
         alt: 'Tazas SUNKA preparadas para compartir',
     },
@@ -57,11 +75,16 @@ const moments = [
         copy: 'Una señal amable para cerrar el día y entrar en calma.',
         product: 'Manzanilla · 20 sobres',
         notes: 'Suave, floral y reconfortante.',
-        productHref: '/productos/2bbbced5-62e2-4d2d-89f8-aa6373ff3904',
+        productId: '2bbbced5-62e2-4d2d-89f8-aa6373ff3904',
         image: nightImage,
         alt: 'Ritual nocturno SUNKA para entrar en calma',
     },
 ]
+
+const moments = baseMoments.map((moment) => ({
+    ...moment,
+    productHref: ritualProductHrefs.get(moment.productId) ?? `/productos/${moment.productId}`,
+}))
 
 const initialMoment = moments[0]
 

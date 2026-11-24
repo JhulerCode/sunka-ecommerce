@@ -1,0 +1,198 @@
+{
+    "article_id": "4e180d54-cf70-47e1-93f3-8e0238a876f4",
+    "slug": "sueno-profundo-40-sobres",
+    "published": true,
+    "sort_order": 22,
+    "featured": true,
+    "featured_order": 21,
+    "name": "Sueño profundo 40 sobres",
+    "badge": "Blend de autor",
+    "price": 9.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1766424682979-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1766424682979-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1766424683660-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1766424683660-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1766424683810-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1766424683810-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762783628794676",
+            "name": "Fusión de hierbas relajantes que favorecen un descanso profundo y natural."
+        },
+        {
+            "id": "1762783636915746",
+            "name": "Ideal para el fin del día."
+        }
+    ],
+    "club_price": 8.4,
+    "description": "Elaborada con toronjil y valeriana, plantas tradicionalmente apreciadas por ayudar a relajar el cuerpo y facilitar la conciliación del sueño. La pimpinela, el romero, la menta y la borraja complementan esta mezcla con sus cualidades herbales y aromáticas. Una infusión natural pensada para acompañar tu rutina nocturna y favorecer un descanso tranquilo.",
+    "ingredients": [
+        {
+            "id": "1762783571242427",
+            "name": "Borraja (Borago officinalis)."
+        },
+        {
+            "id": "1762783580458408",
+            "name": "Romero (Rosmarinus officinalis)."
+        },
+        {
+            "id": "1762783586374789",
+            "name": "Menta negra (Mentha piperita)."
+        },
+        {
+            "id": "1762783592970734",
+            "name": "Toronjil (Melissa officinalis)."
+        },
+        {
+            "id": "1762783600194541",
+            "name": "Pimpinela (Pimpinella saxifraga)."
+        },
+        {
+            "id": "1762783616386220",
+            "name": "Valeriana (Perezia pinnatifida)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0e5f26-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0e5f31-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0e5f38-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": ""
+    },
+    "presentation": [
+        {
+            "id": "ab0e5e24-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "40"
+        },
+        {
+            "id": "ab0e5e31-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1 g"
+        },
+        {
+            "id": "ab0e5e3c-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0e5ef5-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0e5efc-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0e5f04-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0e5e6e-8d2b-11f1-b155-02420a000124",
+                "name": "Toronjil fresco y cítrico"
+            },
+            {
+                "id": "ab0e5e73-8d2b-11f1-b155-02420a000124",
+                "name": "Valeriana terrosa"
+            },
+            {
+                "id": "ab0e5e7b-8d2b-11f1-b155-02420a000124",
+                "name": "Menta y romero aromáticos"
+            },
+            {
+                "id": "ab0e5e85-8d2b-11f1-b155-02420a000124",
+                "name": "Final herbal y persistente"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0e5ed7-8d2b-11f1-b155-02420a000124",
+                "name": "Para una pausa de noche"
+            },
+            {
+                "id": "ab0e5edb-8d2b-11f1-b155-02420a000124",
+                "name": "Para relajarte"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0e5e9e-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0e5ea7-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0e5ead-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0e5eb5-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Sueño Profundo despliega un aroma herbal y envolvente, con la frescura del toronjil y la menta sobre un fondo terroso de valeriana. En boca ofrece un sabor equilibrado, suavemente vegetal y aromático. De cuerpo ligero, culmina en un final fresco, sereno y delicadamente persistente."
+    },
+    "related_products": [
+        {
+            "id": "fa6bc463-da80-4bab-ba34-7a024e25d2af"
+        },
+        {
+            "id": "037dca50-0325-44af-8791-c9bdcae7ca60"
+        },
+        {
+            "id": "d0377d65-0335-4eb9-93ad-a7fcca89a752"
+        }
+    ],
+    "short_description": "Una combinación de hierbas naturales, sin colorantes ni preservantes, creada para favorecer la relajación y acompañar tu descanso nocturno.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

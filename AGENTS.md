@@ -99,14 +99,16 @@ Canonical settings (from `.prettierrc.json` and `.editorconfig`):
 ### Language & Naming
 
 - **Code identifiers in English**: `get`, `formatProductos`, `productosFiltrados`, `applyUrlFilters`.
-- **Product data fields in English** (they mirror the ERP `ecommerce_data` contract):
-  `name`, `short_description`, `description`, `photos`, `photo`, `price`, `club_price`,
+- **Product data fields in English** (they mirror the storefront content contract):
+  `article_id`, `slug`, `published`, `sort_order`, `featured`, `featured_order`, `name`,
+  `short_description`, `description`, `photos`, `photo`, `price`, `club_price`,
   `previous_price`, `regular_price`, `presentation`, `certifications`, `sensory_profile`,
-  `preparation`, `related_products`, `is_featured`, `unit`, `slug`. Exception: customer/partner data mirrors
-  the ERP in English (`name`, `document_type`, `document_number`, `email`,   `phone1`, `addresses`,
-  `contacts`, `partner_data`). Auth credentials use the English integration contract (`email`,
-  `password`, `verification_code`, `password_updated_at`). Static site data (`src/data/`, blend customizer,
-  pickup locations) and UI filter state keep their existing Spanish keys.
+  `preparation`, `related_products`, `seo_title`, `seo_description`, `previous_slugs`, `unit`.
+  Exception: customer/partner data mirrors the ERP in English (`name`, `document_type`,
+  `document_number`, `email`, `phone1`, `addresses`, `contacts`, `partner_data`). Auth
+  credentials use the English integration contract (`email`, `password`, `verification_code`,
+  `password_updated_at`). Static site data (`src/data/`, blend customizer, pickup locations)
+  and UI filter state keep their existing Spanish keys.
 - Files/components: **PascalCase** for `.astro`/`.vue` component files (except icons, see below);
   **kebab-case** for icon files (`icon-*.astro`, `chevron-left.vue`); lowercase for `.js` modules.
 - Keep Spanish strings unaccented vs accented inconsistent across the codebase; prefer accented
@@ -119,7 +121,9 @@ Canonical settings (from `.prettierrc.json` and `.editorconfig`):
 - Dynamic pages read `Astro.params`, e.g. `const { slug } = Astro.params`.
 - Server data fetching uses `serverGet` or `backendRequest`; never call browser helpers from SSR.
 - When a record is missing, return early with `Astro.rewrite('/404')` (never a hard error).
-- Normalize fetched products with `formatProductos` from `src/lib/api.ts` before passing them to components.
+- Build store products with `getStoreProducts()` / `getStoreProductBySlug()` from
+  `src/lib/server/product-catalog.ts`: they merge the ERP master data with
+  `src/data/products/*.json` and normalize with `formatProductos`.
 - Pass data to Vue islands via props and mount with `client:load`
   (`<TiendaGrid client:load productos={productos} lineas={lineas} />`).
 - Interactive DOM wiring for static pages goes in a page-level `<script>` and is driven by
@@ -140,13 +144,17 @@ Canonical settings (from `.prettierrc.json` and `.editorconfig`):
 - Export plain JS arrays of objects plus a lookup map and a small accessor:
   `export const lineas`, `export const lineasBySlug`, `export const getLineaBySlug = (slug) => lineasBySlug[slug]`.
 - Reference imported assets, not hardcoded URLs.
+- Product content lives in `src/data/products/<article_id>.json` (one file per ERP article).
+  `src/lib/server/product-content.ts` loads and validates them; `published: false` hides a
+  product. Photos are MinIO URLs in the JSON, never binaries in the repo. A slug change must
+  add the old value to `previous_slugs` so the detail page can redirect with 301.
 
 ### API Layer, BFF & Error Handling
 
 - Vue uses `src/lib/api.ts` and only same-origin `/api/*` endpoints. Astro SSR uses the server-only
   client. Never expose `API_URL`, `ERP_API_KEY`, `X-API-Key`, or authorization headers.
 - The BFF sends only the fixed parameters each integration endpoint declares (`ids`, `linea`,
-  `categoria`, `featured`, `search`, etc.). Never forward `qry`, `cols`, `incl`, tenant, or
+  `categoria`, `search`, etc.). Never forward `qry`, `cols`, `incl`, tenant, or
   upstream URLs; the legacy `{ fltr, cols, incl }` shape is removed.
 - The checkout order number lives in the BFF: `src/lib/server/order-code.ts` generates
   `partner_order.code` as `YYMMDD<6 digits>` with the `America/Lima` date. The ERP stores it as
@@ -154,12 +162,13 @@ Canonical settings (from `.prettierrc.json` and `.editorconfig`):
   is the `orderId` sent to Izipay and the `purchaseNumber` sent to Niubiz (12 digits required).
 - Delivery coverage is a store policy: `prepareCheckoutOrder` only accepts `envio` when the
   selected ubigeo belongs to Lima; the ERP only validates that the ubigeo exists.
-- The checkout sends the line prices **net of IGV**: the BFF converts the gross price the
-  customer sees using the line's `igv_afectacion` and `igv_porcentaje`. `currency_id: 'PEN'`
-  and `payment_method: 'tarjeta'` are fixed by the store; `delivery_cost` travels as the
-  final charge. The ERP validates the net price against the article's published prices and
-  the currency/payment catalogs. The store limits the cart to 50 lines and 100 units per
-  line.
+- The checkout calculates the line prices **net of IGV** on the server: the BFF ignores the
+  browser's `unit_price`, resolves the current price from `src/data/products`, uses the
+  article's `igv_afectacion` and a server-side IGV rate, and recalculates promotions, delivery
+  and total. `currency_id: 'PEN'` and `payment_method: 'tarjeta'` are fixed by the store;
+  `delivery_cost` travels as the final charge. The ERP validates format, arithmetic, currency
+  and payment catalogs, but trusts the integration for the net price. The store limits the
+  cart to 50 lines and 100 units per line.
 - The order page shows each line's `total` returned by the ERP (gross); `unit_price` is net.
 - The checkout only declares the customer's receipt type (`invoice_type`); the invoice series is
   chosen by the ERP when it issues the invoice. The delivery article is configured server-side in

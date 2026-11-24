@@ -1,0 +1,182 @@
+{
+    "article_id": "88fe4118-3d47-43d7-8bc3-da4c2e06f96d",
+    "slug": "prost-te-20-sobres",
+    "published": true,
+    "sort_order": 16,
+    "featured": true,
+    "featured_order": 15,
+    "name": "Prost-Té 20 sobres",
+    "badge": "Blend de autor",
+    "price": 8.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1766424374136-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1766424374136-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1766424374719-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1766424374719-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1766424374978-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1766424374978-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762783864198480",
+            "name": "Apoyo natural para la salud prostática y urinaria masculina."
+        },
+        {
+            "id": "1762783870834244",
+            "name": "Equilibrio, fortaleza y bienestar interior."
+        }
+    ],
+    "club_price": 7.9,
+    "description": "Prost‑Te es una infusión natural creada para acompañar el cuidado masculino y el bienestar de la próstata. Combina uña de gato, tradicionalmente valorada por sus compuestos antioxidantes, con achiote, fuente natural de carotenoides y otros componentes vegetales. Una alternativa herbal para incorporar a una rutina de alimentación equilibrada y bienestar cotidiano.",
+    "ingredients": [
+        {
+            "id": "1762783836774577",
+            "name": "Achiote (Bixa orellana)."
+        },
+        {
+            "id": "1762783842374518",
+            "name": "Uña de gato (Uncaria tomentosa)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0eb8df-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0eb8e4-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0eb8ea-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": ""
+    },
+    "presentation": [
+        {
+            "id": "ab0eb70b-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0eb716-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1.2 g"
+        },
+        {
+            "id": "ab0eb71f-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0eb8ae-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0eb8b4-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0eb8bc-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0eb74f-8d2b-11f1-b155-02420a000124",
+                "name": "Uña de gato herbal y amaderada"
+            },
+            {
+                "id": "ab0eb830-8d2b-11f1-b155-02420a000124",
+                "name": "Achiote terroso"
+            },
+            {
+                "id": "ab0eb83c-8d2b-11f1-b155-02420a000124",
+                "name": "Ligero amargor"
+            },
+            {
+                "id": "ab0eb842-8d2b-11f1-b155-02420a000124",
+                "name": "Final cálido y persistente"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0eb894-8d2b-11f1-b155-02420a000124",
+                "name": "Para empezar el dia"
+            },
+            {
+                "id": "ab0eb898-8d2b-11f1-b155-02420a000124",
+                "name": "Para relajarte"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0eb85d-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0eb864-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0eb86b-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0eb872-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Prost-Te despliega un aroma herbal y terroso, acompañado de delicados matices amaderados. En boca ofrece un sabor intenso y natural, con un ligero amargor y una cálida expresión botánica. De cuerpo medio, culmina en un final seco, envolvente y persistentemente herbal."
+    },
+    "related_products": [
+        {
+            "id": "802a6e2d-2640-4c5a-a310-5b104b63375e"
+        },
+        {
+            "id": "fa6bc463-da80-4bab-ba34-7a024e25d2af"
+        },
+        {
+            "id": "b123560d-bfce-4c8a-996f-9db13f682358"
+        }
+    ],
+    "short_description": "Una combinación de uña de gato y achiote elaborada con insumos naturales, sin colorantes ni preservantes, que lleva lo mejor de sus ingredientes a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

@@ -1,0 +1,182 @@
+{
+    "article_id": "866333af-b1c3-4ef1-9d32-8248e99146b6",
+    "slug": "jengibre-menta-20-sobres",
+    "published": true,
+    "sort_order": 14,
+    "featured": true,
+    "featured_order": 13,
+    "name": "Jengibre menta 20 sobres",
+    "badge": "Blend de autor",
+    "price": 8.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1766422494744-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1766422494744-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1766422495526-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1766422495526-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1766422495806-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1766422495806-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762782667354622",
+            "name": "Alivia el malestar estomacal, refresca la respiración y purifica el cuerpo."
+        },
+        {
+            "id": "1762782678526183",
+            "name": "Ligereza y frescura en cada taza."
+        }
+    ],
+    "club_price": 7.9,
+    "description": "Elaborada con jengibre y menta cuidadosamente seleccionados, esta infusión reúne ingredientes naturales en una mezcla fresca y deliciosa. Su sabor equilibra la intensidad cálida y ligeramente picante del jengibre con el carácter refrescante de la menta. Una taza aromática y revitalizante para disfrutar caliente o fría.",
+    "ingredients": [
+        {
+            "id": "1762782656319719",
+            "name": "Jengibre (Zingiber officinale)."
+        },
+        {
+            "id": "1762782661158824",
+            "name": "Menta negra (Mentha x piperita)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0eb28b-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0eb291-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0eb299-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con pescados, ensaladas frescas, preparaciones de inspiración asiática y postres de limón o chocolate amargo."
+    },
+    "presentation": [
+        {
+            "id": "ab0eb17a-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0eb187-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1.2 g"
+        },
+        {
+            "id": "ab0eb191-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0eb253-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0eb25e-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0eb267-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0eb1cb-8d2b-11f1-b155-02420a000124",
+                "name": "Jengibre cálido y especiado"
+            },
+            {
+                "id": "ab0eb1d0-8d2b-11f1-b155-02420a000124",
+                "name": "Menta fresca y herbal"
+            },
+            {
+                "id": "ab0eb1d8-8d2b-11f1-b155-02420a000124",
+                "name": "Sutil toque picante"
+            },
+            {
+                "id": "ab0eb1de-8d2b-11f1-b155-02420a000124",
+                "name": "Final limpio y refrescante"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0eb236-8d2b-11f1-b155-02420a000124",
+                "name": "Despues de comer"
+            },
+            {
+                "id": "ab0eb23a-8d2b-11f1-b155-02420a000124",
+                "name": "Para la oficina"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0eb1fa-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0eb202-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0eb209-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0eb211-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Jengibre y Menta despliega un aroma herbal y refrescante, acompañado por el carácter cálido y especiado del jengibre. En boca ofrece un equilibrio agradable entre frescura e intensidad, con un sutil toque picante. De cuerpo ligero, culmina en un final limpio, fresco y persistente."
+    },
+    "related_products": [
+        {
+            "id": "6f28483b-ea39-4dd8-bbb1-d71c52bbbbe3"
+        },
+        {
+            "id": "521639ea-ff0e-431d-b084-b61c1dd435f8"
+        },
+        {
+            "id": "e9dc6380-3c61-4e2b-a17d-7bb74b2e2d67"
+        }
+    ],
+    "short_description": "Una combinación de jengibre y menta elaborada con insumos naturales, sin colorantes ni preservantes, que lleva lo mejor de sus ingredientes a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

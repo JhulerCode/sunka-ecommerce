@@ -1,0 +1,178 @@
+{
+    "article_id": "d51c8eef-d443-47de-bb0c-15473f78d6b5",
+    "slug": "moringa-20-sobres",
+    "published": true,
+    "sort_order": 10,
+    "featured": true,
+    "featured_order": 9,
+    "name": "Moringa 20 sobres",
+    "badge": "Blend de autor",
+    "price": 8.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1767711420030-1.webp",
+            "url": "https://minio.divergecore.com/sunka/1767711420030-1.webp",
+            "name": "1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1767711420139-2.webp",
+            "url": "https://minio.divergecore.com/sunka/1767711420139-2.webp",
+            "name": "2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1767711420155-3.webp",
+            "url": "https://minio.divergecore.com/sunka/1767711420155-3.webp",
+            "name": "3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762783326202503",
+            "name": "Superinfusión rica en vitaminas, hierro y calcio."
+        },
+        {
+            "id": "1762783332606688",
+            "name": "Potencia tus defensas y mejora el bienestar general."
+        }
+    ],
+    "club_price": 7.9,
+    "description": "Elaborada exclusivamente con hojas naturales de moringa, reconocidas por contener compuestos vegetales con propiedades antioxidantes. Su naturaleza funcional la convierte en una excelente opción para complementar una alimentación equilibrada y acompañar el bienestar cotidiano. Una infusión herbal, auténtica y de sabor agradable para incorporar a tu día a día.",
+    "ingredients": [
+        {
+            "id": "1762783320282969",
+            "name": "Moringa (Moringa oleifera)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0f2565-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0f256a-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0f2571-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con ensaladas frescas, vegetales asados, quesos suaves, panes integrales y postres de frutos secos o chocolate amargo."
+    },
+    "presentation": [
+        {
+            "id": "ab0f2446-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0f2455-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1.2 g"
+        },
+        {
+            "id": "ab0f245f-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0f2531-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0f2538-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0f2543-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0f249f-8d2b-11f1-b155-02420a000124",
+                "name": "Moringa herbal"
+            },
+            {
+                "id": "ab0f24a5-8d2b-11f1-b155-02420a000124",
+                "name": "Matices vegetales"
+            },
+            {
+                "id": "ab0f24ae-8d2b-11f1-b155-02420a000124",
+                "name": "Sutil carácter terroso"
+            },
+            {
+                "id": "ab0f24b5-8d2b-11f1-b155-02420a000124",
+                "name": "Final limpio y ligeramente amargo"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0f2510-8d2b-11f1-b155-02420a000124",
+                "name": "Para empezar el dia"
+            },
+            {
+                "id": "ab0f2515-8d2b-11f1-b155-02420a000124",
+                "name": "Para la oficina"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0f24d3-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0f24dc-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0f24e4-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0f24eb-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Moringa despliega un aroma herbal y vegetal, con delicados matices terrosos. En boca presenta un sabor auténtico y equilibrado, acompañado de un ligero amargor característico de sus hojas. De cuerpo ligero, culmina en un final limpio, natural y suavemente persistente."
+    },
+    "related_products": [
+        {
+            "id": "c883017e-d97f-4fad-9571-500ee4034f68"
+        },
+        {
+            "id": "88fe4118-3d47-43d7-8bc3-da4c2e06f96d"
+        },
+        {
+            "id": "623f2b51-f181-4085-9ee3-f9036198f774"
+        }
+    ],
+    "short_description": "Hojas de moringa cuidadosamente seleccionadas, naturales y sin colorantes ni preservantes, para llevar lo mejor de este valioso ingrediente a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

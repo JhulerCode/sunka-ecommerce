@@ -7,6 +7,7 @@ import GhostIcon from '@/assets/icons/ghost.vue'
 import ShieldIcon from '@/assets/icons/icon-shield-check.astro'
 import { backendRequest, getClientIp, orderCookieName } from '@/lib/server/backend'
 import { serverGet as get } from '@/lib/server/public-api'
+import { getProductContentById } from '@/lib/server/product-content'
 import { redondear, formatDate, formatDateTime } from '@/lib/mine'
 import { DELIVERY_TIME_RANGE } from '@/data/pickup-locations'
 
@@ -135,7 +136,18 @@ const lastCompletedStageIndex = stages.reduce(
         etapa.fecha ? index : lastIndex,
     -1,
 )
-const orderItems: Array<Record<string, any>> = pedido?.partner_order_lines || []
+const orderItems: Array<Record<string, any>> = (pedido?.partner_order_lines || []).map(
+    (item: Record<string, any>) => {
+        const content = getProductContentById(
+            String(item.article_id ?? item.article?.id ?? ''),
+        )
+        return {
+            ...item,
+            name: content?.name || item.name,
+            article_photo: content?.photos?.[0]?.url,
+        }
+    },
+)
 
 const parseOrderCollection = (value: unknown): Array<Record<string, any>> => {
     if (Array.isArray(value)) {
@@ -436,8 +448,7 @@ const orderTitle = pedido
                                         <OrderSectionTitle number={productsSectionNumber} title="Productos" />
                                         <div class="divide-y divide-sunka-sand">
                                             {orderItems.map((item) => {
-                                                const imageUrl =
-                                                    item.article?.ecommerce_data?.photos?.[0]?.url
+                                                const imageUrl = item.article_photo
 
                                                 return (
                                                     <article class="flex items-center gap-4 py-4 first:pt-0 last:pb-0">

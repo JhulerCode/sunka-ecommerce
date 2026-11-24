@@ -1,0 +1,114 @@
+{
+    "article_id": "be75c5a9-7b3d-498e-99ad-3dc8cec43458",
+    "slug": "celestial-tea-50-sobres",
+    "published": true,
+    "sort_order": 32,
+    "featured": false,
+    "featured_order": 0,
+    "name": "Celestial Tea 50 sobres",
+    "badge": "Blend del autor",
+    "price": 88.5,
+    "origin": "",
+    "photos": [],
+    "benefits": [],
+    "club_price": 87.5,
+    "description": "Una refinada selección de manzana, pétalos de hibisco y aciano se realza con canela, cardamomo, clavo y pimienta. Su malla piramidal compostable permite que cada ingrediente despliegue plenamente sus aromas y matices. Una creación Luxury de carácter floral, especiado y envolvente, con un equilibrio exquisito.",
+    "ingredients": [],
+    "preparation": {
+        "steps": [],
+        "pairing": "Marida perfectamente con quesos semimaduros, carnes blancas especiadas y postres de manzana o frutos secos."
+    },
+    "presentation": [
+        {
+            "id": "f2f75959-c1ec-469c-a64a-a8074b915d5c",
+            "label": "Saquitos",
+            "value": "50"
+        },
+        {
+            "id": "d99fe959-7353-4112-9d19-0ad33cbff2a6",
+            "label": "Peso por saquito",
+            "value": "3 g"
+        },
+        {
+            "id": "d5aa8c29-f1fa-4ada-92d7-1ededee08f66",
+            "label": "Liberación",
+            "value": "Piramidal"
+        }
+    ],
+    "differentials": [],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "07915853-cce6-4abc-a712-4540b51c93b8",
+                "name": "Manzana dulce"
+            },
+            {
+                "id": "6db07b93-1cb4-410a-8ece-e411dc69a49a",
+                "name": "Hibisco floral"
+            },
+            {
+                "id": "1adfec0e-6a79-4e93-9703-51a6ba0baf33",
+                "name": "Aciano delicado"
+            },
+            {
+                "id": "1ce9d371-b1b6-470b-90b3-32a7dbfc0260",
+                "name": "Especias cálidas"
+            },
+            {
+                "id": "5d1e01be-6e3e-4da3-a1c4-af8e3cc34e1b",
+                "name": "Pimienta sutil"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "04c569af-4f5f-4da2-a40b-6eb5030bf5e2",
+                "name": "Para una pausa de noche"
+            },
+            {
+                "id": "ae3d8bf5-ef08-4a10-920c-489bd4e96a70",
+                "name": "Para relajarte"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0f0ca4-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0f0cae-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0f0cb6-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0f0cbd-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Celestial Tea despliega un aroma frutal y floral, donde la manzana se entrelaza con el hibisco y el aciano. La canela, el cardamomo y el clavo aportan una calidez especiada, realzada por un sutil toque de pimienta. De cuerpo envolvente y acidez equilibrada, culmina en un final elegante, cálido y persistente."
+    },
+    "related_products": [
+        {
+            "id": "d46e3b8d-8bba-4341-bfef-2c0096d320a9"
+        },
+        {
+            "id": "c71f909d-7267-43ed-9fa4-ae7a6894a560"
+        },
+        {
+            "id": "037dca50-0325-44af-8791-c9bdcae7ca60"
+        }
+    ],
+    "short_description": "Una creación Luxury en formato piramidal, donde la manzana, los pétalos florales y una selecta mezcla de especias se unen en una exquisita armonía cálida y envolvente.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

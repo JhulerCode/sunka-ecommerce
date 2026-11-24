@@ -27,20 +27,14 @@ createServer((request, response) => {
     if (url.pathname === '/api/v1/productos') {
         const ids = (url.searchParams.get('ids') || '').split(',').filter(Boolean)
         const product = {
-            id: 'product-1',
-            name: 'Producto de prueba',
-            unit: 'UND',
+            id: '2bbbced5-62e2-4d2d-89f8-aa6373ff3904',
+            name: 'MANZANILLA 20 SOBRES SUNKA',
+            unit: 'NIU',
             igv_affectation: '10',
-            list_price: 10,
+            list_price: null,
             line: { name: 'Tradicional' },
-            ecommerce_data: {
-                name: 'Producto de prueba',
-                price: 10,
-                presentation: [{ label: 'Saquitos', value: 20 }],
-                photos: [],
-            },
         }
-        const data = !ids.length || ids.includes('product-1') ? [product] : []
+        const data = !ids.length || ids.includes(product.id) ? [product] : []
         response.end(JSON.stringify({ data }))
     } else if (url.pathname === '/api/v1/ubigeo-data') {
         response.end(JSON.stringify({ data: systemData }))
@@ -196,8 +190,8 @@ createServer((request, response) => {
             ? { data: { status: 'completed', id: 'payment-order-1', order_code: 'SUNKA-PAY', access_token: 'payment-access' } }
             : { type: 'urn:itderp:problem:integration-payment-access-invalid', title: 'Acceso al pago inválido', status: 401, detail: 'El acceso al intento de pago no es válido o ha vencido.', instance: '/api/v1/payments/izipay/intents/intent-1/status', errorCode: 'INTEGRATION_PAYMENT_ACCESS_INVALID' }))
     } else {
-        response.writeHead(404)
         response.setHeader('content-type', 'application/problem+json')
+        response.writeHead(404)
         response.end(JSON.stringify({
             type: 'urn:itderp:problem:integration-route-not-found',
             title: 'Ruta no encontrada',

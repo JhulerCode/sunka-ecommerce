@@ -1,0 +1,179 @@
+{
+    "article_id": "a3471eb0-ffbc-488c-b256-911d78592241",
+    "slug": "vainilla-chai",
+    "published": true,
+    "sort_order": 26,
+    "featured": true,
+    "featured_order": 25,
+    "name": "Vainilla Chai",
+    "badge": "Blend de autor",
+    "price": 13.9,
+    "origin": "Single Origin Sri Lanka",
+    "photos": [
+        {
+            "id": "1785505030193-Producto_destacada_Vainilla.webp",
+            "url": "https://minio.divergecore.com/sunka/1785505030193-Producto_destacada_Vainilla.webp",
+            "name": "Producto destacada Vainilla.webp",
+            "orden": 1
+        }
+    ],
+    "benefits": [
+        {
+            "id": "0845e60f-2056-41cf-8c62-ee12e8d91439",
+            "name": "Beneficio 1"
+        },
+        {
+            "id": "b6eceaa7-8234-4501-a8f4-468939678df8",
+            "name": "Beneficio 2"
+        }
+    ],
+    "club_price": 12.9,
+    "description": "Una selecta mezcla de tés negros de distintos orígenes con un exquisito sabor a vainilla, de perfil cálido, aromático y equilibrado. Su filtrante de doble cámara favorece una infusión intensa, mientras el sobre laminado preserva su frescura y aroma. Elaborado bajo estándares ISO 9001, ofrece calidad y un sabor envolvente en cada taza.",
+    "ingredients": [
+        {
+            "id": "75975b24-3d77-4c99-a1a0-b9a385f33969",
+            "name": "Ingrediente 1"
+        },
+        {
+            "id": "b5c215c7-e410-4b33-8e95-9c38a80fe2b7",
+            "name": "Ingrediente 2"
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0ee684-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0ee68a-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0ee691-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con quesos cremosos, carnes blancas ligeramente especiadas y postres de manzana, vainilla o frutos secos"
+    },
+    "presentation": [
+        {
+            "id": "ab0ee560-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0ee56a-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "2 g"
+        },
+        {
+            "id": "ab0ee575-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Doble cámara"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0ee648-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0ee650-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0ee659-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [
+        {
+            "id": "ab0ee5a2-8d2b-11f1-b155-02420a000124",
+            "name": "Rainforest Alliance Certified"
+        },
+        {
+            "id": "3a08c289-aecf-45c3-9664-1257e5de8948",
+            "name": "Pure ceylon tea"
+        }
+    ],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0ee5b6-8d2b-11f1-b155-02420a000124",
+                "name": "Té negro intenso"
+            },
+            {
+                "id": "ab0ee5bd-8d2b-11f1-b155-02420a000124",
+                "name": "Vainilla dulce y cremosa "
+            },
+            {
+                "id": "ab0ee5c5-8d2b-11f1-b155-02420a000124",
+                "name": "Matices cálidos"
+            },
+            {
+                "id": "ab0ee5cc-8d2b-11f1-b155-02420a000124",
+                "name": "Final aterciopelado y persistente"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0ee629-8d2b-11f1-b155-02420a000124",
+                "name": "Para empezar el dia"
+            },
+            {
+                "id": "ab0ee633-8d2b-11f1-b155-02420a000124",
+                "name": "Para compartir"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0ee5ea-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0ee5f2-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0ee5f9-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0ee601-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Vainilla Chai despliega un aroma dulce y envolvente, donde la vainilla suaviza el carácter profundo de los tés negros seleccionados. En boca ofrece un sabor cálido, delicadamente cremoso y equilibrado. De cuerpo medio, culmina en un final aterciopelado, aromático y persistente."
+    },
+    "related_products": [
+        {
+            "id": "b123560d-bfce-4c8a-996f-9db13f682358"
+        },
+        {
+            "id": "d0377d65-0335-4eb9-93ad-a7fcca89a752"
+        },
+        {
+            "id": "623f2b51-f181-4085-9ee3-f9036198f774"
+        }
+    ],
+    "short_description": "Un blend Superior de tés negros de orígenes seleccionados con delicado sabor a vainilla, en filtrante de doble cámara, cálido, aromático y exquisitamente equilibrado",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

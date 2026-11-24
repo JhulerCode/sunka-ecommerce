@@ -1,14 +1,10 @@
 ---
-import { formatProductos } from '@/lib/api'
 import { formatProductPrice, getProductPrice, hasClubPrice } from '@/lib/pricing'
-import { serverGet as get } from '@/lib/server/public-api'
+import { getFeaturedStoreProducts } from '@/lib/server/product-catalog'
 
 const isAuthenticated = Astro.locals.session?.status === 'authenticated'
 
-const res2 = await get('productos', { featured: 'true' })
-const productos = formatProductos(res2.ok ? res2.data : [])
-    .filter((producto) => producto.is_featured)
-    .slice(0, 6)
+const productos = (await getFeaturedStoreProducts()).slice(0, 6)
 ---
 
 <section class="bg-sunka-cream py-9 text-sunka-ink md:py-11">

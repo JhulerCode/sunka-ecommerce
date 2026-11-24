@@ -30,7 +30,7 @@ export const POST: APIRoute = async (context) => {
     if (!assertSameOrigin(context.request)) return forbiddenOrigin()
     const parsed = await parseJson(context.request, createPaymentSchema)
     if (!parsed.success) return invalidRequest()
-    const prepared = prepareCheckoutOrder(context, parsed.data.partner_order)
+    const prepared = await prepareCheckoutOrder(context, parsed.data.partner_order)
     if (!prepared.ok) {
         console.error(`[create-payment] prepareCheckoutOrder -> ${prepared.status} ${prepared.problem.type}`)
         return json(prepared)

@@ -1,0 +1,166 @@
+{
+    "article_id": "293476ce-3f50-4a7f-9c69-bf7c26aa4ead",
+    "slug": "muna-hierba-luisa-y-jengibre",
+    "published": true,
+    "sort_order": 13,
+    "featured": true,
+    "featured_order": 12,
+    "name": "Muña Hierba luisa y Jengibre",
+    "badge": "Blend de autor",
+    "price": 18.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1787253858970-MuÃ±a_jengibre_destacado.webp",
+            "url": "https://minio.divergecore.com/sunka/1787253858970-MuÃ±a_jengibre_destacado.webp",
+            "name": "MuÃ±a jengibre destacado.webp",
+            "orden": 1
+        }
+    ],
+    "benefits": [
+        {
+            "id": "0845e60f-2056-41cf-8c62-ee12e8d91439",
+            "name": "Beneficio 1"
+        },
+        {
+            "id": "b6eceaa7-8234-4501-a8f4-468939678df8",
+            "name": "Beneficio 2"
+        }
+    ],
+    "club_price": 17.9,
+    "description": "La muña y la hierba luisa aportan una frescura herbal y delicadamente cítrica, equilibrada por la calidez especiada del jengibre. Su malla piramidal compostable permite que los ingredientes se expandan y liberen plenamente sus aromas y sabores. Una infusión premium, reconfortante y de final refrescante.",
+    "ingredients": [
+        {
+            "id": "75975b24-3d77-4c99-a1a0-b9a385f33969",
+            "name": "Ingrediente 1"
+        },
+        {
+            "id": "b5c215c7-e410-4b33-8e95-9c38a80fe2b7",
+            "name": "Ingrediente 2"
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0e1d4c-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0e1d53-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0e1d5e-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Maridaje recomendado: pie de manzana y canela, galletas de canela "
+    },
+    "presentation": [
+        {
+            "id": "ab0e1c7b-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "10"
+        },
+        {
+            "id": "ab0e1c84-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "2.5 g"
+        },
+        {
+            "id": "ab0e1c8d-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Piramidal"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0e1d21-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "2.5 g por pirámide",
+            "description": "Mayor gramaje para logras una infusión más intensa, aromática y con mayor cuerpo."
+        },
+        {
+            "id": "ab0e1d28-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Malla piramidal compostable",
+            "description": "Brinda el espacio ideal para que los ingredientes se expandan y liberen plenamente su sabor."
+        },
+        {
+            "id": "ab0e1d31-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Ingredientes naturales",
+            "description": "Una cuidada selección de hojas, frutas, flores uy especias para crear blends equilibrados y expresivos."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0e1cbb-8d2b-11f1-b155-02420a000124",
+                "name": "VainillaMuña herbal"
+            },
+            {
+                "id": "ab0e1cc1-8d2b-11f1-b155-02420a000124",
+                "name": "Hierba luisa cítrica"
+            },
+            {
+                "id": "ab0e1cc6-8d2b-11f1-b155-02420a000124",
+                "name": "Jengibre especiado"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0e1d0b-8d2b-11f1-b155-02420a000124",
+                "name": "Despues de comer"
+            },
+            {
+                "id": "ab0e1d0f-8d2b-11f1-b155-02420a000124",
+                "name": "Para relajarte"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0e1ce2-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0e1ce6-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0e1cec-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0e1cf1-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "La muña y la hierba luisa ofrecen un aroma herbal fresco con delicados matices cítricos, mientras el jengibre aporta una calidez especiada que equilibra la mezcla. De cuerpo ligero y sabor armonioso, deja un final limpio, refrescante y sutilmente cálido"
+    },
+    "related_products": [
+        {
+            "id": "64d85e33-243c-4036-8030-bf9b3e141682"
+        },
+        {
+            "id": "f5d90ebb-38b1-4c10-844e-28b805927ad1"
+        },
+        {
+            "id": "b123560d-bfce-4c8a-996f-9db13f682358"
+        }
+    ],
+    "short_description": "Un blend premium en formato piramidal, donde la muña, la hierba luisa y el jengibre se fusionan en un equilibrio herbal y refrescante.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

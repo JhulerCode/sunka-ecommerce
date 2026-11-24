@@ -1,5 +1,6 @@
 import type { APIContext } from 'astro'
 import { requestWithOptionalSession } from './backend'
+import { getProductContentById } from './product-content'
 import { renderOrderConfirmation, type MailOrder } from '@/lib/mail/order'
 import { sendMail } from './mail'
 
@@ -32,10 +33,20 @@ export async function sendCheckoutConfirmation(
 
     let sent = false
     try {
+        const order = {
+            ...data.order,
+            partner_order_lines: (data.order.partner_order_lines ?? []).map((line) => {
+                const content = getProductContentById(
+                    String(line.article_id ?? line.article?.id ?? ''),
+                )
+                return { ...line, name: content?.name || line.name }
+            }),
+        }
+
         await sendMail({
             to,
             ...renderOrderConfirmation({
-                order: data.order,
+                order,
                 lookupCode: data.lookup_code,
                 accessToken: data.access_token,
                 baseUrl: new URL(context.request.url).origin,

@@ -95,7 +95,7 @@ export const Cart = {
 
                 linea: producto.linea,
                 line_name: producto.line_name || producto.line?.name,
-                presentation: producto.presentation || producto.ecommerce_data?.presentation,
+                presentation: producto.presentation,
 
                 blend_datos: producto.blend_datos,
             });

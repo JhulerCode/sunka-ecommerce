@@ -1,0 +1,182 @@
+{
+    "article_id": "079abd48-0241-4fac-9a90-8c6be2fa5a23",
+    "slug": "curcuma-y-jengibre-20-sobres",
+    "published": true,
+    "sort_order": 36,
+    "featured": true,
+    "featured_order": 34,
+    "name": "Cúrcuma y jengibre 20 sobres",
+    "badge": "Blend de autor",
+    "price": 8.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1766423180181-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1766423180181-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1766423180766-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1766423180766-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1766423180921-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1766423180921-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762782421199984",
+            "name": "Infusión revitalizante que estimula la digestión."
+        },
+        {
+            "id": "1762782428694272",
+            "name": "Fortalece las defensas y combate el cansancio de forma natural."
+        }
+    ],
+    "club_price": 7.9,
+    "description": "Elaborada con cúrcuma y jengibre cuidadosamente seleccionados, esta infusión reúne ingredientes naturales en una mezcla intensa y deliciosa. Su sabor combina el carácter terroso de la cúrcuma con el toque cálido y ligeramente picante del jengibre. Una taza aromática, equilibrada y reconfortante para disfrutar en cualquier momento.",
+    "ingredients": [
+        {
+            "id": "1762782406766761",
+            "name": "Cúrcuma (Curcuma longa)."
+        },
+        {
+            "id": "1762782413358120",
+            "name": "Jengibre (Zingiber officinale)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0dfb42-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0dfb55-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0dfb6c-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con vegetales asados, arroces especiados, quesos semimaduros y postres de coco o naranja"
+    },
+    "presentation": [
+        {
+            "id": "ab0df90f-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0df92c-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1.2 g"
+        },
+        {
+            "id": "ab0df941-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0dfad0-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0dfae9-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0dfaff-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": 19.9,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0df9c0-8d2b-11f1-b155-02420a000124",
+                "name": "Cúrcuma terrosa"
+            },
+            {
+                "id": "ab0df9ce-8d2b-11f1-b155-02420a000124",
+                "name": "Jengibre cálido y picante"
+            },
+            {
+                "id": "ab0df9dd-8d2b-11f1-b155-02420a000124",
+                "name": "Matices especiados"
+            },
+            {
+                "id": "ab0df9ec-8d2b-11f1-b155-02420a000124",
+                "name": "Final intenso y persistente"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0dfa92-8d2b-11f1-b155-02420a000124",
+                "name": "Para empezar el dia"
+            },
+            {
+                "id": "ab0dfa9e-8d2b-11f1-b155-02420a000124",
+                "name": "Despues de comer"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0dfa22-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0dfa35-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0dfa44-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0dfa52-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Cúrcuma y Jengibre despliega un aroma cálido y especiado, donde el carácter terroso de la cúrcuma se integra con la intensidad aromática del jengibre. En boca ofrece un sabor profundo y equilibrado, acompañado de un agradable toque picante. De cuerpo medio, culmina en un final cálido, persistente y ligeramente especiado."
+    },
+    "related_products": [
+        {
+            "id": "44391739-ec55-4a80-bad1-af796adbac5e"
+        },
+        {
+            "id": "8d04068a-b9a8-4605-a6ec-b84279a056fc"
+        },
+        {
+            "id": "d0377d65-0335-4eb9-93ad-a7fcca89a752"
+        }
+    ],
+    "short_description": "Una combinación de cúrcuma y jengibre elaborada con insumos naturales, sin colorantes ni preservantes, que lleva lo mejor de sus ingredientes a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

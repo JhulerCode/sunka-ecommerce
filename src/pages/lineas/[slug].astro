@@ -7,7 +7,7 @@ import LineaIdealParaTi from '@/components/lineas/LineaIdealParaTi.astro'
 import LineaDiferencia from '@/components/lineas/LineaDiferencia.astro'
 import LineaPreparacion from '@/components/lineas/LineaPreparacion.astro'
 import { getLineaBySlug } from '@/data/lineas'
-import { serverGet as get } from '@/lib/server/public-api'
+import { getStoreProducts } from '@/lib/server/product-catalog'
 
 const lineaConfig = getLineaBySlug(Astro.params.slug || '')
 
@@ -16,34 +16,16 @@ if (!lineaConfig) {
 }
 
 const productosDestacadosIds = lineaConfig.productosDestacadosIds ?? []
-let productosDestacados: Array<Record<string, any>> = []
-
-if (productosDestacadosIds.length > 0) {
-    const productosResponse = await get('productos', { ids: productosDestacadosIds })
-    const productosById = new Map(
-        (productosResponse.ok ? productosResponse.data ?? [] : []).map(
-            (producto: Record<string, any>) => [producto.id, producto],
-        ),
-    )
-
-    productosDestacados = productosDestacadosIds
-        .map((id: string) => productosById.get(id))
-        .filter(Boolean)
-        .map((producto: Record<string, any>) => {
-            const ecommerceData = producto.ecommerce_data ?? {}
-            const fotoPrincipal = ecommerceData.photos?.[0]
-
-            return {
-                id: producto.id,
-                // ...ecommerceData,
-                name: ecommerceData.name,
-                description: ecommerceData.description,
-                image: fotoPrincipal?.url,
-                imageAlt: fotoPrincipal?.name ?? ecommerceData.name,
-                href: `/productos/${producto.id}`,
-            }
-        })
-}
+const productosDestacados = productosDestacadosIds.length
+    ? (await getStoreProducts(productosDestacadosIds)).map((producto) => ({
+          id: producto.id,
+          name: producto.name,
+          description: producto.short_description || producto.description,
+          image: producto.photo,
+          imageAlt: producto.photos?.[0]?.name ?? producto.name,
+          href: `/productos/${producto.slug}`,
+      }))
+    : []
 
 const linea = { ...lineaConfig, productosDestacados }
 ---

@@ -7,7 +7,68 @@ import {
     partnerOrderTypeSchema,
 } from '../../src/lib/api-schemas'
 import { buildCheckoutDraft, prepareCheckoutOrder } from '../../src/lib/server/checkout-order'
+import type { CheckoutProductData } from '../../src/lib/server/product-catalog'
 import { getMinimumDeliveryDate } from '../../src/lib/delivery-date'
+
+vi.mock('../../src/lib/server/product-catalog', () => ({
+    getCheckoutProducts: vi.fn(async (ids: string[]) =>
+        new Map(
+            ids.map((id) => [
+                id,
+                {
+                    product: {
+                        id,
+                        name: id,
+                        unit: 'UND',
+                        igv_afectacion: '10',
+                        line: { name: 'Tradicional' },
+                    },
+                    content: {
+                        article_id: id,
+                        slug: id,
+                        published: true,
+                        name: id,
+                        price: 20,
+                        club_price: null,
+                        presentation: [{ label: 'Saquitos', value: 50 }],
+                    },
+                },
+            ]),
+        ),
+    ),
+}))
+
+function productData(
+    articleId: string,
+    price: number,
+    lineName = 'Tradicional',
+    presentation = 50,
+): CheckoutProductData {
+    return {
+        product: {
+            id: articleId,
+            name: articleId,
+            unit: 'UND',
+            igv_afectacion: '10',
+            line: { name: lineName },
+        } as any,
+        content: {
+            article_id: articleId,
+            slug: articleId,
+            published: true,
+            name: articleId,
+            price,
+            club_price: null,
+            presentation: [{ label: 'Saquitos', value: presentation }],
+        },
+    }
+}
+
+function products(...items: CheckoutProductData[]) {
+    return new Map(items.map((item) => [item.content.article_id, item]))
+}
+
+const defaultProducts = products(productData('product-1', 20), productData('product-2', 20))
 
 function draft(overrides: Record<string, unknown> = {}) {
     return {
@@ -30,7 +91,7 @@ function draft(overrides: Record<string, unknown> = {}) {
     }
 }
 
-const context = { now: new Date('2026-08-28T19:00:00.000Z') }
+const context = { now: new Date('2026-08-28T19:00:00.000Z'), products: defaultProducts }
 
 describe('contrato partnerOrder.type con integration', () => {
     it('define sale como único tipo válido del checkout', () => {
@@ -126,13 +187,45 @@ describe('preparación del pedido del checkout', () => {
         expect(order.delivery_cost).toBe(0)
     })
 
+    it('calcula el precio desde el contenido si el navegador no lo envía', () => {
+        const order = buildCheckoutDraft(
+            draft({
+                partner_order_lines: [
+                    {
+                        article_id: 'product-1',
+                        quantity: 1,
+                    },
+                ],
+            }),
+            context,
+        )
+        expect(order.amount).toBe(20)
+        expect(order.partner_order_lines[0].unit_price).toBeCloseTo(20 / 1.18, 10)
+    })
+
+    it('rechaza un precio manipulado por el navegador', () => {
+        expect(() =>
+            buildCheckoutDraft(
+                draft({
+                    partner_order_lines: [
+                        {
+                            article_id: 'product-1',
+                            quantity: 1,
+                            unit_price: 0.01,
+                        },
+                    ],
+                }),
+                context,
+            ),
+        ).toThrow('PRICE_CHANGED')
+    })
+
     it('exige líneas con artículo, cantidad y precio válidos', () => {
         for (const partner_order_lines of [
             [],
             [{ article_id: '', quantity: 1, unit_price: 20 }],
             [{ article_id: 'product-1', quantity: 0, unit_price: 20 }],
             [{ article_id: 'product-1', quantity: 101, unit_price: 20 }],
-            [{ article_id: 'product-1', quantity: 1 }],
             [{ article_id: 'product-1', quantity: 1, unit_price: -1 }],
         ]) {
             expect(() => buildCheckoutDraft(draft({ partner_order_lines }), context)).toThrow(
@@ -164,7 +257,13 @@ describe('preparación del pedido del checkout', () => {
                     },
                 ],
             }),
-            context,
+            {
+                ...context,
+                products: products(
+                    productData('product-1', 25, 'Tradicional', 50),
+                    productData('product-2', 25, 'Tradicional', 20),
+                ),
+            },
         )
         expect(order.delivery_cost).toBe(0)
         expect(order.promotions[0].key).toBe('tradicional-general')
@@ -301,10 +400,10 @@ describe('datos de facturación del pedido', () => {
         expect('delivery_article_id' in order).toBe(false)
     })
 
-    it('el BFF responde 503 si falta el artículo de delivery', () => {
+    it('el BFF responde 503 si falta el artículo de delivery', async () => {
         vi.stubEnv('ERP_GUEST_PARTNER_ID', 'partner-invitado')
         vi.stubEnv('ERP_DELIVERY_ARTICLE_ID', '')
-        const result = prepareCheckoutOrder(
+        const result = await prepareCheckoutOrder(
             { cookies: { has: () => false } } as any,
             draft({ ...shipping, delivery_date: getMinimumDeliveryDate() }),
         )

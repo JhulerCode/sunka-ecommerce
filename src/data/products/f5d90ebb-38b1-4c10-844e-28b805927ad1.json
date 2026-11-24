@@ -1,0 +1,166 @@
+{
+    "article_id": "f5d90ebb-38b1-4c10-844e-28b805927ad1",
+    "slug": "eucalipto-citrus",
+    "published": true,
+    "sort_order": 45,
+    "featured": true,
+    "featured_order": 43,
+    "name": "Eucalipto Citrus",
+    "badge": "Blend de autor",
+    "price": 18.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1785501486181-Eucalipto_destacado.webp",
+            "url": "https://minio.divergecore.com/sunka/1785501486181-Eucalipto_destacado.webp",
+            "name": "Eucalipto destacado.webp",
+            "orden": 1
+        }
+    ],
+    "benefits": [
+        {
+            "id": "0845e60f-2056-41cf-8c62-ee12e8d91439",
+            "name": "Beneficio 1"
+        },
+        {
+            "id": "b6eceaa7-8234-4501-a8f4-468939678df8",
+            "name": "Beneficio 2"
+        }
+    ],
+    "club_price": 17.9,
+    "description": "Su perfil herbal y refrescante revela notas naturales que evocan limón y lima, sin cítricos añadidos. La malla piramidal compostable permite que las hojas se expandan y liberen plenamente su aroma y sabor. Una infusión premium, ligera y equilibrada, con un final cítrico persistente.",
+    "ingredients": [
+        {
+            "id": "75975b24-3d77-4c99-a1a0-b9a385f33969",
+            "name": "Ingrediente 1"
+        },
+        {
+            "id": "b5c215c7-e410-4b33-8e95-9c38a80fe2b7",
+            "name": "Ingrediente 2"
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0fb4a5-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0fb4b6-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0fb4ec-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Maridaje recomendado: queque de limón y miel."
+    },
+    "presentation": [
+        {
+            "id": "ab0fb1fa-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "10"
+        },
+        {
+            "id": "ab0fb217-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "2.5 g"
+        },
+        {
+            "id": "ab0fb232-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Piramidal"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0fb41c-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "2.5 g por pirámide",
+            "description": "Mayor gramaje para logras una infusión más intensa, aromática y con mayor cuerpo."
+        },
+        {
+            "id": "ab0fb431-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Malla piramidal compostable",
+            "description": "Brinda el espacio ideal para que los ingredientes se expandan y liberen plenamente su sabor."
+        },
+        {
+            "id": "ab0fb450-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Ingredientes naturales",
+            "description": "Una cuidada selección de hojas, frutas, flores uy especias para crear blends equilibrados y expresivos."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0fb2da-8d2b-11f1-b155-02420a000124",
+                "name": "Eucalipto herbal"
+            },
+            {
+                "id": "ab0fb2ec-8d2b-11f1-b155-02420a000124",
+                "name": "Matices naturales de limón y lima"
+            },
+            {
+                "id": "ab0fb301-8d2b-11f1-b155-02420a000124",
+                "name": "Frescura balsámica"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0fb3d4-8d2b-11f1-b155-02420a000124",
+                "name": "Para relajarte"
+            },
+            {
+                "id": "ab0fb3e2-8d2b-11f1-b155-02420a000124",
+                "name": "Para la oficina"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0fb349-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0fb366-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0fb379-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0fb38c-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "El Eucalipto Citrus ofrece un aroma herbal intenso con notas naturales que evocan limón y lima. En boca es fresco, ligero y equilibrado, con una agradable sensación balsámica. Su final es limpio, cítrico y refrescante, con una persistencia delicada."
+    },
+    "related_products": [
+        {
+            "id": "e9dc6380-3c61-4e2b-a17d-7bb74b2e2d67"
+        },
+        {
+            "id": "293476ce-3f50-4a7f-9c69-bf7c26aa4ead"
+        },
+        {
+            "id": "d0377d65-0335-4eb9-93ad-a7fcca89a752"
+        }
+    ],
+    "short_description": "Un blend premium en formato piramidal, donde el eucalipto despliega notas naturales que evocan limón y lima en un delicado equilibrio.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

@@ -1,3 +1,4 @@
+import { productSlug } from '@/lib/product-slug'
 import type { ApiProblem, ApiResult, Product } from '@/types/api'
 
 export const urls = {
@@ -132,21 +133,19 @@ export async function delet<T = any>(endpoint: Endpoint, item: RequestItem, _mes
 
 export function formatProductos(datos: Array<Record<string, any>> = []): Product[] {
     return datos.map((source): Product => {
-        const ecommerceData = (source.ecommerce_data || {}) as Record<string, any>
-        const photos = Array.isArray(ecommerceData.photos) ? ecommerceData.photos : []
         const producto: Record<string, any> = {
             ...source,
-            ...ecommerceData,
-            name: ecommerceData.name ?? source.name,
             unidad: source.unit,
             linea: source.line_id,
             linea1: source.line,
             igv_afectacion: source.igv_affectation,
-            photos,
+            photos: Array.isArray(source.photos) ? source.photos : [],
         }
 
         return {
             ...producto,
+            id: producto.id,
+            name: producto.name,
             price:
                 producto.price == null || producto.price === ''
                     ? producto.price
@@ -160,7 +159,8 @@ export function formatProductos(datos: Array<Record<string, any>> = []): Product
                     ? null
                     : Number(producto.previous_price).toFixed(2),
             photo: producto.photos[0]?.url,
-            slug: producto.id,
+            slug: String(producto.slug ?? productSlug({ id: producto.id, name: producto.name })),
+            article_id: String(producto.article_id ?? producto.id),
         } as Product
     })
 }

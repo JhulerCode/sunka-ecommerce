@@ -1,0 +1,182 @@
+{
+    "article_id": "a3d94dff-f781-4389-9475-45979324b919",
+    "slug": "jamaica-pina-20-sobres",
+    "published": true,
+    "sort_order": 52,
+    "featured": true,
+    "featured_order": 48,
+    "name": "Jamaica piña 20 sobres",
+    "badge": "Blend de autor",
+    "price": 8.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1766423457573-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1766423457573-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1766423458158-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1766423458158-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1766423458305-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1766423458305-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762781884314962",
+            "name": "Equilibrio perfecto entre acidez y dulzura."
+        },
+        {
+            "id": "1762781891858969",
+            "name": "Favorece la digestión y aporta un toque tropical lleno de vitalidad."
+        }
+    ],
+    "club_price": 7.9,
+    "description": "Elaborada con flor de Jamaica y piña cuidadosamente seleccionadas, esta infusión combina ingredientes naturales en una mezcla vibrante y deliciosa. Su sabor tropical equilibra la intensidad ligeramente ácida de la Jamaica con el dulzor frutal de la piña. Una bebida refrescante y versátil para disfrutar caliente o fría.",
+    "ingredients": [
+        {
+            "id": "1762781845658118",
+            "name": "Jamaica (Hibiscus sabdariffa)"
+        },
+        {
+            "id": "1762781848922500",
+            "name": "Piña (Ananas comosus)"
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0ef07e-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0ef085-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0ef08c-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con ceviches, ensaladas frescas, quesos suaves y postres de coco o vainilla."
+    },
+    "presentation": [
+        {
+            "id": "ab0eee86-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0eee9b-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1.2 g"
+        },
+        {
+            "id": "ab0eeede-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0ef008-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0ef046-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0ef052-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0eef2b-8d2b-11f1-b155-02420a000124",
+                "name": "Flor de Jamaica intensa"
+            },
+            {
+                "id": "ab0eef33-8d2b-11f1-b155-02420a000124",
+                "name": "Piña dulce y tropical"
+            },
+            {
+                "id": "ab0eef3d-8d2b-11f1-b155-02420a000124",
+                "name": "Acidez refrescante"
+            },
+            {
+                "id": "ab0eef44-8d2b-11f1-b155-02420a000124",
+                "name": "Final frutal persistente"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0eefe3-8d2b-11f1-b155-02420a000124",
+                "name": "Para compartir"
+            },
+            {
+                "id": "ab0eefe9-8d2b-11f1-b155-02420a000124",
+                "name": "Para relajarte"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0eef9c-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0eefa6-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0eefae-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0eefb4-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Jamaica y Piña despliega un aroma tropical y frutal, donde la frescura de la piña acompaña el carácter intenso de la flor de Jamaica. En boca ofrece un equilibrio entre dulzura y acidez, con cuerpo ligero y vivaz. Culmina en un final refrescante, jugoso y agradablemente persistente."
+    },
+    "related_products": [
+        {
+            "id": "6c760f4f-755a-4233-b233-62e8025f2eac"
+        },
+        {
+            "id": "866333af-b1c3-4ef1-9d32-8248e99146b6"
+        },
+        {
+            "id": "a3471eb0-ffbc-488c-b256-911d78592241"
+        }
+    ],
+    "short_description": "Una combinación natural de flor de Jamaica y piña, sin colorantes ni preservantes, que lleva lo mejor de sus ingredientes a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

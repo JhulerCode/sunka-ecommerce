@@ -132,11 +132,29 @@ describe('promociones del checkout', () => {
         }, {
             now: new Date('2026-08-22T19:00:00.000Z'),
             deliveryArticleId: 'article-delivery',
+            products: new Map([['product-1', {
+                product: {
+                    id: 'product-1',
+                    name: 'Producto',
+                    unit: 'UND',
+                    igv_afectacion: '10',
+                    line: { name: 'Tradicional' },
+                } as any,
+                content: {
+                    article_id: 'product-1',
+                    slug: 'product-1',
+                    published: true,
+                    name: 'Producto',
+                    price: 20,
+                    club_price: null,
+                    presentation: [{ label: 'Saquitos', value: 20 }],
+                },
+            }]]),
         })
 
         expect(order.delivery_cost).toBe(10)
         expect(order.amount).toBe(30)
         expect(order.promotions).toEqual([])
-        expect(order.partner_order_lines[0].unit_price).toBe(20)
+        expect(order.partner_order_lines[0].unit_price).toBeCloseTo(20 / 1.18, 10)
     })
 })

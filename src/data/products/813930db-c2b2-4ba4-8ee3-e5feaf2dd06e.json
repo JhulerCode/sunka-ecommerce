@@ -1,0 +1,198 @@
+{
+    "article_id": "813930db-c2b2-4ba4-8ee3-e5feaf2dd06e",
+    "slug": "diet-te-verde-21-sobres",
+    "published": true,
+    "sort_order": 27,
+    "featured": true,
+    "featured_order": 26,
+    "name": "Diet te verde 21 sobres",
+    "badge": "Blend de autor",
+    "price": 8.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1766422973277-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1766422973277-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1766422973975-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1766422973975-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1766422974138-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1766422974138-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762783116834662",
+            "name": "Favorece el metabolismo y ayuda a controlar el peso con antioxidantes naturales y cero azúcar."
+        }
+    ],
+    "club_price": 7.9,
+    "description": "Elaborada con té verde, naturalmente rico en polifenoles, y una selección de alcachofa, diente de león, culén, borraja y manzanilla, hierbas tradicionalmente apreciadas para acompañar la digestión y una alimentación equilibrada. La Stevia aporta un delicado dulzor natural. Una infusión dietética, ligera y agradable para incorporar a tu rutina diaria.\n",
+    "ingredients": [
+        {
+            "id": "7b1dc908-df2e-426d-bcb7-f2dc84fa74d8",
+            "name": "Alcachofa (Cynara scolymus)."
+        },
+        {
+            "id": "e1f688bb-e79e-4532-a55d-a12c4cc4dc80",
+            "name": "Borraja (Borago officinalis)."
+        },
+        {
+            "id": "1762783085561644",
+            "name": "Manzanilla (Matricaria chamomilla)."
+        },
+        {
+            "id": "1762783090682441",
+            "name": "Diente de león (Taraxacum officinale)."
+        },
+        {
+            "id": "1762783094882805",
+            "name": "Culén (Psoralea glandulosa)."
+        },
+        {
+            "id": "1762783100442699",
+            "name": "Té verde (Camellia sinensis)."
+        },
+        {
+            "id": "1762783106434536",
+            "name": "Estevia (Stevia rebaudiana)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0ea619-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0ea621-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0ea62a-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": ""
+    },
+    "presentation": [
+        {
+            "id": "ab0ea4ff-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "21"
+        },
+        {
+            "id": "ab0ea508-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1.5 g"
+        },
+        {
+            "id": "ab0ea513-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0ea5e1-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0ea5e8-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0ea5f2-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0ea54d-8d2b-11f1-b155-02420a000124",
+                "name": "Té verde fresco y vegetal"
+            },
+            {
+                "id": "ab0ea554-8d2b-11f1-b155-02420a000124",
+                "name": "Manzanilla floral"
+            },
+            {
+                "id": "ab0ea55b-8d2b-11f1-b155-02420a000124",
+                "name": "Matices herbales ligeramente amargos"
+            },
+            {
+                "id": "ab0ea563-8d2b-11f1-b155-02420a000124",
+                "name": "Final suavemente dulce"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0ea5c2-8d2b-11f1-b155-02420a000124",
+                "name": "Para empezar el dia"
+            },
+            {
+                "id": "ab0ea5c7-8d2b-11f1-b155-02420a000124",
+                "name": "Para la oficina"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0ea57f-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0ea588-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0ea591-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0ea599-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Diet Té Verde despliega un aroma herbal y vegetal, suavizado por los delicados matices florales de la manzanilla. En boca combina el frescor del té verde con notas ligeramente amargas y un dulzor sutil aportado por la Stevia. De cuerpo ligero, culmina en un final equilibrado, limpio y agradable."
+    },
+    "related_products": [
+        {
+            "id": "bdd6e7ac-42ad-4a0c-b506-4c8109030b6a"
+        },
+        {
+            "id": "4ca59bee-c0f0-4d64-9163-7453eff89802"
+        },
+        {
+            "id": "9a62d294-7338-4dc7-8c88-197b2d8c1c47"
+        }
+    ],
+    "short_description": "Una selección de té verde y hierbas naturales, sin colorantes ni preservantes, creada para acompañar un estilo de vida equilibrado.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

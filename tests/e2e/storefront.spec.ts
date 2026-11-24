@@ -11,6 +11,16 @@ test('muestra 404 cuando el producto no existe', async ({ page }) => {
     await expect(page).toHaveTitle(/no encontrada|404/i)
 })
 
+test('usa el nombre del producto en la URL y redirige desde el id', async ({ page }) => {
+    const articleId = '2bbbced5-62e2-4d2d-89f8-aa6373ff3904'
+    const legacy = await page.request.get(`/productos/${articleId}`, { maxRedirects: 0 })
+    expect(legacy.status()).toBe(301)
+    expect(legacy.headers()['location']).toContain('/productos/manzanilla-20-sobres')
+
+    await page.goto('/productos/manzanilla-20-sobres')
+    await expect(page.getByRole('heading', { name: 'Manzanilla 20 sobres' })).toBeVisible()
+})
+
 test('envía newsletter por el BFF del mismo origen', async ({ page }) => {
     await page.goto('/')
     const response = await page.evaluate(async () => {
@@ -123,7 +133,7 @@ test('espera la confirmación IPN antes de completar un checkout intent', async 
                     delivery_type: 'retiro',
                     punto_retiro: 'planta-sunka',
                     delivery_date: '2099-01-01',
-                    partner_order_lines: [{ article_id: 'product-1', quantity: 1, unit_price: 10 }],
+                    partner_order_lines: [{ article_id: '2bbbced5-62e2-4d2d-89f8-aa6373ff3904', quantity: 1, unit_price: 8.9 }],
                 },
             }),
         }).then((response) => response.json())
@@ -164,7 +174,7 @@ test('cancela el intento de pago anterior antes de crear uno nuevo', async ({ pa
                     delivery_type: 'retiro',
                     punto_retiro: 'planta-sunka',
                     delivery_date: '2099-01-01',
-                    partner_order_lines: [{ article_id: 'product-1', quantity: 1, unit_price: 10 }],
+                    partner_order_lines: [{ article_id: '2bbbced5-62e2-4d2d-89f8-aa6373ff3904', quantity: 1, unit_price: 8.9 }],
                 },
             }),
         }).then((response) => response.json())
@@ -201,7 +211,7 @@ test('recupera un pago desde la cookie del intento sin repetir el cobro', async 
                     delivery_type: 'retiro',
                     punto_retiro: 'planta-sunka',
                     delivery_date: '2099-01-01',
-                    partner_order_lines: [{ article_id: 'product-1', quantity: 1, unit_price: 10 }],
+                    partner_order_lines: [{ article_id: '2bbbced5-62e2-4d2d-89f8-aa6373ff3904', quantity: 1, unit_price: 8.9 }],
                 },
             }),
         }).then((response) => response.json())

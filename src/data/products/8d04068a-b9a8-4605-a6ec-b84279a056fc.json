@@ -1,0 +1,186 @@
+{
+    "article_id": "8d04068a-b9a8-4605-a6ec-b84279a056fc",
+    "slug": "curcuma-zanahoria-y-naranja-20-sobres",
+    "published": true,
+    "sort_order": 39,
+    "featured": true,
+    "featured_order": 37,
+    "name": "Cúrcuma, zanahoria y naranja 20 sobres",
+    "badge": "Blend de autor",
+    "price": 8.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1767795032187-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1767795032187-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1767795032242-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1767795032242-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1767795032262-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1767795032262-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762782103414815",
+            "name": "Fuente natural de antioxidantes y betacarotenos."
+        },
+        {
+            "id": "1762782126886225",
+            "name": "Ilumina tu piel y aporta energía saludable para cada día."
+        }
+    ],
+    "club_price": 7.9,
+    "description": "Elaborada con cúrcuma, zanahoria y naranja cuidadosamente seleccionadas, esta infusión reúne ingredientes naturales en una mezcla colorida y deliciosa. Su sabor combina el carácter terroso de la cúrcuma, la suavidad de la zanahoria y la frescura cítrica de la naranja. Una taza equilibrada, aromática y agradable para disfrutar caliente o fría.\n",
+    "ingredients": [
+        {
+            "id": "1762782082351980",
+            "name": "Curcuma (Curcuma longa)."
+        },
+        {
+            "id": "1762782090582992",
+            "name": "Zanahoria (Daucus carota)."
+        },
+        {
+            "id": "1762782097975418",
+            "name": "Naranja (Citrus x sinensis)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0ece87-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0ece8e-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0ece96-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con ensaladas frescas, vegetales asados, quesos suaves y postres de coco, vainilla o frutos secos."
+    },
+    "presentation": [
+        {
+            "id": "ab0ecd5a-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0ecd6b-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1.2 g"
+        },
+        {
+            "id": "ab0ecd77-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0ece51-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0ece59-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0ece62-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0ecdba-8d2b-11f1-b155-02420a000124",
+                "name": "Cúrcuma terrosa"
+            },
+            {
+                "id": "ab0ecdc1-8d2b-11f1-b155-02420a000124",
+                "name": "Zanahoria suavemente dulce"
+            },
+            {
+                "id": "ab0ecdc8-8d2b-11f1-b155-02420a000124",
+                "name": "Naranja fresca y cítrica"
+            },
+            {
+                "id": "ab0ecdce-8d2b-11f1-b155-02420a000124",
+                "name": "Final cálido y refrescante"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0ece2f-8d2b-11f1-b155-02420a000124",
+                "name": "Para empezar el dia"
+            },
+            {
+                "id": "ab0ece34-8d2b-11f1-b155-02420a000124",
+                "name": "Para compartir"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0ecdee-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0ecdf8-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0ece00-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0ece07-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Cúrcuma, Zanahoria y Naranja despliega un aroma fresco y cítrico, acompañado por el carácter terroso de la cúrcuma. En boca, la suavidad ligeramente dulce de la zanahoria equilibra la vivacidad de la naranja. De cuerpo ligero, culmina en un final cálido, refrescante y delicadamente especiado."
+    },
+    "related_products": [
+        {
+            "id": "079abd48-0241-4fac-9a90-8c6be2fa5a23"
+        },
+        {
+            "id": "182ed6a1-38e7-48e3-ac41-78a82d97bf47"
+        },
+        {
+            "id": "1497aff4-23b8-4c90-8b48-c976ca81060e"
+        }
+    ],
+    "short_description": "Una combinación de cúrcuma, zanahoria y naranja elaborada con insumos naturales, sin colorantes ni preservantes, que lleva lo mejor de sus ingredientes a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

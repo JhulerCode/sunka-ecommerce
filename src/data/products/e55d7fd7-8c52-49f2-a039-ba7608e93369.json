@@ -1,0 +1,182 @@
+{
+    "article_id": "e55d7fd7-8c52-49f2-a039-ba7608e93369",
+    "slug": "jamaica-50-sobres",
+    "published": true,
+    "sort_order": 51,
+    "featured": true,
+    "featured_order": 47,
+    "name": "Jamaica 50 sobres",
+    "badge": "Blend de autor",
+    "price": 17.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1766425040562-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1766425040562-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1766425040411-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1766425040411-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1766425039733-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1766425039733-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762781760330282",
+            "name": "Rica en antioxidantes y vitamina C."
+        },
+        {
+            "id": "1762781769595897",
+            "name": "Ayuda a depurar el organismo y mantenerte hidratado naturalmente."
+        },
+        {
+            "id": "1762781773186708",
+            "name": "Refrescante y deliciosa caliente o fría."
+        }
+    ],
+    "club_price": 16.9,
+    "description": "Elaborada únicamente con flor de Jamaica seleccionada, esta infusión conserva la intensidad y pureza natural de su ingrediente. Ofrece un sabor exquisito, ligeramente ácido y refrescante, acompañado de un atractivo color rubí. Una bebida vibrante y versátil para disfrutar caliente o fría.",
+    "ingredients": [
+        {
+            "id": "1762781793202225",
+            "name": "Jamaica (Hibiscus sabdariffa)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0f364a-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0f3650-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0f3658-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con ceviches, comidas ligeramente picantes, quesos frescos y postres de chocolate amargo o coco."
+    },
+    "presentation": [
+        {
+            "id": "ab0f351f-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "50"
+        },
+        {
+            "id": "ab0f3531-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1.2 g"
+        },
+        {
+            "id": "ab0f353d-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0f360b-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0f3614-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0f361d-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0f357b-8d2b-11f1-b155-02420a000124",
+                "name": "Flor de Jamaica intensa"
+            },
+            {
+                "id": "ab0f3582-8d2b-11f1-b155-02420a000124",
+                "name": "Matices florales"
+            },
+            {
+                "id": "ab0f3589-8d2b-11f1-b155-02420a000124",
+                "name": "Acidez refrescante"
+            },
+            {
+                "id": "ab0f3590-8d2b-11f1-b155-02420a000124",
+                "name": "Final limpio y vibrante"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0f35e4-8d2b-11f1-b155-02420a000124",
+                "name": "Para compartir"
+            },
+            {
+                "id": "ab0f35e8-8d2b-11f1-b155-02420a000124",
+                "name": "Para relajarte"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0f35a8-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0f35b1-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0f35b9-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0f35c1-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Jamaica despliega un aroma floral y delicadamente frutal, acompañado de su característica intensidad. En boca presenta una acidez vivaz y refrescante, con cuerpo ligero y limpio. Culmina en un final agradable, vibrante y ligeramente persistente."
+    },
+    "related_products": [
+        {
+            "id": "6c760f4f-755a-4233-b233-62e8025f2eac"
+        },
+        {
+            "id": "a3d94dff-f781-4389-9475-45979324b919"
+        },
+        {
+            "id": "8977694d-de6e-47f2-81f8-71ae3e84b6bf"
+        }
+    ],
+    "short_description": "Flor de Jamaica cuidadosamente seleccionada, naturalmente deliciosa y sin colorantes ni preservantes, para llevar lo mejor de nuestros insumos a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

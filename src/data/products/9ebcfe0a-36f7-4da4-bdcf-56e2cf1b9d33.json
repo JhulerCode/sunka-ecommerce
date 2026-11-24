@@ -1,0 +1,182 @@
+{
+    "article_id": "9ebcfe0a-36f7-4da4-bdcf-56e2cf1b9d33",
+    "slug": "jengibre-pina-20-sobres",
+    "published": true,
+    "sort_order": 4,
+    "featured": true,
+    "featured_order": 4,
+    "name": "Jengibre piña 20 sobres",
+    "badge": "Blend de autor",
+    "price": 8.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1766423547673-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1766423547673-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1766423548232-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1766423548232-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1766423548488-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1766423548488-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762782571518615",
+            "name": "Activa el metabolismo y mejora la digestión."
+        },
+        {
+            "id": "1762782576254875",
+            "name": "Una mezcla fresca y exótica que despierta tus sentidos."
+        }
+    ],
+    "club_price": 7.9,
+    "description": "Elaborada con jengibre y piña cuidadosamente seleccionados, esta infusión reúne ingredientes naturales en una mezcla tropical y deliciosa. Su sabor equilibra la dulzura frutal de la piña con el carácter cálido y ligeramente picante del jengibre. Una taza aromática y refrescante para disfrutar caliente o fría.",
+    "ingredients": [
+        {
+            "id": "1762782558742314",
+            "name": "Jengibre (Zingiber officinale)."
+        },
+        {
+            "id": "1762782564094914",
+            "name": "Piña (Ananas comosus)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0ede49-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0ede51-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0ede58-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con pescados, preparaciones de inspiración asiática, quesos suaves y postres de coco o vainilla."
+    },
+    "presentation": [
+        {
+            "id": "ab0ed7a5-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0ed7b2-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1.2 g"
+        },
+        {
+            "id": "ab0ed7bd-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0eddfc-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0ede0e-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0ede1b-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0ed800-8d2b-11f1-b155-02420a000124",
+                "name": "Piña dulce y tropical"
+            },
+            {
+                "id": "ab0ed806-8d2b-11f1-b155-02420a000124",
+                "name": "Jengibre cálido y especiado"
+            },
+            {
+                "id": "ab0ed80d-8d2b-11f1-b155-02420a000124",
+                "name": "Sutil toque picante"
+            },
+            {
+                "id": "ab0ed814-8d2b-11f1-b155-02420a000124",
+                "name": "Final frutal y persistente"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0ed865-8d2b-11f1-b155-02420a000124",
+                "name": "Para empezar el dia"
+            },
+            {
+                "id": "ab0ed86a-8d2b-11f1-b155-02420a000124",
+                "name": "Para compartir"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0ed82d-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0ed834-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0ed83a-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0ed841-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Jengibre y Piña despliega un aroma tropical y frutal, acompañado por la intensidad especiada del jengibre. En boca ofrece un agradable equilibrio entre dulzura, frescura y un sutil toque picante. De cuerpo ligero, culmina en un final jugoso, cálido y persistentemente tropical."
+    },
+    "related_products": [
+        {
+            "id": "866333af-b1c3-4ef1-9d32-8248e99146b6"
+        },
+        {
+            "id": "615ad62c-a2a6-46bc-b4f4-89ce251c1442"
+        },
+        {
+            "id": "f5d90ebb-38b1-4c10-844e-28b805927ad1"
+        }
+    ],
+    "short_description": "Una combinación de jengibre y piña elaborada con insumos naturales, sin colorantes ni preservantes, que lleva lo mejor de sus ingredientes a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

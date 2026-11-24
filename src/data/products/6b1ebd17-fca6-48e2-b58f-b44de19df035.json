@@ -1,0 +1,182 @@
+{
+    "article_id": "6b1ebd17-fca6-48e2-b58f-b44de19df035",
+    "slug": "te-verde-jazmin-20-sobres",
+    "published": true,
+    "sort_order": 25,
+    "featured": true,
+    "featured_order": 24,
+    "name": "Te verde Jazmin 20 sobres",
+    "badge": "Blend de autor",
+    "price": 8.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1766423644077-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1766423644077-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1766423644667-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1766423644667-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1766423644829-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1766423644829-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762783514362819",
+            "name": "Aroma floral y efecto relajante."
+        },
+        {
+            "id": "1762783520502713",
+            "name": "Calma la mente y renueva la energía interior con delicadeza."
+        }
+    ],
+    "club_price": 7.9,
+    "description": "Elaborada con té verde y jazmín cuidadosamente seleccionados, esta infusión reúne ingredientes naturales en una mezcla delicada y exquisita. Su sabor combina la frescura vegetal del té verde con el carácter floral y aromático del jazmín. Una taza ligera, elegante y equilibrada para disfrutar en cualquier momento del día.",
+    "ingredients": [
+        {
+            "id": "1762783497371970",
+            "name": "Té verde (Camellia sinensis)."
+        },
+        {
+            "id": "1762783502354649",
+            "name": "Flor de Jazmín (Jasminum officinale)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0e8367-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0e836c-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0e8372-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Marida perfectamente con sushi, pescados suaves, ensaladas frescas, quesos ligeros y postres de limón o vainilla."
+    },
+    "presentation": [
+        {
+            "id": "ab0e828e-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "20"
+        },
+        {
+            "id": "ab0e8297-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1 g"
+        },
+        {
+            "id": "ab0e829f-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0e8338-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0e833e-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0e8346-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0e82c9-8d2b-11f1-b155-02420a000124",
+                "name": "Té verde fresco"
+            },
+            {
+                "id": "ab0e82cd-8d2b-11f1-b155-02420a000124",
+                "name": "Jazmín floral y aromático"
+            },
+            {
+                "id": "ab0e82d3-8d2b-11f1-b155-02420a000124",
+                "name": "Matices vegetales"
+            },
+            {
+                "id": "ab0e82d9-8d2b-11f1-b155-02420a000124",
+                "name": "Final delicado y persistente"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0e831e-8d2b-11f1-b155-02420a000124",
+                "name": "Para la oficina"
+            },
+            {
+                "id": "ab0e8321-8d2b-11f1-b155-02420a000124",
+                "name": "Para relajarte"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0e82f0-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0e82f6-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0e82fb-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0e8301-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Té Verde y Jazmín despliega un aroma floral y delicado, donde el jazmín armoniza con la frescura vegetal del té verde. En boca ofrece un sabor suave y equilibrado, acompañado de una sutil astringencia. De cuerpo ligero, culmina en un final limpio, perfumado y persistente."
+    },
+    "related_products": [
+        {
+            "id": "3baf320d-3389-4778-bb72-9dcd44bfb8ae"
+        },
+        {
+            "id": "079abd48-0241-4fac-9a90-8c6be2fa5a23"
+        },
+        {
+            "id": "bde961ff-e8fa-4c22-95fd-010119112033"
+        }
+    ],
+    "short_description": "Una delicada combinación de té verde y jazmín, elaborada con insumos naturales y sin colorantes ni preservantes, que lleva lo mejor de sus ingredientes a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

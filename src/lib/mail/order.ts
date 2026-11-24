@@ -1,6 +1,8 @@
 import { emailLayout, escapeHtml, mailBrand } from './layout'
 
 type OrderLine = {
+    article_id?: string
+    article?: { id?: string }
     name?: string
     quantity?: number | string
     unit_price?: number | string

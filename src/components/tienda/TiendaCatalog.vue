@@ -287,7 +287,6 @@ export default defineComponent({
             }
             ;[
                 producto.sensory_profile?.moments,
-                producto.ecommerce_data?.sensory_profile?.moments,
                 producto.momentos,
                 producto.momento,
                 producto.tags,

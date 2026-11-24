@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "DivergeCore Integration API",
-    "version": "14.2.0",
+    "version": "15.0.0",
     "description": "API server-to-server. No acepta Origin, x-company ni qry. Contrato versionado: ver CHANGELOG.md. Documentación viva en /api/v1/docs."
   },
   "servers": [
@@ -95,7 +95,6 @@
     "urn:itderp:problem:partner-order-partner-not-found",
     "urn:itderp:problem:partner-order-partner-role-invalid",
     "urn:itderp:problem:partner-order-payment-method-invalid",
-    "urn:itderp:problem:partner-order-price-changed",
     "urn:itderp:problem:partner-order-price-invalid",
     "urn:itderp:problem:partner-order-required-fields-missing",
     "urn:itderp:problem:partner-order-type-immutable",
@@ -148,18 +147,6 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "featured",
-            "in": "query",
-            "description": "'true' filtra ecommerce_data.is_featured",
-            "schema": {
-              "type": "string",
-              "enum": [
-                "true",
-                "false"
-              ]
             }
           }
         ],
@@ -2003,9 +1990,6 @@
           "list_price": {
             "type": "number"
           },
-          "ecommerce_data": {
-            "type": "object"
-          },
           "line": {
             "type": "object"
           }
@@ -2059,7 +2043,7 @@
           "unit_price": {
             "type": "number",
             "minimum": 0,
-            "description": "Precio unitario neto, sin IGV. Debe coincidir con un precio publicado del artículo convertido a neto (list_price, ecommerce_data.price o ecommerce_data.club_price). Si se omite, se usa list_price."
+            "description": "Precio unitario neto, sin IGV, calculado y validado por la integración. Si se omite, se usa list_price."
           },
           "blend_data": {}
         },

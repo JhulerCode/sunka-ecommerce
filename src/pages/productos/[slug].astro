@@ -3,18 +3,35 @@ import BaseLayout from '@/layouts/BaseLayout.astro'
 import BoxIcon from '@/assets/icons/icon-box.astro'
 import BotanicalMixIcon from '@/assets/icons/icon-botanical-mix.astro'
 import LeafIcon from '@/assets/icons/icon-leaf.astro'
-import { formatProductos } from '@/lib/api'
 import { formatProductPrice, getProductPrice, hasClubPrice } from '@/lib/pricing'
-import { serverGet as get } from '@/lib/server/public-api'
+import { slugifyProductName } from '@/lib/product-slug'
+import { getStoreProductBySlug, getStoreProducts } from '@/lib/server/product-catalog'
+import { getProductContentById } from '@/lib/server/product-content'
 import { getLineaByName } from '@/data/lineas'
 
-const { slug } = Astro.params
+const productIdPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
+const { slug: rawSlug = '' } = Astro.params
 const isAuthenticated = Astro.locals.session?.status === 'authenticated'
 
-const productResponse = await get('productos', { ids: slug })
-const producto = formatProductos(productResponse.ok ? productResponse.data ?? [] : [])[0]
+const requestedSlug = productIdPattern.test(rawSlug)
+    ? rawSlug.toLowerCase()
+    : slugifyProductName(rawSlug)
 
-if (!producto) return Astro.rewrite('/404')
+let storeProduct = await getStoreProductBySlug(requestedSlug)
+
+if (!storeProduct) {
+    const legacyContent = getProductContentById(requestedSlug)
+    if (legacyContent) storeProduct = await getStoreProductBySlug(legacyContent.slug)
+}
+
+if (!storeProduct) return Astro.rewrite('/404')
+
+const producto = storeProduct.product
+const canonicalSlug = String(producto.slug)
+
+if (rawSlug !== canonicalSlug) {
+    return Astro.redirect(`/productos/${canonicalSlug}`, 301)
+}
 
 const normalizeTextList = (value: unknown): string[] => {
     if (!Array.isArray(value)) return []
@@ -64,12 +81,14 @@ const perfilSensorial =
     producto.sensory_profile && typeof producto.sensory_profile === 'object'
         ? producto.sensory_profile
         : {}
-const notas = normalizeTextList(perfilSensorial.notas)
-const momentos = normalizeTextList(perfilSensorial.momentos)
-const atributos = normalizePairs(perfilSensorial.atributos).map((atributo) => ({
-    ...atributo,
-    percentage: Math.min(100, Math.max(0, Number.parseFloat(atributo.value) || 0)),
-}))
+const notas = normalizeTextList(perfilSensorial.notes ?? perfilSensorial.notas)
+const momentos = normalizeTextList(perfilSensorial.moments ?? perfilSensorial.momentos)
+const atributos = normalizePairs(perfilSensorial.attributes ?? perfilSensorial.atributos).map(
+    (atributo) => ({
+        ...atributo,
+        percentage: Math.min(100, Math.max(0, Number.parseFloat(atributo.value) || 0)),
+    }),
+)
 const hasPerfilSensorial = Boolean(
     perfilSensorial.title ||
     perfilSensorial.description ||
@@ -83,41 +102,45 @@ const diferenciales: Array<Record<string, any>> = lineaConfig?.diferenciales ?? 
 
 const preparacion =
     producto.preparation && typeof producto.preparation === 'object' ? producto.preparation : {}
-const pasosPreparacion = [
-    {
-        titulo: 'Calienta',
-        descripcion: 'Utiliza 200 ml de agua a 90–95 °C.',
-    },
-    {
-        titulo: 'Infusiona',
-        descripcion: 'Deja el saquito entre 3 y 5 minutos.',
-    },
-    {
-        titulo: 'Personaliza',
-        descripcion: 'Disfrútalo solo o con un toque de leche caliente.',
-    },
-]
-const hasPreparacion = true
+const configuredSteps = Array.isArray(preparacion.steps) ? preparacion.steps : []
+const pasosPreparacion: Array<{ titulo: string; descripcion: string }> =
+    configuredSteps.length
+        ? configuredSteps
+              .map((step: Record<string, any>) => ({
+                  titulo: step?.title ?? step?.titulo ?? '',
+                  descripcion: step?.description ?? step?.descripcion ?? '',
+              }))
+              .filter((step: { titulo: string; descripcion: string }) => step.titulo || step.descripcion)
+        : [
+          {
+              titulo: 'Calienta',
+              descripcion: 'Utiliza 200 ml de agua a 90–95 °C.',
+          },
+          {
+              titulo: 'Infusiona',
+              descripcion: 'Deja el saquito entre 3 y 5 minutos.',
+          },
+          {
+              titulo: 'Personaliza',
+              descripcion: 'Disfrútalo solo o con un toque de leche caliente.',
+          },
+      ]
+const hasPreparacion = pasosPreparacion.length > 0 || Boolean(preparacion.pairing)
 
+const currentArticleId = String(producto.article_id ?? producto.id)
 const relatedIds = Array.isArray(producto.related_products)
     ? [
           ...new Set(
               producto.related_products
-                  .map((item: Record<string, any>) => item?.id)
-                  .filter((id: string) => id && id !== producto.id),
+                  .map((item: Record<string, any> | string) =>
+                      typeof item === 'string' ? item : item?.id,
+                  )
+                  .filter((id): id is string => Boolean(id) && id !== currentArticleId),
           ),
       ].slice(0, 3)
     : []
 
-const relatedResponses = relatedIds.length
-    ? await get('productos', { ids: relatedIds })
-    : { ok: true, status: 200, data: [] }
-const relatedById = new Map(
-    formatProductos(relatedResponses.ok ? relatedResponses.data ?? [] : []).map((item) => [String(item.id), item]),
-)
-const relacionados = relatedIds
-    .map((id) => relatedById.get(String(id)))
-    .filter((item): item is NonNullable<typeof item> => Boolean(item))
+const relacionados = relatedIds.length ? await getStoreProducts(relatedIds) : []
 
 const linea = producto.line?.name ?? ''
 const lineaTiendaHref = linea
@@ -127,7 +150,12 @@ const precio = formatProductPrice(getProductPrice(producto, isAuthenticated))
 const precioRegular = formatProductPrice(producto.price)
 const precioClub = formatProductPrice(producto.club_price)
 const mostrarComparacion = hasClubPrice(producto)
-const pageDescription = producto.short_description || producto.description || producto.name
+const pageTitle = producto.seo_title || `${producto.name} | SUNKA`
+const pageDescription =
+    producto.seo_description ||
+    producto.short_description ||
+    producto.description ||
+    producto.name
 const cartProduct = JSON.stringify({
     ...producto,
     regular_price: producto.price,
@@ -138,7 +166,11 @@ const sectionTitleClass =
     'mt-3 font-heading text-3xl font-semibold leading-tight text-sunka-ink md:text-4xl'
 ---
 
-<BaseLayout title={`${producto.name} | SUNKA`} description={pageDescription}>
+<BaseLayout
+    title={pageTitle}
+    description={pageDescription}
+    canonical={new URL(`/productos/${canonicalSlug}`, Astro.url).toString()}
+>
     <article class="overflow-hidden bg-sunka-white text-sunka-ink">
         <div class="mx-auto max-w-7xl px-5 pt-24 md:px-8">
             <nav

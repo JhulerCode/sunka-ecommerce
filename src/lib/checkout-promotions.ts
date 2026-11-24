@@ -223,7 +223,7 @@ export function getProductLine(item: PromotionItem) {
 }
 
 export function getProductPresentation(item: PromotionItem) {
-    const presentation = item.presentation || item.ecommerce_data?.presentation || []
+    const presentation = item.presentation || []
     const sachets = Array.isArray(presentation)
         ? presentation.find((entry) => normalizeSlug(entry?.label) === 'saquitos')
         : null

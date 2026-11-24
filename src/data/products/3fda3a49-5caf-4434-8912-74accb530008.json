@@ -1,0 +1,126 @@
+{
+    "article_id": "3fda3a49-5caf-4434-8912-74accb530008",
+    "slug": "manzanilla-6-vasos",
+    "published": true,
+    "sort_order": 9,
+    "featured": false,
+    "featured_order": 0,
+    "name": "Manzanilla 6 vasos",
+    "badge": "Blend del autor",
+    "price": 13,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1767628424208-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1767628424208-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1767628424305-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1767628424305-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1767628424321-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1767628424321-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762784999170515",
+            "name": "Fuente de antioxidantes naturales."
+        },
+        {
+            "id": "1762785005889237",
+            "name": "Solo agrega agua y disfruta un sabor vibrante que revitaliza y protege tus células."
+        }
+    ],
+    "club_price": 12,
+    "description": "Sunka Cup Manzanilla ofrece una infusión de perfil delicado, limpio y naturalmente dulce. Sus notas florales y herbales se complementan con sutiles matices que recuerdan a la miel ligera y la manzana. Cada vaso contiene 2 g de ingredientes cuidadosamente dosificados bajo un filtro de fibra vegetal integrado. Solo agrega una pequeña cantidad de agua caliente a 85 °C, mueve suavemente, completa el vaso y espera de 2 a 3 minutos.",
+    "ingredients": [
+        {
+            "id": "1762784965380296",
+            "name": "Flor de jamaica (Hibiscus sabdariffa)."
+        },
+        {
+            "id": "1762784972921712",
+            "name": "Grosella negra (Ribes nigrum)."
+        },
+        {
+            "id": "1762784979170545",
+            "name": "Frambuesa (Rubus idaeus)."
+        },
+        {
+            "id": "1762784985098422",
+            "name": "Fresa (Fragaria)."
+        },
+        {
+            "id": "1762784990409217",
+            "name": "Arándanos (Vaccinium corymbosum)."
+        }
+    ],
+    "preparation": {
+        "steps": [],
+        "pairing": "Ideal para acompañar galletas de mantequilla, bizcochos de vainilla, panes suaves, frutas frescas como manzana o pera y quesos frescos de sabor delicado."
+    },
+    "presentation": [
+        {
+            "id": "7f7f583e-fa68-4441-9d43-e4b019fb7f90",
+            "label": "Vasos",
+            "value": "6"
+        },
+        {
+            "id": "fbbb9d5a-748f-470d-ae95-f52d51024df9",
+            "label": "Peso por vaso",
+            "value": "2 g"
+        },
+        {
+            "id": "3317980f-d61e-4875-9511-088a18c537b3",
+            "label": "Envase",
+            "value": "Compostable"
+        }
+    ],
+    "differentials": [],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "0bf568e0-4a83-41f6-adaa-7dcbad7205c6",
+                "name": "Flores de manzanilla"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "1e856476-9105-4ea5-a0a4-8a4e6fa6a6e3",
+                "name": "Para compartir"
+            },
+            {
+                "id": "afc633e0-8425-4c21-b20d-a19b80a9915b",
+                "name": "Para relajarte"
+            }
+        ],
+        "attributes": [],
+        "description": "Presenta un aroma floral y herbal con una delicada dulzura natural. En boca es suave, limpio y equilibrado, con cuerpo ligero y sutiles matices de miel y manzana que conducen a un final agradable y reconfortante."
+    },
+    "related_products": [
+        {
+            "id": "ea26fe7f-084d-4d82-b323-ecf100933f2b"
+        },
+        {
+            "id": "30c9b2ae-d287-4bb4-ae97-740b82bb40e6"
+        },
+        {
+            "id": "8b40851b-e6c6-4607-936d-81be73a8f845"
+        }
+    ],
+    "short_description": "Una infusión suave y floral, de aroma delicado y sabor naturalmente reconfortante. Sunka Cup Manzanilla reúne practicidad y equilibrio en un vaso listo para infusionar donde estés.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

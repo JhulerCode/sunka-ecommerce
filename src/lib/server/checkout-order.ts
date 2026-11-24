@@ -4,6 +4,7 @@ import {
     CHECKOUT_POLICY_VERSION,
     evaluateCheckoutPromotions,
 } from '@/lib/checkout-promotions'
+import { getProductPrice } from '@/lib/pricing'
 import { failure } from './bff'
 import {
     ORDER_CURRENCY,
@@ -14,6 +15,7 @@ import { ACCESS_COOKIE, REFRESH_COOKIE, runtimeEnv } from './backend'
 import { isDeliveryDateAllowed } from '@/lib/delivery-date'
 import { DELIVERY_TIME_RANGE, getPickupLocation } from '@/data/pickup-locations'
 import { generateOrderCode } from './order-code'
+import { getCheckoutProducts, type CheckoutProductData } from './product-catalog'
 
 type CheckoutDraft = Record<string, any>
 
@@ -22,9 +24,16 @@ type CheckoutOrderOptions = {
     now?: Date
     guestPartnerId?: string
     deliveryArticleId?: string
+    products?: Map<string, CheckoutProductData>
 }
 
+const CHECKOUT_MAX_LINES = 50
 const CHECKOUT_MAX_QUANTITY = 100
+const IGV_RATE = 18
+
+function cents(value: number) {
+    return Math.round(Number(value) * 100)
+}
 
 function resolveDeliveryArticle(deliveryCost: number, deliveryArticleId: unknown) {
     if (deliveryCost <= 0) return null
@@ -60,6 +69,7 @@ export function buildCheckoutDraft(
         now,
         guestPartnerId,
         deliveryArticleId,
+        products,
     }: CheckoutOrderOptions = {},
 ) {
     if (!['envio', 'retiro'].includes(String(draft.delivery_type))) {
@@ -94,19 +104,40 @@ export function buildCheckoutDraft(
     const sourceItems = Array.isArray(draft.partner_order_lines)
         ? draft.partner_order_lines
         : []
-    if (!sourceItems.length || sourceItems.length > 50) {
+    if (!sourceItems.length || sourceItems.length > CHECKOUT_MAX_LINES) {
         throw new Error('INVALID_CART')
     }
-    const items = sourceItems.map((item: CheckoutDraft) => ({
-        article_id: String(item.article_id || ''),
-        quantity: Number(item.quantity),
-        unit_price: Number(item.unit_price),
-        igv_afectacion: item.igv_afectacion,
-        igv_porcentaje: item.igv_porcentaje,
-        line_name: item.line_name,
-        presentation: item.presentation,
-        blend_data: item.blend_data,
-    }))
+
+    if (!products) throw new Error('PRODUCT_UNAVAILABLE')
+
+    const items = sourceItems.map((item: CheckoutDraft) => {
+        const articleId = String(item.article_id || '').trim()
+        if (!articleId) throw new Error('INVALID_CART')
+
+        const productData = products.get(articleId)
+        if (!productData) throw new Error('PRODUCT_UNAVAILABLE')
+
+        const quantity = Number(item.quantity)
+        const price = Number(getProductPrice(productData.content, isClubMember))
+        const clientPrice = Number(item.unit_price)
+
+        if (!Number.isFinite(price) || price < 0) throw new Error('PRODUCT_UNAVAILABLE')
+        if (Number.isFinite(clientPrice) && clientPrice < 0) throw new Error('INVALID_CART')
+        if (Number.isFinite(clientPrice) && cents(clientPrice) !== cents(price)) {
+            throw new Error('PRICE_CHANGED')
+        }
+
+        return {
+            article_id: articleId,
+            quantity,
+            unit_price: price,
+            igv_afectacion: productData.product.igv_afectacion,
+            igv_porcentaje: IGV_RATE,
+            line_name: productData.product.line?.name ?? productData.product.linea1?.name ?? '',
+            presentation: productData.content.presentation ?? [],
+            blend_data: item.blend_data,
+        }
+    })
     if (
         items.some(
             (item) =>
@@ -188,10 +219,23 @@ export function buildCheckoutDraft(
     }
 }
 
-export function prepareCheckoutOrder(
+function priceChanged(): ApiResult<never> {
+    return {
+        ok: false,
+        status: 409,
+        problem: {
+            type: 'urn:itderp:problem:integration-payment-price-changed',
+            title: 'Precio actualizado',
+            status: 409,
+            detail: 'Los precios de los productos cambiaron. Actualiza tu resumen e inténtalo nuevamente.',
+        },
+    }
+}
+
+export async function prepareCheckoutOrder(
     context: APIContext,
     draft: CheckoutDraft,
-): ApiResult<CheckoutDraft> {
+): Promise<ApiResult<CheckoutDraft>> {
     const hasSession = hasCustomerSession(context)
     const guestPartnerId = hasSession ? undefined : runtimeEnv('ERP_GUEST_PARTNER_ID')
     if (!hasSession && !guestPartnerId) {
@@ -204,6 +248,31 @@ export function prepareCheckoutOrder(
         )
     }
     try {
+        const sourceItems = Array.isArray(draft.partner_order_lines)
+            ? draft.partner_order_lines
+            : []
+        const articleIds = sourceItems.map((item: CheckoutDraft) =>
+            String(item?.article_id || '').trim(),
+        )
+
+        if (
+            !sourceItems.length ||
+            sourceItems.length > CHECKOUT_MAX_LINES ||
+            articleIds.some((id) => !id) ||
+            sourceItems.some((item: CheckoutDraft) => {
+                const quantity = Number(item?.quantity)
+                return (
+                    !Number.isFinite(quantity) ||
+                    quantity <= 0 ||
+                    quantity > CHECKOUT_MAX_QUANTITY
+                )
+            })
+        ) {
+            throw new Error('INVALID_CART')
+        }
+
+        const products = await getCheckoutProducts([...new Set(articleIds)])
+
         return {
             ok: true,
             status: 200,
@@ -211,9 +280,29 @@ export function prepareCheckoutOrder(
                 isClubMember: hasSession,
                 guestPartnerId,
                 deliveryArticleId: runtimeEnv('ERP_DELIVERY_ARTICLE_ID'),
+                products,
             }),
         }
     } catch (error) {
+        if (error instanceof Error && error.message === 'PRICE_CHANGED') {
+            return priceChanged()
+        }
+        if (error instanceof Error && error.message === 'PRODUCT_UNAVAILABLE') {
+            return failure(
+                422,
+                'product-unavailable',
+                'Producto no disponible',
+                'Uno de los productos de tu carrito ya no está disponible. Actualiza tu carrito e inténtalo nuevamente.',
+            )
+        }
+        if (error instanceof Error && error.message === 'ERP_UNAVAILABLE') {
+            return failure(
+                503,
+                'service-unavailable',
+                'Servicio no disponible',
+                'No se pudo validar el catálogo. Intenta nuevamente en unos minutos.',
+            )
+        }
         if (
             error instanceof Error &&
             error.message === 'DELIVERY_ARTICLE_NOT_CONFIGURED'

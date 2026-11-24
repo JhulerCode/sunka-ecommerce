@@ -1,0 +1,183 @@
+{
+    "article_id": "2b412274-b52d-4df0-8fd2-738aad09ac2f",
+    "slug": "manzanilla-100-sobres",
+    "published": true,
+    "sort_order": 7,
+    "featured": true,
+    "featured_order": 7,
+    "name": "Manzanilla 100 sobres",
+    "badge": "Blend de autor",
+    "price": 8.9,
+    "origin": "",
+    "photos": [
+        {
+            "id": "1767794294101-FOTO1.webp",
+            "url": "https://minio.divergecore.com/sunka/1767794294101-FOTO1.webp",
+            "name": "FOTO1.webp",
+            "orden": 1
+        },
+        {
+            "id": "1767794294146-FOTO2.webp",
+            "url": "https://minio.divergecore.com/sunka/1767794294146-FOTO2.webp",
+            "name": "FOTO2.webp",
+            "orden": 2
+        },
+        {
+            "id": "1767794294161-FOTO3.webp",
+            "url": "https://minio.divergecore.com/sunka/1767794294161-FOTO3.webp",
+            "name": "FOTO3.webp",
+            "orden": 3
+        }
+    ],
+    "benefits": [
+        {
+            "id": "1762784039242423",
+            "name": "Relaja el cuerpo, calma la mente y favorece una digestión armoniosa."
+        },
+        {
+            "id": "1762784045066817",
+            "name": "Suavidad natural para cualquier hora del día."
+        }
+    ],
+    "club_price": 7.9,
+    "description": "Elaborada exclusivamente con flores naturales de manzanilla, tradicionalmente apreciadas por acompañar el bienestar digestivo y brindar una agradable sensación de calma. Su delicado carácter floral la convierte en una infusión ideal para disfrutar después de las comidas o durante una pausa reconfortante. Una alternativa natural, suave y exquisita para incorporar a tu rutina diaria.",
+    "ingredients": [
+        {
+            "id": "1762784029046693",
+            "name": "Manzanilla (Matricaria chamomilla)."
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0e2dcc-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0e2dd5-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0e2ddc-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": ""
+    },
+    "presentation": [
+        {
+            "id": "ab0e2cbb-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "100"
+        },
+        {
+            "id": "ab0e2cc9-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "1 g"
+        },
+        {
+            "id": "ab0e2cd2-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Rectangular"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0e2d98-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "Single Origin Sri Lanka",
+            "description": "Hojas seleccionadas por su intensidad, aroma y consistencia."
+        },
+        {
+            "id": "ab0e2da1-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Doble cámara",
+            "description": "Permite una mejor circulación del agua durante la infusión."
+        },
+        {
+            "id": "ab0e2daa-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": "Aroma protegido",
+            "description": "El empaque ayuda a conservar el perfil aromático del blend."
+        }
+    ],
+    "certifications": [
+        {
+            "id": "ab0e2cfd-8d2b-11f1-b155-02420a000124",
+            "name": "Rainforest Alliance Certified"
+        }
+    ],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0e2d0f-8d2b-11f1-b155-02420a000124",
+                "name": "Manzanilla floral"
+            },
+            {
+                "id": "ab0e2d17-8d2b-11f1-b155-02420a000124",
+                "name": "Matices herbales"
+            },
+            {
+                "id": "ab0e2d1e-8d2b-11f1-b155-02420a000124",
+                "name": "Sutil dulzura natural"
+            },
+            {
+                "id": "ab0e2d23-8d2b-11f1-b155-02420a000124",
+                "name": "Final suave y reconfortante"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0e2d7d-8d2b-11f1-b155-02420a000124",
+                "name": "Para una pausa de noche"
+            },
+            {
+                "id": "ab0e2d81-8d2b-11f1-b155-02420a000124",
+                "name": "Para relajarte"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0e2d40-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0e2d4b-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0e2d51-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0e2d58-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "Manzanilla despliega un aroma floral, delicado y ligeramente dulce, acompañado de suaves matices herbales. En boca ofrece un sabor equilibrado y reconfortante, con una sutil dulzura natural. De cuerpo ligero, culmina en un final limpio, cálido y agradable."
+    },
+    "related_products": [
+        {
+            "id": "2bbbced5-62e2-4d2d-89f8-aa6373ff3904"
+        },
+        {
+            "id": "da79bd8c-7757-4fcf-b4bc-a5374e0ec796"
+        },
+        {
+            "id": "293476ce-3f50-4a7f-9c69-bf7c26aa4ead"
+        }
+    ],
+    "short_description": "Flores de manzanilla cuidadosamente seleccionadas, naturales y sin colorantes ni preservantes, para llevar su delicada esencia a cada taza.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

@@ -16,24 +16,45 @@ describe('contratos del ecommerce', () => {
         expect(formatDate(null)).toBeNull()
     })
 
-    it('normaliza productos del ERP', () => {
+    it('normaliza productos de la tienda', () => {
         const [product] = formatProductos([
             {
                 id: 'tea-1',
-                name: 'Nombre interno',
+                name: 'Té Andino',
                 price: 12,
-                ecommerce_data: {
-                    name: 'Té Andino',
-                    photos: [{ url: 'https://cdn.example/tea.webp' }],
-                },
+                unit: 'NIU',
+                igv_affectation: '10',
+                photos: [{ url: 'https://cdn.example/tea.webp' }],
+                slug: 'te-andino',
+                presentation: [{ label: 'Saquitos', value: 20 }],
             },
         ])
 
         expect(product).toMatchObject({
+            id: 'tea-1',
+            article_id: 'tea-1',
             name: 'Té Andino',
             price: '12.00',
             photo: 'https://cdn.example/tea.webp',
-            slug: 'tea-1',
+            slug: 'te-andino',
+        })
+    })
+
+    it('normaliza productos maestros sin ecommerce_data', () => {
+        const [product] = formatProductos([
+            {
+                id: 'p-1',
+                name: 'Producto ERP',
+                unit: 'NIU',
+                igv_affectation: '10',
+            },
+        ])
+
+        expect(product).toMatchObject({
+            id: 'p-1',
+            name: 'Producto ERP',
+            photos: [],
+            slug: 'producto-erp',
         })
     })
 

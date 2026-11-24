@@ -1,0 +1,166 @@
+{
+    "article_id": "64d85e33-243c-4036-8030-bf9b3e141682",
+    "slug": "cacao-mango",
+    "published": true,
+    "sort_order": 29,
+    "featured": true,
+    "featured_order": 28,
+    "name": "Cacao Mango",
+    "badge": "Blend de autor",
+    "price": 18.9,
+    "origin": "Single Origin Sri Lanka",
+    "photos": [
+        {
+            "id": "1785501469750-Cacao_Mango_destacado.webp",
+            "url": "https://minio.divergecore.com/sunka/1785501469750-Cacao_Mango_destacado.webp",
+            "name": "Cacao Mango destacado.webp",
+            "orden": 1
+        }
+    ],
+    "benefits": [
+        {
+            "id": "0845e60f-2056-41cf-8c62-ee12e8d91439",
+            "name": "Beneficio 1"
+        },
+        {
+            "id": "b6eceaa7-8234-4501-a8f4-468939678df8",
+            "name": "Beneficio 2"
+        }
+    ],
+    "club_price": 17.9,
+    "description": "Las notas intensas del cacao se equilibran con el dulzor tropical del mango. Su malla piramidal compostable permite que cada ingrediente libere plenamente su aroma y sabor. Una infusión premium, envolvente y naturalmente deliciosa.",
+    "ingredients": [
+        {
+            "id": "75975b24-3d77-4c99-a1a0-b9a385f33969",
+            "name": "Ingrediente 1"
+        },
+        {
+            "id": "b5c215c7-e410-4b33-8e95-9c38a80fe2b7",
+            "name": "Ingrediente 2"
+        }
+    ],
+    "preparation": {
+        "steps": [
+            {
+                "id": "ab0e7e16-8d2b-11f1-b155-02420a000124",
+                "title": "Calienta",
+                "description": "Utiliza 200 ml de agua a 90–95 °C."
+            },
+            {
+                "id": "ab0e7e1c-8d2b-11f1-b155-02420a000124",
+                "title": "Infusiona",
+                "description": "Deja el saquito entre 3 y 5 minutos."
+            },
+            {
+                "id": "ab0e7e22-8d2b-11f1-b155-02420a000124",
+                "title": "Personaliza",
+                "description": "Disfrútalo solo o con un toque de leche caliente."
+            }
+        ],
+        "pairing": "Maridaje recomendado: cheesecake de vainilla, pie de maracuyá o torta de coco"
+    },
+    "presentation": [
+        {
+            "id": "ab0e7d1c-8d2b-11f1-b155-02420a000124",
+            "label": "Saquitos",
+            "value": "10"
+        },
+        {
+            "id": "ab0e7d23-8d2b-11f1-b155-02420a000124",
+            "label": "Peso por saquito",
+            "value": "2.5 g"
+        },
+        {
+            "id": "ab0e7d2c-8d2b-11f1-b155-02420a000124",
+            "label": "Liberación",
+            "value": "Piramidal"
+        }
+    ],
+    "differentials": [
+        {
+            "id": "ab0e7de5-8d2b-11f1-b155-02420a000124",
+            "icon": "origen",
+            "title": "2.5 g por pirámide",
+            "description": "Mayor gramaje para logras una infusión más intensa, aromática y con mayor cuerpo."
+        },
+        {
+            "id": "ab0e7dec-8d2b-11f1-b155-02420a000124",
+            "icon": "doble-camara",
+            "title": "Malla piramidal compostable",
+            "description": "Brinda el espacio ideal para que los ingredientes se expandan y liberen plenamente su sabor."
+        },
+        {
+            "id": "ab0e7df4-8d2b-11f1-b155-02420a000124",
+            "icon": "aroma",
+            "title": " Ingredientes naturales",
+            "description": "Una cuidada selección de hojas, frutas, flores uy especias para crear blends equilibrados y expresivos  "
+        }
+    ],
+    "certifications": [],
+    "previous_price": null,
+    "sensory_profile": {
+        "notes": [
+            {
+                "id": "ab0e7d62-8d2b-11f1-b155-02420a000124",
+                "name": "Cacao tostado"
+            },
+            {
+                "id": "ab0e7d68-8d2b-11f1-b155-02420a000124",
+                "name": "Mango maduro"
+            },
+            {
+                "id": "ab0e7d6e-8d2b-11f1-b155-02420a000124",
+                "name": "Dulzor tropical"
+            }
+        ],
+        "title": "Una pausa cálida con carácter.",
+        "moments": [
+            {
+                "id": "ab0e7dc9-8d2b-11f1-b155-02420a000124",
+                "name": "Para compartir"
+            },
+            {
+                "id": "ab0e7dd2-8d2b-11f1-b155-02420a000124",
+                "name": "Para relajarte"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "ab0e7d94-8d2b-11f1-b155-02420a000124",
+                "label": "Aroma",
+                "value": 88
+            },
+            {
+                "id": "ab0e7d9c-8d2b-11f1-b155-02420a000124",
+                "label": "Cuerpo",
+                "value": 78
+            },
+            {
+                "id": "ab0e7da2-8d2b-11f1-b155-02420a000124",
+                "label": "Especias",
+                "value": 70
+            },
+            {
+                "id": "ab0e7da9-8d2b-11f1-b155-02420a000124",
+                "label": "Suavidad",
+                "value": 82
+            }
+        ],
+        "description": "El mango aporta una entrada dulce, jugosa y tropical. El cacao añade profundidad, calidez y un cuerpo envolvente. Un blend exótico y equilibrado, con un final suave y persistente."
+    },
+    "related_products": [
+        {
+            "id": "e9dc6380-3c61-4e2b-a17d-7bb74b2e2d67"
+        },
+        {
+            "id": "293476ce-3f50-4a7f-9c69-bf7c26aa4ead"
+        },
+        {
+            "id": "a3471eb0-ffbc-488c-b256-911d78592241"
+        }
+    ],
+    "short_description": "Un blend premium en formato piramidal, donde el cacao y el mango se encuentran en perfecto equilibrio.",
+    "seo_title": "",
+    "seo_description": "",
+    "previous_slugs": []
+}

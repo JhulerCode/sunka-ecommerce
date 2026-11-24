@@ -1,17 +1,16 @@
 import type { APIRoute } from 'astro'
-import { backendRequest } from '@/lib/server/backend'
 import { json } from '@/lib/server/bff'
-import { integrationPublicPath } from '@/lib/server/public-api'
+import { getStoreProducts } from '@/lib/server/product-catalog'
 
 export const GET: APIRoute = async ({ request }) => {
     const source = new URL(request.url).searchParams
-    const result = await backendRequest(integrationPublicPath('productos', {
-        ids: source.get('ids') ?? undefined,
-        linea: source.get('linea') ?? undefined,
-        categoria: source.get('categoria') ?? undefined,
-        featured: source.get('featured') ?? undefined,
-    }))
-    const response = json(result)
+    const ids = (source.get('ids') || '')
+        .split(',')
+        .map((id) => id.trim())
+        .filter(Boolean)
+
+    const products = await getStoreProducts(ids.length ? ids : undefined)
+    const response = json({ ok: true, status: 200, data: products })
     response.headers.set('cache-control', 'public, s-maxage=60, stale-while-revalidate=300')
     return response
 }
