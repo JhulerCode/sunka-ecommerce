@@ -161,6 +161,10 @@ Canonical settings (from `.prettierrc.json` and `.editorconfig`):
   the currency/payment catalogs. The store limits the cart to 50 lines and 100 units per
   line.
 - The order page shows each line's `total` returned by the ERP (gross); `unit_price` is net.
+- The checkout only declares the customer's receipt type (`invoice_type`); the invoice series is
+  chosen by the ERP when it issues the invoice. The delivery article is configured server-side in
+  `ERP_DELIVERY_ARTICLE_ID` and sent as `delivery_article_id` when `delivery_cost > 0`; never
+  accept it from the browser.
 - Successful responses use `{ data, meta?, warnings? }`; errors use the ERP Problem Details
   (`application/problem+json`) with `type`, `errorCode`, `title`, `status`, `detail`, `instance`.
   Client helpers return the discriminated `ApiResult<T>` type.
@@ -172,9 +176,9 @@ Canonical settings (from `.prettierrc.json` and `.editorconfig`):
 
 ### Environment Variables
 
-- Private vars are `API_URL`, `ERP_API_KEY`, `ERP_GUEST_PARTNER_ID`, `PAYMENT_PROVIDER`,
-  `RECAPTCHA_SECRET_KEY`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`
-  and `SMTP_FROM`.
+- Private vars are `API_URL`, `ERP_API_KEY`, `ERP_GUEST_PARTNER_ID`,
+  `ERP_DELIVERY_ARTICLE_ID`, `PAYMENT_PROVIDER`, `RECAPTCHA_SECRET_KEY`, `SMTP_HOST`,
+  `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS` and `SMTP_FROM`.
 - Browser vars are `PUBLIC_IZIPAY_PUBLIC_KEY` and `PUBLIC_RECAPTCHA_SITE_KEY`.
 - The BFF validates reCAPTCHA for ARCO and libro de reclamaciones with
   `RECAPTCHA_SECRET_KEY`; the ERP does not validate captcha.

@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import {
     ORDER_CURRENCY,
     PARTNER_ORDER_ORIGIN,
@@ -6,7 +6,8 @@ import {
     createPaymentSchema,
     partnerOrderTypeSchema,
 } from '../../src/lib/api-schemas'
-import { buildCheckoutDraft } from '../../src/lib/server/checkout-order'
+import { buildCheckoutDraft, prepareCheckoutOrder } from '../../src/lib/server/checkout-order'
+import { getMinimumDeliveryDate } from '../../src/lib/delivery-date'
 
 function draft(overrides: Record<string, unknown> = {}) {
     return {
@@ -211,7 +212,7 @@ describe('preparación del pedido del checkout', () => {
                     delivery_ubigeo_id: '150101',
                     delivery_address_data: { ubigeo1: { province: 'Lima' } },
                 }),
-                context,
+                { ...context, deliveryArticleId: 'article-delivery' },
             ).delivery_address_data.ubigeo1,
         ).toEqual({ province: 'Lima' })
     })
@@ -245,5 +246,73 @@ describe('preparación del pedido del checkout', () => {
         expect(() =>
             buildCheckoutDraft(draft({ punto_retiro: 'local-inventado' }), context),
         ).toThrow('INVALID_PICKUP_LOCATION')
+    })
+})
+
+describe('datos de facturación del pedido', () => {
+    const shipping = {
+        delivery_type: 'envio',
+        delivery_ubigeo_id: '150101',
+        delivery_address_data: { ubigeo1: { province: 'Lima' } },
+        partner_order_lines: [{ article_id: 'product-1', quantity: 1, unit_price: 20 }],
+    }
+
+    it('conserva el tipo de comprobante elegido por el cliente', () => {
+        expect(buildCheckoutDraft(draft({ invoice_type: '03' }), context)).toMatchObject({
+            invoice_type: '03',
+        })
+        expect(buildCheckoutDraft(draft({ invoice_type: '01' }), context)).toMatchObject({
+            invoice_type: '01',
+        })
+        expect(buildCheckoutDraft(draft({ invoice_type: 'NV' }), context)).toMatchObject({
+            invoice_type: 'NV',
+        })
+    })
+
+    it('descarta la serie enviada por el navegador', () => {
+        const order = buildCheckoutDraft(
+            draft({
+                invoice_type: '03',
+                invoice_series: 'B999',
+                invoice_series_id: 'serie-manipulada',
+            }),
+            context,
+        )
+        expect(order).toMatchObject({ invoice_type: '03' })
+        expect('invoice_series' in order).toBe(false)
+        expect('invoice_series_id' in order).toBe(false)
+    })
+
+    it('envía el artículo de delivery configurado y descarta el del navegador', () => {
+        const order = buildCheckoutDraft(
+            draft({ ...shipping, delivery_article_id: 'articulo-manipulado' }),
+            { ...context, deliveryArticleId: 'article-delivery' },
+        )
+        expect(order.delivery_cost).toBe(10)
+        expect(order.delivery_article_id).toBe('article-delivery')
+    })
+
+    it('no envía artículo de delivery cuando el pedido no cobra envío', () => {
+        const order = buildCheckoutDraft(draft(), {
+            ...context,
+            deliveryArticleId: 'article-delivery',
+        })
+        expect(order.delivery_cost).toBe(0)
+        expect('delivery_article_id' in order).toBe(false)
+    })
+
+    it('el BFF responde 503 si falta el artículo de delivery', () => {
+        vi.stubEnv('ERP_GUEST_PARTNER_ID', 'partner-invitado')
+        vi.stubEnv('ERP_DELIVERY_ARTICLE_ID', '')
+        const result = prepareCheckoutOrder(
+            { cookies: { has: () => false } } as any,
+            draft({ ...shipping, delivery_date: getMinimumDeliveryDate() }),
+        )
+        expect(result.ok).toBe(false)
+        expect(result.status).toBe(503)
+    })
+
+    afterEach(() => {
+        vi.unstubAllEnvs()
     })
 })

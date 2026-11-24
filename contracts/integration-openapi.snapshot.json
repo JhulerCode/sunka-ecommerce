@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "DivergeCore Integration API",
-    "version": "11.0.0",
+    "version": "14.2.0",
     "description": "API server-to-server. No acepta Origin, x-company ni qry. Contrato versionado: ver CHANGELOG.md. Documentación viva en /api/v1/docs."
   },
   "servers": [
@@ -18,7 +18,6 @@
   "x-problem-types": [
     "urn:itderp:problem:arco-drive-not-configured",
     "urn:itderp:problem:arco-drive-upload-failed",
-    "urn:itderp:problem:arco-invalid-captcha",
     "urn:itderp:problem:arco-invalid-field-types",
     "urn:itderp:problem:arco-invalid-files",
     "urn:itderp:problem:arco-invalid-input",
@@ -71,6 +70,7 @@
     "urn:itderp:problem:partner-order-code-invalid",
     "urn:itderp:problem:partner-order-contact-not-found",
     "urn:itderp:problem:partner-order-currency-invalid",
+    "urn:itderp:problem:partner-order-delivery-article-invalid",
     "urn:itderp:problem:partner-order-delivery-cost-invalid",
     "urn:itderp:problem:partner-order-delivery-location-invalid",
     "urn:itderp:problem:partner-order-delivery-type-invalid",
@@ -80,6 +80,7 @@
     "urn:itderp:problem:partner-order-invalid-status",
     "urn:itderp:problem:partner-order-invalid-status-transition",
     "urn:itderp:problem:partner-order-invoiced",
+    "urn:itderp:problem:partner-order-invoice-series-invalid",
     "urn:itderp:problem:partner-order-items-invalid",
     "urn:itderp:problem:partner-order-maquila-bom-invalid",
     "urn:itderp:problem:partner-order-maquila-content-not-service",
@@ -916,7 +917,7 @@
             "CheckoutAccess": []
           }
         ],
-        "description": "Registra el resultado del envío de la confirmación reclamada. El comprobante se emite al confirmarse el pago con independencia del resultado del correo; con sent=false el consumidor puede reintentar en una próxima consulta.",
+        "description": "Registra el resultado del envío de la confirmación reclamada. La confirmación no emite el comprobante: el ERP lo emite al facturar el pedido o su despacho, con independencia del resultado del correo. Con sent=false el consumidor puede reintentar en una próxima consulta.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Id"
@@ -2143,11 +2144,20 @@
               "NV"
             ]
           },
+          "invoice_series": {
+            "type": "string",
+            "deprecated": true,
+            "description": "Aceptado por compatibilidad e ignorado. El pedido solo conserva invoice_type; la serie la elige el ERP al emitir la factura o boleta."
+          },
           "invoice_ruc": {
             "type": "string"
           },
           "invoice_business_name": {
             "type": "string"
+          },
+          "delivery_article_id": {
+            "type": "string",
+            "description": "Artículo de la empresa usado para facturar delivery_cost. Obligatorio cuando delivery_cost es mayor que cero."
           },
           "contact_id": {
             "type": "string"
@@ -2320,10 +2330,17 @@
               "NV"
             ]
           },
+          "invoice_series": {
+            "type": "string",
+            "description": "Serie de pedidos legados; los pedidos nuevos no la fijan porque la serie se elige al facturar."
+          },
           "invoice_ruc": {
             "type": "string"
           },
           "invoice_business_name": {
+            "type": "string"
+          },
+          "delivery_article_id": {
             "type": "string"
           },
           "stages": {

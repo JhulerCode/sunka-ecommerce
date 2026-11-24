@@ -131,6 +131,7 @@ describe('promociones del checkout', () => {
             }],
         }, {
             now: new Date('2026-08-22T19:00:00.000Z'),
+            deliveryArticleId: 'article-delivery',
         })
 
         expect(order.delivery_cost).toBe(10)

@@ -17,7 +17,21 @@ import { generateOrderCode } from './order-code'
 
 type CheckoutDraft = Record<string, any>
 
+type CheckoutOrderOptions = {
+    isClubMember?: boolean
+    now?: Date
+    guestPartnerId?: string
+    deliveryArticleId?: string
+}
+
 const CHECKOUT_MAX_QUANTITY = 100
+
+function resolveDeliveryArticle(deliveryCost: number, deliveryArticleId: unknown) {
+    if (deliveryCost <= 0) return null
+    const id = String(deliveryArticleId || '').trim()
+    if (!id) throw new Error('DELIVERY_ARTICLE_NOT_CONFIGURED')
+    return id
+}
 
 function hasCustomerSession(context: APIContext) {
     return context.cookies.has(ACCESS_COOKIE) || context.cookies.has(REFRESH_COOKIE)
@@ -41,7 +55,12 @@ function netUnitPrice(item: CheckoutDraft) {
 
 export function buildCheckoutDraft(
     draft: CheckoutDraft,
-    { isClubMember = false, now, guestPartnerId }: { isClubMember?: boolean; now?: Date; guestPartnerId?: string } = {},
+    {
+        isClubMember = false,
+        now,
+        guestPartnerId,
+        deliveryArticleId,
+    }: CheckoutOrderOptions = {},
 ) {
     if (!['envio', 'retiro'].includes(String(draft.delivery_type))) {
         throw new Error('INVALID_DELIVERY_TYPE')
@@ -116,7 +135,17 @@ export function buildCheckoutDraft(
 
     const { punto_retiro: _untrustedPickup, ...deliveryAddressData } =
         draft.delivery_address_data || {}
-    const { partner_id: _untrustedPartner, ...sourceDraft } = draft
+    // La serie la define el ERP al facturar; el artículo de delivery sí lo configura
+    // la tienda en el servidor y nunca se toma del navegador.
+    const {
+        partner_id: _untrustedPartner,
+        invoice_series: _untrustedInvoiceSeries,
+        invoice_series_id: _untrustedInvoiceSeriesId,
+        delivery_article_id: _untrustedDeliveryArticle,
+        ...sourceDraft
+    } = draft
+    const deliveryCost = promotionQuote.deliveryCost
+    const resolvedDeliveryArticle = resolveDeliveryArticle(deliveryCost, deliveryArticleId)
 
     return {
         ...sourceDraft,
@@ -126,7 +155,8 @@ export function buildCheckoutDraft(
         currency_id: ORDER_CURRENCY,
         payment_method: 'tarjeta',
         amount: promotionQuote.total,
-        delivery_cost: promotionQuote.deliveryCost,
+        delivery_cost: deliveryCost,
+        ...(resolvedDeliveryArticle ? { delivery_article_id: resolvedDeliveryArticle } : {}),
         ...(guestPartnerId ? { partner_id: guestPartnerId } : {}),
         delivery_address: draft.delivery_type === 'retiro'
             ? pickupLocation?.direccion
@@ -177,9 +207,25 @@ export function prepareCheckoutOrder(
         return {
             ok: true,
             status: 200,
-            data: buildCheckoutDraft(draft, { isClubMember: hasSession, guestPartnerId }),
+            data: buildCheckoutDraft(draft, {
+                isClubMember: hasSession,
+                guestPartnerId,
+                deliveryArticleId: runtimeEnv('ERP_DELIVERY_ARTICLE_ID'),
+            }),
         }
     } catch (error) {
+        if (
+            error instanceof Error &&
+            error.message === 'DELIVERY_ARTICLE_NOT_CONFIGURED'
+        ) {
+            console.error('[checkout] ERP_DELIVERY_ARTICLE_ID no está configurada')
+            return failure(
+                503,
+                'service-unavailable',
+                'Servicio no disponible',
+                'El checkout no está disponible en este momento. Intenta nuevamente más tarde.',
+            )
+        }
         if (
             error instanceof Error &&
             [

@@ -15,6 +15,7 @@ Producción exige una API key activa con los scopes usados por la tienda.
 - `API_URL`: URL privada de Express; nunca se publica en el bundle.
 - `ERP_API_KEY`: credencial privada de esta aplicación; identifica empresa y scopes.
 - `ERP_GUEST_PARTNER_ID`: socio del ERP al que se atribuyen los pedidos de invitado; debe pertenecer a la misma empresa.
+- `ERP_DELIVERY_ARTICLE_ID`: artículo activo del ERP con el que se factura el costo de envío; obligatorio cuando el pedido tiene `delivery_cost` mayor que cero.
 - `PAYMENT_PROVIDER`: pasarela de tarjeta activa del checkout (`izipay` o `niubiz`); por defecto `izipay`.
 - `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS` y `SMTP_FROM`: transporte de los correos al cliente. Las plantillas viven en `src/lib/mail/` y el envío en `src/lib/server/mail.ts`.
 - `PUBLIC_IZIPAY_PUBLIC_KEY`: clave pública usada por el SDK de pagos.
