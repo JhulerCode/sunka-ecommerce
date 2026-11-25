@@ -9,6 +9,7 @@ import { backendRequest, getClientIp, orderCookieName } from '@/lib/server/backe
 import { serverGet as get } from '@/lib/server/public-api'
 import { getProductContentById } from '@/lib/server/product-content'
 import { redondear, formatDate, formatDateTime } from '@/lib/mine'
+import { formatPaymentDate } from '@/lib/payment-date'
 import { DELIVERY_TIME_RANGE } from '@/data/pickup-locations'
 
 const params = Astro.url.searchParams
@@ -213,6 +214,8 @@ const paymentState = pedido?.is_paid
     : paymentStateLabels[pedido?.payment_status] || 'En verificación'
 const paymentFailed = pedido?.payment_status === 'payment_failed'
 const paymentReview = pedido?.payment_status === 'manual_review'
+const transactionDateValue = String(pedido?.payment?.transaction_date || '').trim()
+const transactionDateLabel = formatPaymentDate(transactionDateValue)
 const orderTitle = pedido
     ? `Pedido ${pedido.code} | SUNKA Herbal Tea`
     : `${orderError?.title || 'Pedido no encontrado'} | SUNKA Herbal Tea`
@@ -389,9 +392,34 @@ const orderTitle = pedido
                                             <OrderDetail label="Método de pago">
                                                 {catalogName(paymentMethods, pedido.payment_method)}
                                             </OrderDetail>
+                                            {pedido.payment?.card && (
+                                                <OrderDetail label="Tarjeta">
+                                                    {pedido.payment.card}
+                                                </OrderDetail>
+                                            )}
+                                            {pedido.payment?.brand && (
+                                                <OrderDetail label="Marca">
+                                                    {pedido.payment.brand}
+                                                </OrderDetail>
+                                            )}
+                                            {transactionDateLabel && (
+                                                <OrderDetail label="Fecha de transacción">
+                                                    {transactionDateLabel}
+                                                </OrderDetail>
+                                            )}
+                                            {pedido.payment?.transaction_id && (
+                                                <OrderDetail label="Código de transacción" breakable>
+                                                    {pedido.payment.transaction_id}
+                                                </OrderDetail>
+                                            )}
                                             <OrderDetail label="Estado del pago">
                                                 {paymentState}
                                             </OrderDetail>
+                                            {pedido.payment?.action_description && (
+                                                <OrderDetail label="Motivo de rechazo" wide>
+                                                    {pedido.payment.action_description}
+                                                </OrderDetail>
+                                            )}
                                             {pedido.invoice_type === '01' && (
                                                 <>
                                                     <OrderDetail label="RUC">

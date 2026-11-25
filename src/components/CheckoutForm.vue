@@ -496,6 +496,40 @@
 
                     <!-- Formulario activo -->
                     <div v-if="step === 3" class="space-y-4">
+                        <div
+                            v-if="failedPayment"
+                            class="rounded-xl border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-800"
+                            role="alert"
+                        >
+                            <p class="font-semibold">Pago rechazado</p>
+                            <p class="mt-1">{{ failedPayment.reason }}</p>
+                            <dl class="mt-2 flex flex-wrap gap-x-6 gap-y-1 text-xs text-red-700">
+                                <div v-if="failedPayment.orderCode" class="flex gap-1">
+                                    <dt class="font-semibold">Pedido:</dt>
+                                    <dd>{{ failedPayment.orderCode }}</dd>
+                                </div>
+                                <div v-if="failedPayment.attemptedAtLabel" class="flex gap-1">
+                                    <dt class="font-semibold">Fecha del intento:</dt>
+                                    <dd>{{ failedPayment.attemptedAtLabel }}</dd>
+                                </div>
+                                <div class="flex gap-1">
+                                    <dt class="font-semibold">Monto:</dt>
+                                    <dd>S/ {{ total.toFixed(2) }}</dd>
+                                </div>
+                            </dl>
+                            <p class="mt-2 text-xs">
+                                No se realizó ningún cobro. Puedes intentarlo nuevamente con otra
+                                tarjeta.
+                            </p>
+                            <a
+                                v-if="failedPayment.orderId"
+                                :href="`/pedidos/${failedPayment.orderId}`"
+                                class="mt-2 inline-block text-xs font-semibold underline hover:text-red-900"
+                            >
+                                Ver detalle del intento
+                            </a>
+                        </div>
+
                         <!-- Tipo de comprobante -->
                         <JdRadio
                             label="Tipo de comprobante"
@@ -845,6 +879,7 @@ import {
 } from '../data/pickup-locations'
 import { urls, get, post, patch, delet, formatProductos } from '../lib/api'
 import { formatDate, genId } from '../lib/mine'
+import { formatPaymentDate } from '../lib/payment-date'
 
 export default defineComponent({
     inheritAttrs: false,
@@ -896,6 +931,7 @@ export default defineComponent({
             errors: {},
             items: [],
             acceptTerms: false,
+            failedPayment: null,
 
             ubigeos: [],
             ubigeosLoading: false,
@@ -1711,6 +1747,7 @@ export default defineComponent({
         },
         async pagarConNiubiz() {
             this.shapeDatos()
+            this.failedPayment = null
             const send = {
                 email: this.form.partner_data.email,
                 partner_order: this.form,
@@ -1887,17 +1924,7 @@ export default defineComponent({
                 if (result.ok && result.data?.status === 'completed') {
                     this.completeCardPayment(result)
                 } else if (result.ok && result.data?.status === 'payment_failed') {
-                    const reason = String(
-                        (result.data as Record<string, any>)?.action_description || '',
-                    ).trim()
-                    const message = reason
-                        ? `El pago no fue confirmado: ${reason}.`
-                        : 'El pago no fue confirmado.'
-                    this.showPendingCardPayment(message)
-                    this.paymentPendingFailed = true
-                    this.pendingPaymentMessage =
-                        `${message} Conservamos el pedido para que puedas identificarlo y solicitar ayuda antes de intentar otro pago.`
-                    clearTimeout(this.pendingStatusTimer)
+                    this.handleCardPaymentFailed(result.data)
                 } else if (result.ok && result.data?.status === 'manual_review') {
                     const reason = String(
                         (result.data as Record<string, any>)?.action_description || '',
@@ -1925,6 +1952,38 @@ export default defineComponent({
                 this.paymentVerifying = false
                 this.loadingPagar = false
             }
+        },
+        handleCardPaymentFailed(data: Record<string, any> | null | undefined) {
+            const detail = data || {}
+            const orderId = String(detail.order_id || detail.id || this.form.id || '').trim()
+            const orderCode = String(detail.order_code || this.form.order_code || '').trim()
+            const reason = String(detail.action_description || '').trim()
+            const attemptedAt = String(detail.transaction_date || '').trim()
+
+            // El intento rechazado se conserva en el ERP (auditoría), pero el
+            // checkout vuelve al paso 3 para que el cliente pueda reintentar con
+            // otra tarjeta; el siguiente pago crea un pedido e intento nuevos.
+            this.clearActivePaymentIntent()
+            clearTimeout(this.pendingStatusTimer)
+            this.paymentPending = false
+            this.paymentPendingFailed = false
+            this.pendingPaymentMessage = ''
+            this.paymentVerifying = false
+            this.paymentOpening = false
+            this.loadingPagar = false
+
+            this.form.order_code = ''
+            this.form.id = ''
+            this.form.redirect_url = ''
+
+            this.failedPayment = {
+                orderId: orderId || null,
+                orderCode,
+                reason: reason || 'El pago no fue confirmado por la pasarela.',
+                attemptedAtLabel: formatPaymentDate(attemptedAt),
+            }
+            this.errors.general = ''
+            this.$nextTick(() => this.scrollToForm('seccionForm3'))
         },
         async validateCardPayment(paymentData: Record<string, unknown>, intentId: string) {
             const body = { paymentData, checkout_intent_id: intentId }
