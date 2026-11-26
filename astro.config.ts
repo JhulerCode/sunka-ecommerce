@@ -1,15 +1,13 @@
 import { defineConfig } from 'astro/config'
 import node from '@astrojs/node'
-import vercel from '@astrojs/vercel'
 import vue from '@astrojs/vue'
 import tailwindcss from '@tailwindcss/vite'
 
-const useVercel = process.env.VERCEL === '1'
 const isBuild = process.argv.includes('build')
 
 export default defineConfig({
     output: 'server',
-    adapter: useVercel ? vercel() : node({ mode: 'standalone' }),
+    adapter: node({ mode: 'standalone' }),
     integrations: [vue()],
     vite: {
         // Caché separada: `astro build` prebundlea dependencias en modo producción y,

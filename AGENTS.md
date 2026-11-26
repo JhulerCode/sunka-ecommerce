@@ -5,9 +5,9 @@ Guidance for AI coding agents working in this repository. Read this before makin
 ## Project Overview
 
 E-commerce storefront for **SUNKA Herbal Tea** (Peruvian herbal tea brand). It is an
-[Astro](https://astro.build) site (SSR) with **Vue 3** islands and **Tailwind CSS v4**, deployed to
-**Vercel**. Astro acts as a BFF: browser code calls same-origin `/api/*` routes, while server-only
-code talks to the ERP through `src/lib/server/backend.ts`.
+[Astro](https://astro.build) site (SSR) with **Vue 3** islands and **Tailwind CSS v4**. Astro acts
+as a BFF: browser code calls same-origin `/api/*` routes, while server-only code talks to the ERP
+through `src/lib/server/backend.ts`.
 
 - All user-facing copy is **Spanish (es-PE)**.
 - Prices are in Peruvian Soles and rendered as `S/ {valor}`.
@@ -16,7 +16,7 @@ code talks to the ERP through `src/lib/server/backend.ts`.
 
 ## Tech Stack
 
-- **Astro 5** — `output: 'server'`, adapter `@astrojs/vercel` (see `astro.config.ts`).
+- **Astro 5** — `output: 'server'`, adapter `@astrojs/node` standalone (see `astro.config.ts`).
 - **Vue 3** — Options API components mounted as islands with `client:load`.
 - **Tailwind CSS 4** — via `@tailwindcss/vite`; theme tokens defined in `src/styles/theme.css` using the `@theme` directive. `src/styles/global.css` is the entry that imports the split styles.
 - **pnpm** — the package manager (see `packageManager` in `package.json`). Never use npm/yarn.
@@ -93,7 +93,7 @@ src/
 
 - Images are imported as modules (e.g. `import banner from '@/assets/banner1.webp'`) so Astro
   optimizes them. Never reference `src/assets` via a raw URL.
-- `dist/`, `.astro/`, `.vercel/`, `node_modules/`, `mockups/` are gitignored build artifacts.
+- `dist/`, `.astro/`, `node_modules/`, `mockups/` are gitignored build artifacts.
 
 ### Where each thing goes
 
@@ -258,6 +258,6 @@ Canonical settings (from `.prettierrc.json` and `.editorconfig`):
 
 - Commit messages follow Conventional Commits: `feat:`, `fix:`, `refactor:`, etc., lowercase
   subject (see `git log`). No other commit discipline is enforced.
-- Do not modify `.env`, `pnpm-lock.yaml`, or build artifacts (`dist/`, `.astro/`, `.vercel/`) unless
-  the task explicitly requires it.
+- Do not modify `.env`, `pnpm-lock.yaml`, or build artifacts (`dist/`, `.astro/`) unless the task
+  explicitly requires it.
 - After a change, run `pnpm build` to confirm the site compiles.
