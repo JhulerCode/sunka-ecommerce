@@ -1,0 +1,228 @@
+.button {
+    @apply px-4 py-1.5 rounded-lg cursor-pointer flex justify-center items-center gap-2 border h-fit w-fit;
+}
+
+.button1 {
+    @apply border-black bg-black text-white hover:bg-gray-800;
+}
+
+.button2 {
+    @apply border-gray-300 hover:text-black;
+}
+
+.sunka-field {
+    min-width: 0;
+}
+
+.sunka-label,
+.label {
+    display: flex;
+    gap: 0.2rem;
+    margin-bottom: 7px;
+    color: var(--sunka-forest);
+    font-size: 0.75rem;
+    font-weight: 650;
+    letter-spacing: 0.02em;
+}
+
+.sunka-label .nec,
+.label .nec {
+    color: var(--sunka-danger);
+}
+
+.sunka-control,
+.input {
+    width: 100%;
+    min-height: var(--sunka-control-height);
+    border: 1px solid var(--sunka-sand);
+    border-radius: 0;
+    padding: 0.7rem 0.8rem;
+    background: var(--sunka-control-background);
+    color: var(--sunka-ink);
+    font: inherit;
+    font-size: 0.875rem;
+    line-height: 1.35;
+    outline: none;
+    box-shadow: none;
+    transition:
+        border-color 160ms ease,
+        box-shadow 160ms ease,
+        background-color 160ms ease;
+}
+
+.sunka-control::placeholder,
+.input::placeholder {
+    color: var(--sunka-stone);
+    opacity: 0.78;
+}
+
+.sunka-control:hover:not(:disabled):not(.is-disabled),
+.input:hover:not(:disabled):not(.is-disabled) {
+    border-color: color-mix(in srgb, var(--sunka-brass) 55%, var(--sunka-sand));
+}
+
+.sunka-control:focus,
+.sunka-control:focus-visible,
+.sunka-control.is-open,
+.sunka-field:focus-within > .sunka-control,
+.input:focus,
+.input:focus-visible {
+    border-color: var(--sunka-brass);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--sunka-control-focus);
+}
+
+.sunka-control:disabled,
+.sunka-control.is-disabled,
+.input:disabled,
+.input.is-disabled {
+    cursor: not-allowed;
+    border-color: var(--sunka-sand);
+    background: var(--sunka-cream);
+    color: var(--sunka-stone);
+    opacity: 0.78;
+}
+
+.sunka-control[aria-invalid='true'],
+.input[aria-invalid='true'] {
+    border-color: var(--sunka-danger);
+}
+
+.sunka-control[aria-invalid='true']:focus,
+.sunka-control[aria-invalid='true']:focus-visible,
+.input[aria-invalid='true']:focus,
+.input[aria-invalid='true']:focus-visible {
+    box-shadow: 0 0 0 3px rgba(159, 81, 62, 0.12);
+}
+
+.sunka-error,
+.input-error {
+    margin-top: 0.35rem;
+    color: var(--sunka-danger);
+    font-size: 0.7rem;
+    line-height: 1.35;
+    text-align: left;
+}
+
+.sunka-choice,
+.checkbox,
+.radio {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+    color: #665e54;
+    font-size: 0.8rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.sunka-choice span,
+.checkbox span,
+.radio span {
+    text-align: left;
+}
+
+.sunka-choice input[type='checkbox'],
+.checkbox input {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    appearance: none;
+    border: 1px solid var(--sunka-sand);
+    border-radius: 0;
+    background: var(--sunka-control-background);
+    color: var(--sunka-ink);
+    cursor: pointer;
+}
+
+.sunka-choice input[type='checkbox']::before,
+.checkbox input::before {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: var(--sunka-white);
+    font-size: 0.65rem;
+    content: '✓';
+    opacity: 0;
+}
+
+.sunka-choice input[type='checkbox']:checked,
+.checkbox input:checked {
+    border-color: var(--sunka-brass);
+    background: var(--sunka-brass);
+}
+
+.sunka-choice input[type='checkbox']:checked::before,
+.checkbox input:checked::before {
+    opacity: 1;
+}
+
+.sunka-choice input[type='radio'],
+.radio input {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    appearance: none;
+    border: 1px solid var(--sunka-sand);
+    border-radius: 50%;
+    background: var(--sunka-control-background);
+    cursor: pointer;
+}
+
+.sunka-choice input[type='radio']::before,
+.radio input::before {
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    background: var(--sunka-brass);
+    content: '';
+    transform: scale(0);
+    transition: transform 140ms ease;
+}
+
+.sunka-choice input[type='radio']:checked,
+.radio input:checked {
+    border-color: var(--sunka-brass);
+}
+
+.sunka-choice input[type='radio']:checked::before,
+.radio input:checked::before {
+    transform: scale(1);
+}
+
+.sunka-choice input:focus-visible,
+.checkbox input:focus-visible,
+.radio input:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--sunka-control-focus);
+}
+
+.modal {
+    @apply fixed inset-0 z-50 flex items-center justify-center bg-black/50;
+}
+
+.modal .center {
+    @apply bg-white rounded-2xl shadow-xl w-auto max-w-[95vw] mx-4 max-h-[90vh] flex flex-col;
+}
+
+.modal header {
+    @apply border-b border-gray-300 p-4 flex justify-between items-center;
+}
+
+.modal header h3 {
+    @apply text-lg font-semibold;
+}
+.modal header button {
+    @apply text-gray-500 hover:text-black cursor-pointer;
+}
+
+.modal footer {
+    @apply border-t border-gray-300 flex justify-end gap-3 p-4;
+}
+
+.modal main {
+    @apply overflow-y-auto flex-1 p-6;
+}
