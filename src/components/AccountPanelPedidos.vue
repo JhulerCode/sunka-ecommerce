@@ -76,7 +76,7 @@
 import { defineComponent } from 'vue'
 import JdButton from "../components/JdButton.vue";
 
-import { get, post, urls } from "../lib/api";
+import { get, post, urls } from '@/lib/api/client';
 
 export default defineComponent({
     components: {

@@ -115,7 +115,7 @@
 import { defineComponent } from 'vue'
 import JdInput from './JdInput.vue'
 import LoadingSpin from './LoadingSpin.vue'
-import { post, urls } from '../lib/api'
+import { post, urls } from '@/lib/api/client'
 
 export default defineComponent({
     components: {

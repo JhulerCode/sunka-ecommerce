@@ -1,4 +1,4 @@
-import type { CartItem } from './cart'
+import type { CartItem } from '@/types/cart'
 
 export function toPromotionItems(items: CartItem[]) {
     return items.map((item) => ({

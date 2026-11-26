@@ -225,7 +225,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { post } from '../lib/api';
+import { post } from '@/lib/api/client';
 import JdInput from '../components/JdInput.vue';
 import JdSelect from './JdSelect.vue';
 import JdRadio from '../components/JdRadio.vue';

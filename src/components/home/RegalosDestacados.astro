@@ -1,5 +1,6 @@
 ---
-import { formatProductPrice, getProductPrice, hasClubPrice } from '@/lib/pricing'
+import { formatProductPrice } from '@/lib/utils/currency'
+import { getProductPrice, hasClubPrice } from '@/lib/pricing'
 import { getFeaturedStoreProducts } from '@/lib/server/product-catalog'
 
 const isAuthenticated = Astro.locals.session?.status === 'authenticated'

@@ -3,30 +3,11 @@ export const GENERAL_FREE_SHIPPING_MINIMUM = 75
 export const CLUB_FREE_SHIPPING_MINIMUM = 65
 export const CHECKOUT_POLICY_VERSION = 1
 
-type PromotionItem = Record<string, any> & {
-    quantity?: number
-    unit_price?: number
-}
-
-export type PromotionRequirement = {
-    line: string
-    presentation: number
-    quantity: number
-}
-
-export type PromotionRule = {
-    key: string
-    name: string
-    audience: 'general' | 'club'
-    requirements: PromotionRequirement[]
-    mysteryBox?: boolean
-}
-
-export type PromotionBenefit = {
-    type: 'envio_gratis' | 'caja_sorpresa'
-    label: string
-    quantity?: number
-}
+import type {
+    PromotionBenefit,
+    PromotionItem,
+    PromotionRule,
+} from '@/types/checkout'
 
 export const CHECKOUT_PROMOTION_RULES: PromotionRule[] = [
     {

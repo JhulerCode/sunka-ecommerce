@@ -1,3 +1,4 @@
+import { formatPrice } from '@/lib/utils/currency'
 import { emailLayout, escapeHtml, mailBrand } from './layout'
 
 type OrderLine = {
@@ -15,10 +16,6 @@ export type MailOrder = {
     delivery_type?: string
     partner_data?: { name?: string; email?: string }
     partner_order_lines?: OrderLine[]
-}
-
-function formatAmount(value: unknown) {
-    return `S/ ${Number(value || 0).toFixed(2)}`
 }
 
 function formatDate(value: unknown) {
@@ -126,7 +123,7 @@ export function renderOrderConfirmation({
                     <strong>Nro de pedido:</strong> ${escapeHtml(orderCode)}<br />
                     <strong>Código de consulta:</strong> ${escapeHtml(lookupCode)}<br />
                     <strong>Tipo de entrega:</strong> ${escapeHtml(deliveryName(order.delivery_type))}<br />
-                    <strong>Importe:</strong> ${formatAmount(order.amount)}<br />
+                    <strong>Importe:</strong> ${formatPrice(order.amount ?? 0)}<br />
                 </div>
                 <p>Para consultar tu pedido como invitado, usa el número de pedido y el código de seis dígitos. El código vence en 30 días y no debes compartirlo.</p>
                 ${orderLines(order.partner_order_lines)}

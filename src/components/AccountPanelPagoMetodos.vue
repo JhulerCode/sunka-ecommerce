@@ -89,7 +89,7 @@ import mastercardUrl from "../assets/icons/mastercard.svg?url";
 import dinersUrl from "../assets/icons/diners-club.svg?url";
 import amexUrl from "../assets/icons/american-express.svg?url";
 
-import { urls, get, delet } from "../lib/api";
+import { urls, get, delet } from '@/lib/api/client';
 
 export default defineComponent({
     components: {

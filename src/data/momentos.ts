@@ -1,9 +1,4 @@
-export interface Momento {
-    slug: string
-    titulo: string
-    icon: string
-    aliases: string[]
-}
+import type { Momento } from '@/types/content'
 
 export const momentos: Momento[] = [
     {

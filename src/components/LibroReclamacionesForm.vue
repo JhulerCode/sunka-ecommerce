@@ -156,7 +156,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { post } from "../lib/api";
+import { post } from '@/lib/api/client';
 import JdInput from "./JdInput.vue";
 import JdTextArea from "./JdTextArea.vue";
 import JdSelect from "./JdSelect.vue";

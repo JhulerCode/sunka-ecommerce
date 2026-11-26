@@ -213,8 +213,8 @@ import Trash from '../assets/icons/trash.vue';
 import Star from '../assets/icons/star.vue';
 import LoadingSpin from './LoadingSpin.vue';
 
-import { urls, get, patch } from '../lib/api';
-import { genId } from '../lib/mine';
+import { urls, get, patch } from '@/lib/api/client';
+import { genId } from '@/lib/utils/id';
 
 export default defineComponent({
     components: {

@@ -61,7 +61,7 @@ import JdInput from '../components/JdInput.vue'
 import JdSelect from '../components/JdSelect.vue'
 import JdLoading from '../components/LoadingSpin.vue'
 import JdButton from '../components/JdButton.vue'
-import { urls, get, patch } from '../lib/api'
+import { urls, get, patch } from '@/lib/api/client'
 
 export default defineComponent({
     components: {

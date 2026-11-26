@@ -514,7 +514,7 @@
                                 </div>
                                 <div class="flex gap-1">
                                     <dt class="font-semibold">Monto:</dt>
-                                    <dd>S/ {{ total.toFixed(2) }}</dd>
+                                    <dd>{{ formatCurrency(total) }}</dd>
                                 </div>
                             </dl>
                             <p class="mt-2 text-xs">
@@ -722,13 +722,12 @@
                             <p class="text-xs text-gray-500">Cantidad: {{ item.cantidad }}</p>
 
                             <p class="text-sm font-semibold text-gray-700 mt-1">
-                                S/
-                                {{ (itemPrice(item) * item.cantidad).toFixed(2) }}
+                                {{ formatCurrency(itemPrice(item) * item.cantidad) }}
                             </p>
                         </div>
                         <p v-if="showPriceComparison(item)" class="text-[10px] text-gray-500 text-right">
                             {{ user.id ? 'Precio regular' : 'Precio Club' }}:
-                            S/ {{ (user.id ? regularPrice(item) : clubPrice(item)).toFixed(2) }}
+                            {{ formatCurrency(user.id ? regularPrice(item) : clubPrice(item)) }}
                         </p>
                     </div>
                 </div>
@@ -738,16 +737,16 @@
             <div class="checkout-totals">
                 <div class="flex justify-between">
                     <span>Subtotal (sin IGV)</span>
-                    <span>S/ {{ netSubtotal.toFixed(2) }}</span>
+                    <span>{{ formatCurrency(netSubtotal) }}</span>
                 </div>
                 <div class="flex justify-between">
                     <span>IGV (18%)</span>
-                    <span>S/ {{ igv.toFixed(2) }}</span>
+                    <span>{{ formatCurrency(igv) }}</span>
                 </div>
                 <div class="flex justify-between">
                     <span>Costo de envío</span>
                     <span>
-                        <span v-if="deliveryCost > 0">S/ {{ deliveryCost.toFixed(2) }}</span>
+                        <span v-if="deliveryCost > 0">{{ formatCurrency(deliveryCost) }}</span>
                         <span v-else>Gratis</span>
                     </span>
                 </div>
@@ -764,13 +763,13 @@
                     v-if="form.delivery_type === 'envio' && !promotionQuote.hasFreeShipping"
                     class="checkout-shipping-progress"
                 >
-                    Te faltan S/ {{ promotionQuote.missingForFreeShipping.toFixed(2) }} para obtener
+                    Te faltan {{ formatCurrency(promotionQuote.missingForFreeShipping) }} para obtener
                     envío gratis{{ user.id ? ' Club' : '' }}.
                 </p>
 
                 <div class="checkout-total">
                     <span>Total</span>
-                    <span>S/ {{ total.toFixed(2) }}</span>
+                    <span>{{ formatCurrency(total) }}</span>
                 </div>
             </div>
 
@@ -805,7 +804,7 @@
             </p>
             <div class="checkout-mobile-bar__total">
                 <small>{{ summaryMobileLabel }}</small>
-                <strong>S/ {{ total.toFixed(2) }}</strong>
+                <strong>{{ formatCurrency(total) }}</strong>
             </div>
             <button
                 type="button"
@@ -877,8 +876,11 @@ import {
     PICKUP_LOCATIONS,
     getPickupLocation,
 } from '../data/pickup-locations'
-import { urls, get, post, patch, delet, formatProductos } from '../lib/api'
-import { formatDate, genId } from '../lib/mine'
+import { urls, get, post, patch, delet } from '@/lib/api/client'
+import { formatProductos } from '@/lib/catalog/product-format'
+import { formatPrice } from '@/lib/utils/currency'
+import { formatDate } from '@/lib/utils/date'
+import { genId } from '@/lib/utils/id'
 import { formatPaymentDate } from '../lib/payment-date'
 
 export default defineComponent({
@@ -1154,6 +1156,9 @@ export default defineComponent({
                 return { ...item, regular_price: product.price, club_price: product.club_price }
             })
             this.refreshItemPrices()
+        },
+        formatCurrency(value) {
+            return formatPrice(value)
         },
         itemPrice(item) {
             return Number(item.pu) || 0

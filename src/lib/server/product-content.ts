@@ -1,7 +1,5 @@
-import {
-    validateProductContents,
-    type ProductContent,
-} from '@/lib/product-content'
+import { validateProductContents } from '@/lib/product-content'
+import type { ProductContent } from '@/types/product'
 
 const modules = import.meta.glob<ProductContent>('../../data/products/*.json', {
     eager: true,

@@ -9,12 +9,6 @@ export function getProductPrice(product: Record<string, any> | null | undefined,
     return product.price
 }
 
-export function formatProductPrice(value: unknown) {
-    if (value === undefined || value === null || value === '') return ''
-    const number = Number(value)
-    return Number.isFinite(number) ? number.toFixed(2) : String(value)
-}
-
 export function hasClubPrice(product: Record<string, any> | null | undefined) {
     if (!product) return false
 

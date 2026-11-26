@@ -1,13 +1,9 @@
-import { formatProductos, get } from './api'
+import { formatProductos } from '@/lib/catalog/product-format'
+import { get } from '@/lib/api/client'
 import { getProductPrice } from './pricing'
+import type { CartItem } from '@/types/cart'
 
 const CART_KEY = 'sunka_cart'
-
-export interface CartItem extends Record<string, any> {
-    articulo: string | number
-    cantidad: number
-    pu: number
-}
 
 function normalizeCartItem(item: Record<string, any>): CartItem {
     const normalized: Record<string, any> = { ...item }

@@ -236,6 +236,7 @@ import { defineComponent } from 'vue'
 import ShoppingCart from '@/assets/icons/shopping-cart-plus.vue'
 import { Cart } from '@/lib/cart'
 import { evaluateCheckoutPromotions } from '@/lib/checkout-promotions'
+import { formatPrice } from '@/lib/utils/currency'
 
 export default defineComponent({
     name: 'CartDrawer',
@@ -347,11 +348,7 @@ export default defineComponent({
             return Cart.priceItems([item], this.isClubMember)[0]?.pu ?? item.pu
         },
         formatCurrency(value) {
-            return new Intl.NumberFormat('es-PE', {
-                style: 'currency',
-                currency: 'PEN',
-                minimumFractionDigits: 2,
-            }).format(Number(value))
+            return formatPrice(value)
         },
         regularPrice(item) {
             return item.regular_price ?? item.pu

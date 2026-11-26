@@ -86,7 +86,7 @@
                                 <strong>{{ empaque.nombre }}</strong>
                                 <small>{{ empaque.descripcion }}</small>
                             </span>
-                            <b>+ S/ {{ money(empaque.precio) }}</b>
+                            <b>+ {{ money(empaque.precio) }}</b>
                         </button>
                     </div>
                 </div>
@@ -492,14 +492,14 @@
                 <div class="blend-price-lines">
                     <div>
                         <span>Hierba base + complementos</span
-                        ><b>S/ {{ money(ingredientesPrice) }}</b>
+                        ><b>{{ money(ingredientesPrice) }}</b>
                     </div>
                     <div>
                         <span>{{ empaqueSummary }} + etiqueta personalizada</span
-                        ><b>S/ {{ money(empaquePrice) }}</b>
+                        ><b>{{ money(empaquePrice) }}</b>
                     </div>
                     <div class="blend-price-total">
-                        <span>Total</span><b>S/ {{ money(costoTotal) }}</b>
+                        <span>Total</span><b>{{ money(costoTotal) }}</b>
                     </div>
                 </div>
                 <button
@@ -517,7 +517,7 @@
             <div class="blend-mobile-bar">
                 <div class="blend-mobile-bar__total">
                     <small>Blend {{ formatSummary }} · {{ empaqueSummary }}</small>
-                    <strong>S/ {{ money(costoTotal) }}</strong>
+                    <strong>{{ money(costoTotal) }}</strong>
                 </div>
                 <button
                     type="button"
@@ -545,6 +545,7 @@ import { Blend } from '../lib/blend'
 import { Cart } from '../lib/cart'
 import logoSunka from '../assets/logo-sunka-black.webp'
 import JdInput from './JdInput.vue'
+import { formatPrice } from '@/lib/utils/currency'
 
 export default defineComponent({
     name: 'BlendForm',
@@ -741,7 +742,7 @@ export default defineComponent({
     },
     methods: {
         money(value) {
-            return Number(value || 0).toFixed(2)
+            return formatPrice(value ?? 0)
         },
         percentage(value) {
             return this.pesoMaximo ? Math.round((Number(value || 0) / this.pesoMaximo) * 100) : 0

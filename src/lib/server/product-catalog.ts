@@ -1,6 +1,7 @@
-import { formatProductos } from '@/lib/api'
-import { mergeProductContent, type ProductContent } from '@/lib/product-content'
+import { formatProductos } from '@/lib/catalog/product-format'
+import { mergeProductContent } from '@/lib/product-content'
 import type { Product } from '@/types/api'
+import type { ProductContent } from '@/types/product'
 import { serverGet } from './public-api'
 import {
     findProductContentBySlug,

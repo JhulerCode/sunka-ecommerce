@@ -126,7 +126,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { post } from '../lib/api'
+import { post } from '@/lib/api/client'
 
 export default defineComponent({
     name: 'NewsletterForm',

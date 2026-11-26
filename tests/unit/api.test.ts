@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest'
 import { readFileSync, readdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
-import { formatProductos } from '@/lib/api'
+import { formatProductos } from '@/lib/catalog/product-format'
 import { orderLookupSchema, signInSchema } from '@/lib/api-schemas'
 import { assertSameOrigin, failure, json } from '@/lib/server/bff'
 import { checkoutCookieName, orderCookieName } from '@/lib/server/backend'
 import { integrationPublicPath } from '@/lib/server/public-api'
-import { formatDate } from '@/lib/mine'
+import { formatDate } from '@/lib/utils/date'
 
 describe('contratos del ecommerce', () => {
     it('formatea las fechas siempre como dd/mm/yyyy', () => {

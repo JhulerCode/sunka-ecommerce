@@ -8,7 +8,8 @@ import ShieldIcon from '@/assets/icons/icon-shield-check.astro'
 import { backendRequest, getClientIp, orderCookieName } from '@/lib/server/backend'
 import { serverGet as get } from '@/lib/server/public-api'
 import { getProductContentById } from '@/lib/server/product-content'
-import { redondear, formatDate, formatDateTime } from '@/lib/mine'
+import { formatDate, formatDateTime } from '@/lib/utils/date'
+import { formatPrice } from '@/lib/utils/currency'
 import { formatPaymentDate } from '@/lib/payment-date'
 import { DELIVERY_TIME_RANGE } from '@/data/pickup-locations'
 
@@ -341,8 +342,7 @@ const orderTitle = pedido
                                             {pedido.delivery_type === 'envio' ? (
                                                 <>
                                                     <OrderDetail label="Costo de envío">
-                                                        {currencySymbol}
-                                                        {redondear(pedido.delivery_cost || 0)}
+                                                        {formatPrice(pedido.delivery_cost || 0, currencySymbol)}
                                                     </OrderDetail>
                                                     <OrderDetail label="Dirección" wide>
                                                         {pedido.delivery_address}
@@ -501,7 +501,7 @@ const orderTitle = pedido
                                                             </p>
                                                         </div>
                                                         <strong class="shrink-0 text-sm font-semibold text-sunka-forest">
-                                                            S/ {Number(item.total ?? item.unit_price * item.quantity).toFixed(2)}
+                                                            {formatPrice(Number(item.total ?? item.unit_price * item.quantity), currencySymbol)}
                                                         </strong>
                                                     </article>
                                                 )
@@ -518,8 +518,7 @@ const orderTitle = pedido
                                                 </p>
                                             </div>
                                             <strong class="font-heading text-2xl font-semibold text-sunka-brass-light">
-                                                {currencySymbol}
-                                                {redondear(pedido.amount)}
+                                                {formatPrice(pedido.amount, currencySymbol)}
                                             </strong>
                                         </div>
                                     </section>
