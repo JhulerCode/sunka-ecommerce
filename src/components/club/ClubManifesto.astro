@@ -1,0 +1,46 @@
+---
+import apparel from '@/assets/club/apparel.png'
+---
+
+<section class="bg-sunka-forest py-12 text-sunka-white md:py-16">
+    <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 md:grid-cols-2 md:px-8 lg:gap-16">
+        <div class="relative fade-up">
+            <div class="absolute -left-3 -top-3 h-full w-full border border-sunka-brass/70"></div>
+            <img
+                src={apparel.src}
+                alt="Prendas esenciales Club Sunka"
+                class="relative aspect-[1.12] w-full object-cover"
+            />
+        </div>
+        <div class="fade-up delay-1">
+            <p class="section-kicker">Una extensión de la marca</p>
+            <h2 class="section-title section-title-light max-w-lg">
+                No es merchandising. Es una forma de llevar la marca contigo.
+            </h2>
+            <p class="mt-4 max-w-lg text-sm leading-relaxed text-sunka-white/78 md:text-base">
+                Cada pieza nace de la misma idea que nuestros tés: calidad, utilidad y una
+                estética pensada para permanecer.
+            </p>
+            <ul class="mt-6 max-w-xl divide-y divide-sunka-white/10 border-y border-sunka-white/10">
+                <li class="club-step">
+                    <span>01</span>
+                    <div>
+                        <strong>Materiales elegidos para durar.</strong>
+                    </div>
+                </li>
+                <li class="club-step">
+                    <span>02</span>
+                    <div>
+                        <strong>Diseño simple, útil y reconocible.</strong>
+                    </div>
+                </li>
+            </ul>
+            <a
+                href="#coleccion"
+                class="club-button club-button-gold mt-7 w-full sm:w-fit"
+            >
+                Conoce la colección
+            </a>
+        </div>
+    </div>
+</section>

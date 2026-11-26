@@ -1,0 +1,81 @@
+---
+import ritualPause from '@/assets/home/campo.webp'
+import ritualDetail from '@/assets/home/lineas/piramidal.webp'
+import ritualBlend from '@/assets/home/blend.webp'
+import proposito1 from '@/assets/origen/proposito1.webp'
+import proposito2 from '@/assets/origen/proposito2.webp'
+import proposito3 from '@/assets/origen/proposito3.webp'
+---
+
+<section class="purpose-section bg-sunka-forest py-20 text-sunka-white md:py-28">
+    <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <header class="grid gap-8 md:grid-cols-[1.15fr_.85fr] md:items-start lg:gap-16">
+            <div class="fade-up">
+                <p class="kicker text-sunka-brass-light">El propósito de Sunka</p>
+                <h2 class="mt-4 max-w-xl font-heading text-3xl font-semibold leading-tight md:text-4xl">
+                    Nacimos para<br class="hidden md:block" /> trascender.
+                </h2>
+            </div>
+            <div class="border-l border-sunka-brass/55 pl-6 fade-up delay-1 md:mt-1 md:pl-8">
+                <p class="max-w-lg text-base leading-relaxed text-sunka-white/75 md:text-lg">
+                    Sunka nació en el Perú con la convicción de crear una marca capaz de permanecer
+                    en el tiempo. Unimos calidad, innovación e identidad propia para acompañar la
+                    vida de las personas y construir un legado que trascienda generaciones.
+                </p>
+                <p class="mt-7 text-[10px] font-semibold uppercase tracking-[.28em] text-sunka-brass-light">
+                    Marca peruana <span class="mx-1 text-sunka-brass/70">·</span> Visión global
+                </p>
+            </div>
+        </header>
+        <div class="mt-12 grid auto-rows-[230px] gap-4 md:mt-14 md:grid-cols-[1fr_1fr_1.15fr] md:auto-rows-[220px] lg:auto-rows-[250px]">
+            <a href="#historia" class="purpose-card purpose-card-main md:col-span-2 md:row-span-2 fade-up">
+                <img src={proposito1.src} alt="Ingredientes y productos SUNKA sobre una mesa" />
+                <div class="purpose-card-overlay"></div>
+                <span>
+                    <small>Nuestro origen</small>
+                    <strong>Una idea creada para permanecer.</strong>
+                    <em>Todo comenzó con la intención de construir algo que el tiempo no pudiera borrar.</em>
+                </span>
+            </a>
+            <a href="/tienda" class="purpose-card fade-up delay-1">
+                <img src={proposito2.src} alt="Preparación de una infusión SUNKA" />
+                <div class="purpose-card-overlay"></div>
+                <span><small>Nuestro ideal</small><strong>Elevar cada experiencia a través de la calidad.</strong></span>
+            </a>
+            <a href="/origen" class="purpose-card fade-up delay-2">
+                <img src={proposito3.src} alt="Tazas SUNKA bajo el cielo peruano" />
+                <div class="purpose-card-overlay"></div>
+                <span><small>Nuestra visión</small><strong>Una marca peruana destinada a trascender.</strong></span>
+            </a>
+        </div>
+
+        <div class="hidden grid gap-6 md:grid-cols-[1.2fr_.8fr] md:items-end">
+            <div class="fade-up">
+                <p class="kicker text-sunka-brass-light">Sunka en tu día</p><h2
+                    class="mt-4 font-heading text-3xl font-semibold leading-tight md:text-4xl"
+                >
+                    Hay una forma de acompañar<br class="hidden lg:block" /> cada momento.
+                </h2>
+            </div><p class="max-w-md leading-relaxed text-sunka-white/72 fade-up delay-1">
+                No creemos en una única manera de vivir el té. Creamos opciones para tus
+                mañanas, tus pausas y esos momentos que eliges compartir.
+            </p>
+        </div>
+        <div class="hidden mt-12 grid auto-rows-[250px] gap-4 md:grid-cols-5 md:auto-rows-[270px]">
+            <a href="/rituales" class="card md:col-span-3 md:row-span-2"
+                ><img src={ritualPause.src} alt="Pausa con té SUNKA" /><div></div><span
+                    ><small>Tu pausa</small><strong>Un instante que vuelve a ser tuyo.</strong
+                    ></span
+                ></a
+            ><a href="/rituales" class="card md:col-span-2"
+                ><img src={ritualDetail.src} alt="Preparación de té piramidal" /><div>
+                </div><span
+                    ><small>Tu ritual</small><strong>Calidad que se siente.</strong></span
+                ></a
+            ><a href="/crea-tu-blend" class="card md:col-span-2"
+                ><img src={ritualBlend.src} alt="Ingredientes de infusiones" /><div></div><span
+                    ><small>Tu creación</small><strong>Una mezcla a tu manera.</strong></span
+                ></a>
+        </div>
+    </div>
+</section>

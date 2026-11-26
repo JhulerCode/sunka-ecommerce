@@ -1,0 +1,25 @@
+---
+import destacadoImage from '@/assets/rituales/destacado.webp'
+---
+
+<section class="bg-sunka-forest py-12 text-sunka-white md:py-16">
+    <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 md:px-8 lg:grid-cols-2 lg:gap-16">
+        <div class="relative fade-up">
+            <span class="absolute -left-4 top-4 h-full w-full border border-sunka-brass/70"></span>
+            <img src={destacadoImage.src} alt="Preparación consciente de una taza de té" class="relative aspect-[4/3] w-full object-cover" />
+        </div>
+        <div class="fade-up delay-1">
+            <p class="section-kicker">Ritual destacado · 5 min</p>
+            <h2 class="section-title section-title-light">Cinco minutos para volver a tu ritmo.</h2>
+            <p class="mt-4 max-w-lg text-sm leading-relaxed text-sunka-white/78 md:text-base">
+                Un ritual no es una regla. Es una pequeña decisión que convierte una taza en un momento propio.
+            </p>
+            <ol class="mt-6 divide-y divide-sunka-white/10 border-y border-sunka-white/10">
+                <li class="ritual-step"><span>01</span><div><strong>Elige la taza que hoy te provoca.</strong><small>Tu ritual empieza antes del primer sorbo.</small></div></li>
+                <li class="ritual-step"><span>02</span><div><strong>Infusiona y deja que el aroma aparezca.</strong><small>Respeta el tiempo indicado en cada producto.</small></div></li>
+                <li class="ritual-step"><span>03</span><div><strong>Haz una pausa. Continúa distinto.</strong><small>Cinco minutos también pueden cambiar el día.</small></div></li>
+            </ol>
+            <a class="ritual-button ritual-button-gold mt-7 w-full sm:w-fit" href="/crea-tu-blend">Descubre tu blend</a>
+        </div>
+    </div>
+</section>

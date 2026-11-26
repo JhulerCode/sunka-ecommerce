@@ -1,0 +1,51 @@
+---
+import type { ProductDetailView } from '@/lib/server/catalog/product-detail'
+
+interface Props {
+    view: ProductDetailView
+}
+
+const { view } = Astro.props
+const { hasPreparacion, pasosPreparacion, preparacion, eyebrowClass, sectionTitleClass } = view
+---
+
+{
+    hasPreparacion && (
+        <section class="bg-sunka-cream">
+            <div class="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-16">
+                <p class={eyebrowClass}>Modo de preparación</p>
+                <h2 class={sectionTitleClass}>Tu ritual paso a paso.</h2>
+
+                {pasosPreparacion.length > 0 && (
+                    <ol class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-10 lg:gap-16">
+                        {pasosPreparacion.map((paso, index) => (
+                            <li class="grid grid-cols-[auto_1fr] gap-3 border-b border-sunka-sand pb-6">
+                                <span class="font-heading text-3xl font-semibold leading-none text-sunka-brass">
+                                    {String(index + 1).padStart(2, '0')}
+                                </span>
+                                <div>
+                                    {paso.titulo && (
+                                        <h3 class="text-base font-semibold">
+                                            {paso.titulo}
+                                        </h3>
+                                    )}
+                                    {paso.descripcion && (
+                                        <p class="mt-2 text-sm leading-snug text-sunka-ink/65">
+                                            {paso.descripcion}
+                                        </p>
+                                    )}
+                                </div>
+                            </li>
+                        ))}
+                    </ol>
+                )}
+
+                {preparacion.pairing && (
+                    <p class="mt-8 rounded-sm bg-sunka-white px-5 py-3 text-center text-xs text-sunka-ink/65">
+                        {preparacion.pairing}
+                    </p>
+                )}
+            </div>
+        </section>
+    )
+}

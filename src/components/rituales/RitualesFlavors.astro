@@ -1,0 +1,19 @@
+---
+const flavors = ['Fresco y ligero', 'Cálido y envolvente', 'Frutal y vibrante', 'Intenso y aromático']
+---
+
+<section class="bg-sunka-forest py-10 text-center text-sunka-white md:py-14">
+    <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <p class="section-kicker">Elige por sabor</p>
+        <h2 class="section-title section-title-light">¿Cómo quieres que se sienta tu taza?</h2>
+        <p class="mt-2 text-sm text-sunka-white/72">Explora las colecciones por perfil sensorial, sin complicaciones.</p>
+        <div class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {flavors.map((flavor) => (
+                <a href="/tienda" class="rounded-md border border-sunka-white/20 bg-white/5 px-5 py-5 font-heading text-sm font-semibold transition hover:border-sunka-brass hover:bg-sunka-brass hover:text-sunka-ink">
+                    {flavor}
+                    <span class="mt-2 block text-[11px] uppercase tracking-[0.12em] text-sunka-brass-light">Explorar →</span>
+                </a>
+            ))}
+        </div>
+    </div>
+</section>

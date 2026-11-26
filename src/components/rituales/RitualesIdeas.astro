@@ -1,0 +1,30 @@
+---
+interface Props {
+    articles: Array<Record<string, any>>
+}
+
+const { articles } = Astro.props
+---
+
+<section id="ideas-para-disfrutar" class="scroll-mt-24 bg-sunka-white py-10 md:py-14">
+    <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="flex flex-wrap items-end justify-between gap-6">
+            <div>
+                <p class="section-kicker">Ideas SUNKA</p>
+                <h2 class="section-title">Para disfrutar mejor el té.</h2>
+            </div>
+            <a href="#" class="text-xs font-semibold uppercase tracking-[0.1em] text-sunka-ink hover:text-sunka-brass">Ver todas las ideas →</a>
+        </div>
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+            {articles.map((article, index) => (
+                <article class={`group fade-up delay-${index}`}>
+                    <div class="aspect-[16/10] overflow-hidden rounded-md bg-sunka-sand">
+                        <img src={article.image.src} alt="" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+                    </div>
+                    <p class="section-kicker mt-5">{article.eyebrow}</p>
+                    <h3 class="mt-2 font-heading text-lg font-semibold leading-tight text-sunka-ink">{article.title}</h3>
+                </article>
+            ))}
+        </div>
+    </div>
+</section>

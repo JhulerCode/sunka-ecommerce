@@ -1,0 +1,32 @@
+---
+interface Props {
+    heading: string
+    updatedAt: string
+    updatedSize?: 'sm' | 'xs'
+}
+
+const { heading, updatedAt, updatedSize = 'xs' } = Astro.props
+const updatedClass =
+    updatedSize === 'sm' ? 'text-sm text-gray-400 mb-6' : 'text-xs text-gray-400 mb-6'
+---
+
+<main
+    class="politicas-privacidad max-w-5xl mx-auto px-6 pt-32 pb-12 prose prose-neutral lg:pt-36"
+>
+    <header class="text-center mb-6">
+        <h1
+            class="text-2xl text-center font-semibold mb-6 text-neutral-900 tracking-[0.15rem] sm:tracking-[0.25rem] md:tracking-[0.4rem]"
+        >
+            {heading}
+        </h1>
+
+        <p class={updatedClass}>
+            Última actualización: <strong>{updatedAt}</strong>
+        </p>
+
+        <div class="w-24 h-[2px] bg-neutral-800 mx-auto mt-2 rounded-full">
+        </div>
+    </header>
+
+    <slot />
+</main>

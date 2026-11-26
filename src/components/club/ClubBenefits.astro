@@ -1,0 +1,38 @@
+---
+interface Props {
+    benefits: Array<Record<string, any>>
+}
+
+const { benefits } = Astro.props
+---
+
+<section id="beneficios" class="scroll-mt-20 bg-sunka-white py-10 md:py-14">
+    <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="text-center fade-up">
+            <p class="section-kicker">Ser parte del club</p>
+            <h2 class="section-title">Más cerca de lo que viene.</h2>
+            <p class="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-sunka-ink/68">
+                Una comunidad para quienes quieren vivir Sunka dentro y fuera de la taza.
+            </p>
+        </div>
+        <div class="mx-auto mt-8 grid max-w-5xl gap-3 md:grid-cols-3">
+            {
+                benefits.map((benefit, index) => (
+                    <article
+                        class={`border border-sunka-sand bg-sunka-cream p-5 fade-up delay-${index}`}
+                    >
+                        <p class="text-[9px] font-semibold uppercase tracking-[0.18em] text-sunka-brass">
+                            {benefit.number}
+                        </p>
+                        <h3 class="mt-3 font-heading text-base font-semibold leading-tight text-sunka-ink md:text-lg">
+                            {benefit.title}
+                        </h3>
+                        <p class="mt-2 text-sm leading-relaxed text-sunka-ink/68">
+                            {benefit.description}
+                        </p>
+                    </article>
+                ))
+            }
+        </div>
+    </div>
+</section>

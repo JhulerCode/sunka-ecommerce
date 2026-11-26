@@ -1,0 +1,48 @@
+---
+import BoxIcon from '@/assets/icons/icon-box.astro'
+import BotanicalMixIcon from '@/assets/icons/icon-botanical-mix.astro'
+import LeafIcon from '@/assets/icons/icon-leaf.astro'
+import type { ProductDetailView } from '@/lib/server/catalog/product-detail'
+
+interface Props {
+    view: ProductDetailView
+}
+
+const { view } = Astro.props
+const { diferenciales, eyebrowClass, sectionTitleClass } = view
+---
+
+{
+    diferenciales.length > 0 && (
+        <section class="bg-sunka-white">
+            <div class="mx-auto max-w-7xl px-5 py-14 md:px-8 md:py-16">
+                <p class={eyebrowClass}>La diferencia Sunka</p>
+                <h2 class={sectionTitleClass}>Más expresión en cada taza.</h2>
+
+                <div class="mt-10 grid grid-cols-1 gap-9 md:grid-cols-3 md:gap-10 lg:gap-16">
+                    {diferenciales.map((item) => (
+                        <article class="border-t-2 border-sunka-brass pt-5">
+                            <span class="grid h-10 w-10 place-items-center rounded-full bg-sunka-sand text-sunka-brass">
+                                {item.icon === 'leaf' && <LeafIcon class="h-5 w-5" />}
+                                {item.icon === 'layers' && (
+                                    <BotanicalMixIcon class="h-5 w-5" />
+                                )}
+                                {item.icon === 'box' && <BoxIcon class="h-5 w-5" />}
+                            </span>
+                            {item.titulo && (
+                                <h3 class="mt-4 text-base font-semibold text-sunka-ink">
+                                    {item.titulo}
+                                </h3>
+                            )}
+                            {item.descripcion && (
+                                <p class="mt-2 text-sm leading-relaxed text-sunka-ink/65">
+                                    {item.descripcion}
+                                </p>
+                            )}
+                        </article>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
+}

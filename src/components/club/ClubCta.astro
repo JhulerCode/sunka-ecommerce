@@ -1,0 +1,38 @@
+---
+import hero from '@/assets/club/hero.png'
+import NewsLetterForm from '@/components/forms/NewsLetterForm.vue'
+---
+
+<section class="relative overflow-hidden bg-sunka-ink py-14 text-sunka-white md:py-20">
+    <img
+        src={hero.src}
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover object-right opacity-55"
+    />
+    <div
+        class="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,15,9,.99)_0%,rgba(4,15,9,.93)_48%,rgba(4,15,9,.18)_100%)]"
+    ></div>
+    <div class="relative mx-auto max-w-7xl px-5 md:px-8">
+        <div class="max-w-xl fade-up">
+            <p class="section-kicker">Únete a Club Sunka</p>
+            <h2 class="section-title section-title-light mt-3">
+                La próxima colección empieza aquí.
+            </h2>
+            <p class="mt-4 max-w-lg text-sm leading-relaxed text-sunka-white/78 md:text-base">
+                Recibe acceso anticipado, lanzamientos y contenido Sunka. Sin membresía pagada,
+                solo beneficios que valen la pena.
+            </p>
+            <div class="mt-7 max-w-lg">
+                <NewsLetterForm
+                    client:load
+                    theme="dark"
+                    variant="home"
+                    showPrivacy={false}
+                />
+            </div>
+            <p class="mt-4 text-[9px] leading-4 text-sunka-white/42">
+                Al registrarte aceptas recibir novedades de Sunka. Puedes salir cuando quieras.
+            </p>
+        </div>
+    </div>
+</section>

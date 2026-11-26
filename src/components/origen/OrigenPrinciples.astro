@@ -1,0 +1,70 @@
+---
+import ThreeLeafSproutIcon from '@/assets/icons/icon-three-leaf-sprout.astro'
+import BotanicalBranchIcon from '@/assets/icons/icon-botanical-branch.astro'
+
+interface Props {
+    principles: string[][]
+}
+
+const { principles } = Astro.props
+---
+
+<section class="principles-section relative overflow-hidden bg-[#f5ecdc] py-14 md:py-20 lg:py-24">
+    <BotanicalBranchIcon
+        class="absolute -right-8 -top-2 h-auto w-64 text-sunka-brass opacity-[0.13] md:w-80 lg:w-[380px]"
+        aria-hidden="true"
+    />
+    <BotanicalBranchIcon
+        class="absolute -bottom-16 -left-20 h-auto w-64 -scale-x-100 rotate-[12deg] text-sunka-brass opacity-[0.08] md:w-72"
+        aria-hidden="true"
+    />
+
+    <div class="relative mx-auto max-w-7xl px-5 md:px-8">
+        <div class="mx-auto max-w-3xl text-center fade-up">
+            <p class="kicker text-sunka-brass">Lo que nos mueve</p><h2
+                class="mt-4 font-heading text-3xl font-semibold leading-tight md:text-4xl"
+            >
+                Tres principios. Una sola forma<br class="hidden md:block" /> de hacer las cosas.
+            </h2>
+            <div
+                class="mx-auto mt-5 flex items-center justify-center gap-2 text-sunka-brass"
+                aria-hidden="true"
+            >
+                <span class="h-px w-14 bg-sunka-brass/70"></span>
+                <ThreeLeafSproutIcon class="h-5 w-5" />
+                <span class="h-px w-14 bg-sunka-brass/70"></span>
+            </div>
+            <p class="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-sunka-ink/80 md:text-base">
+                Nuestra historia se construye con decisiones concretas: elevar la calidad,
+                innovar con propósito y demostrar todo lo que una marca peruana puede llegar a
+                ser.
+            </p>
+        </div>
+        <div class="mt-10 grid gap-5 md:mt-12 md:grid-cols-3">
+            {
+                principles.map((item) => (
+                    <article class="flex min-h-[285px] flex-col items-center rounded-[20px] border border-sunka-brass/35 bg-[#fffdf8]/90 px-5 py-7 text-center shadow-[0_12px_28px_rgba(73,48,17,.11)] fade-up lg:min-h-[305px] lg:px-6">
+                        <>
+                            <span class="flex h-20 w-20 items-center justify-center rounded-full border border-sunka-brass/55 text-sunka-brass">
+                                <span class="font-heading text-2xl font-semibold tracking-[0.08em]">
+                                    {item[0]}
+                                </span>
+                            </span>
+                            <h3 class="mt-5 font-heading text-xl font-semibold leading-tight">
+                                {item[1]}
+                            </h3>
+                            <span class="mt-4 flex items-center gap-1.5 text-sunka-brass" aria-hidden="true">
+                                <span class="h-px w-5 bg-sunka-brass/70"></span>
+                                <span class="h-1.5 w-1.5 rounded-full bg-sunka-brass"></span>
+                                <span class="h-px w-5 bg-sunka-brass/70"></span>
+                            </span>
+                            <p class="mt-4 max-w-sm text-sm leading-relaxed text-sunka-ink/72">
+                                {item[2]}
+                            </p>
+                        </>
+                    </article>
+                ))
+            }
+        </div>
+    </div>
+</section>

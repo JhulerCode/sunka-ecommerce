@@ -1,0 +1,33 @@
+---
+import type { ProductDetailView } from '@/lib/server/catalog/product-detail'
+
+interface Props {
+    view: ProductDetailView
+}
+
+const { view } = Astro.props
+---
+
+<div class="mx-auto max-w-7xl px-5 pt-24 md:px-8">
+    <nav
+        aria-label="Ruta de navegación"
+        class="flex flex-wrap gap-2 py-5 text-[11px] text-sunka-stone"
+    >
+        <a href="/tienda" class="transition-colors hover:text-sunka-brass">Tienda</a>
+        {
+            view.linea && (
+                <>
+                    <span>/</span>
+                    <a
+                        href={view.lineaTiendaHref}
+                        class="transition-colors hover:text-sunka-brass"
+                    >
+                        {view.linea}
+                    </a>
+                </>
+            )
+        }
+        <span>/</span>
+        <span aria-current="page">{view.producto.name}</span>
+    </nav>
+</div>

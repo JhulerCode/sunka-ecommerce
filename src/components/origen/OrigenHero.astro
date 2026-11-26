@@ -1,0 +1,47 @@
+---
+import hero from '@/assets/origen/hero.webp'
+import heroMobile from '@/assets/origen/hero.webp'
+---
+
+<section
+    class="hero relative min-h-[690px] w-full overflow-hidden bg-sunka-ink text-sunka-white md:min-h-[650px]"
+>
+    <picture class="absolute inset-0 block h-full w-full">
+        <source media="(max-width: 767px)" srcset={heroMobile.src} />
+        <img
+            src={hero.src}
+            alt="Mujer disfrutando una infusión SUNKA"
+            class="origin-hero-image h-full w-full object-cover object-right md:object-center"
+        />
+    </picture>
+    <div
+        class="absolute inset-0 bg-[linear-gradient(180deg,rgba(9,8,6,1)_0%,rgba(9,8,6,.98)_34%,rgba(9,8,6,.82)_58%,rgba(9,8,6,.18)_100%)] md:bg-[linear-gradient(90deg,rgba(9,8,6,1)_0%,rgba(9,8,6,.92)_42%,rgba(9,8,6,.46)_68%,rgba(9,8,6,.12)_100%)]"
+    >
+    </div>
+    <div
+        class="relative mx-auto flex min-h-[690px] max-w-7xl items-start px-5 pt-28 md:min-h-[650px] md:items-center md:px-8 md:pt-24"
+    >
+        <div class="max-w-2xl fade-up">
+            <p class="kicker text-sunka-brass-light/90">Nuestra historia</p>
+            <h1
+                class="mt-4 max-w-xl font-heading text-3xl font-semibold leading-[1.05] md:text-5xl"
+            >
+                Una marca creada<br />para trascender.
+            </h1>
+            <p class="mt-6 max-w-md text-base leading-relaxed text-sunka-white/88 md:text-lg">
+                Sunka es una marca peruana de té e infusiones que combina calidad e innovación
+                para acompañarte en cada momento de tu día.
+            </p>
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+                <a
+                    href="/tienda"
+                    class="button-origin border border-sunka-brass bg-sunka-brass text-sunka-white hover:bg-sunka-brass-light hover:text-sunka-ink"
+                    >Descubre nuestras colecciones</a
+                ><a
+                    href="#historia"
+                    class="button-origin border border-sunka-white/55 text-sunka-white hover:bg-sunka-white hover:text-sunka-ink"
+                    >Conoce nuestra esencia</a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,48 @@
+---
+interface Props {
+    categories: Array<Record<string, any>>
+}
+
+const { categories } = Astro.props
+---
+
+<section class="bg-sunka-cream py-12 md:py-16">
+    <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="grid gap-4 fade-up md:grid-cols-2 md:items-end">
+            <div>
+                <p class="section-kicker">Objetos para tu ritmo</p>
+                <h2 class="section-title">Diseñados para acompañarte.</h2>
+            </div>
+            <p class="max-w-lg text-sm leading-relaxed text-sunka-ink/68 md:justify-self-end">
+                Piezas útiles, contemporáneas y duraderas para tu día a día.
+            </p>
+        </div>
+
+        <div class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {
+                categories.map(({ eyebrow, title, description, Icon }, index) => (
+                    <article
+                        class={`border border-sunka-sand bg-sunka-white p-5 fade-up delay-${Math.min(index, 3)}`}
+                    >
+                        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-sunka-forest text-sunka-brass-light">
+                            <Icon class="h-5 w-5" />
+                        </span>
+                        <p class="section-kicker mt-5">
+                            {eyebrow}
+                        </p>
+                        <h3 class="mt-2 font-heading text-base font-semibold leading-tight text-sunka-ink md:text-lg">
+                            {title}
+                        </h3>
+                        <p class="mt-2 text-sm leading-relaxed text-sunka-ink/68">{description}</p>
+                        <a
+                            href="#coleccion"
+                            class="mt-4 inline-flex text-[11px] font-semibold uppercase tracking-[0.12em] text-sunka-ink transition hover:text-sunka-brass"
+                        >
+                            Explorar →
+                        </a>
+                    </article>
+                ))
+            }
+        </div>
+    </div>
+</section>

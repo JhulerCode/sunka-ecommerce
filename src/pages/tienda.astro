@@ -5,29 +5,15 @@ import Beneficios from '@/components/home/Beneficios.astro'
 import bannerTienda from '@/assets/banner1.webp'
 import originImage from '@/assets/origen/andes.webp'
 import { getStoreProducts } from '@/lib/server/catalog/service'
+import { buildCatalogLineas } from '@/lib/catalog/facets'
 import { momentos } from '@/data/content/momentos'
 
 const isAuthenticated = Astro.locals.session?.status === 'authenticated'
 
-//--- Load productos ---//
 const productos = await getStoreProducts()
-
-//--- Set líneas ---//
-const lineas = []
-for (const a of productos) {
-    if (a.linea1) {
-        const i = lineas.findIndex((b) => b.id == a.linea)
-        if (i === -1) {
-            lineas.push({
-                ...a.linea1,
-                nombre: a.linea1.nombre ?? a.linea1.name ?? '',
-            })
-        }
-    }
-}
+const lineas = buildCatalogLineas(productos)
 
 const collator = new Intl.Collator('es', { sensitivity: 'base' })
-lineas.sort((a, b) => collator.compare(a.nombre ?? a.name ?? '', b.nombre ?? b.name ?? ''))
 const momentosOrdenados = [...momentos].sort((a, b) => collator.compare(a.titulo, b.titulo))
 ---
 

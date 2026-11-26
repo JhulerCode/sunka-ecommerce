@@ -1,0 +1,165 @@
+---
+interface Props {
+    moments: Array<Record<string, any>>
+    initialMoment: Record<string, any>
+}
+
+const { moments, initialMoment } = Astro.props
+---
+
+<section id="encuentra-tu-ritual" class="bg-sunka-cream py-12 md:py-16">
+    <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="grid gap-4 fade-up md:grid-cols-2 md:items-end">
+            <div>
+                <p class="section-kicker">Tu día, a tu manera</p>
+                <h2 class="section-title">Un ritual para cada ritmo.</h2>
+            </div>
+            <p class="max-w-lg text-sm leading-relaxed text-sunka-ink/68 md:justify-self-end">
+                Elige el momento que estás viviendo y descubre el ritual SUNKA que mejor lo
+                acompaña.
+            </p>
+        </div>
+
+        <div
+            class="mt-8 grid grid-cols-2 gap-2 md:grid-cols-4"
+            role="group"
+            aria-label="Selecciona un momento del día"
+        >
+            {moments.map((moment, index) => (
+                <button
+                    class={`moment-button ${index === 0 ? 'is-active' : ''}`}
+                    data-moment={moment.key}
+                    data-label={moment.label}
+                    data-eyebrow={moment.eyebrow}
+                    data-name={moment.title}
+                    data-copy={moment.copy}
+                    data-product={moment.product}
+                    data-product-href={moment.productHref}
+                    data-notes={moment.notes}
+                    data-image={moment.image.src}
+                    data-alt={moment.alt}
+                    type="button"
+                    aria-pressed={index === 0 ? 'true' : 'false'}
+                >
+                    {moment.button}
+                </button>
+            ))}
+        </div>
+
+        <article
+            class="mt-6 grid overflow-hidden rounded-md border border-sunka-ink/14 bg-sunka-white shadow-[0_1px_0_rgba(9,8,6,.05)] fade-up lg:grid-cols-[1.15fr_0.85fr]"
+            aria-live="polite"
+        >
+            <figure class="relative h-[330px] min-h-0 w-full self-start overflow-hidden bg-sunka-forest sm:h-[420px] lg:h-[500px]">
+                <img
+                    id="moment-image"
+                    src={initialMoment.image.src}
+                    alt={initialMoment.alt}
+                    class="absolute inset-0 block h-full w-full object-cover object-[right_center] transition-all duration-500"
+                />
+                <div
+                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-sunka-ink/85 via-sunka-ink/5 to-transparent"
+                    aria-hidden="true"
+                ></div>
+                <figcaption class="absolute inset-x-0 bottom-0 p-6 text-sunka-white md:p-8">
+                    <p id="moment-eyebrow" class="text-[11px] font-semibold uppercase tracking-[0.2em] text-sunka-brass-light">
+                        {initialMoment.eyebrow}
+                    </p>
+                    <p id="moment-label" class="mt-2 text-sm text-sunka-white/78">
+                        {initialMoment.label}
+                    </p>
+                </figcaption>
+            </figure>
+
+            <div id="moment-content" class="flex flex-col justify-center p-6 transition-all duration-300 md:p-8 lg:p-10">
+                <p class="section-kicker">Tu ritual SUNKA</p>
+                <h3 id="moment-name" class="mt-2 font-heading text-2xl font-semibold leading-tight text-sunka-ink md:text-3xl">
+                    {initialMoment.title}
+                </h3>
+                <p id="moment-copy" class="mt-4 text-sm leading-relaxed text-sunka-ink/68 md:text-base">
+                    {initialMoment.copy}
+                </p>
+
+                <div class="my-6 h-px bg-sunka-sand"></div>
+
+                <div>
+                    <p class="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-sunka-brass">
+                        Te recomendamos
+                    </p>
+                    <p id="moment-product" class="font-heading text-xl font-semibold text-sunka-ink">
+                        {initialMoment.product}
+                    </p>
+                    <p id="moment-notes" class="mt-2 text-sm leading-relaxed text-sunka-ink/68">
+                        {initialMoment.notes}
+                    </p>
+                </div>
+
+                <a
+                    id="moment-product-link"
+                    class="ritual-button ritual-button-gold mt-7 w-full sm:w-fit"
+                    href={initialMoment.productHref}
+                >
+                    Ver producto recomendado
+                </a>
+
+            </div>
+        </article>
+    </div>
+</section>
+
+<script>
+    const requiredElement = <T extends HTMLElement>(id: string) => {
+        const element = document.getElementById(id)
+        if (!element) throw new Error(`Elemento requerido no encontrado: ${id}`)
+        return element as T
+    }
+
+    const fields = {
+        label: requiredElement<HTMLElement>('moment-label'),
+        eyebrow: requiredElement<HTMLElement>('moment-eyebrow'),
+        name: requiredElement<HTMLElement>('moment-name'),
+        copy: requiredElement<HTMLElement>('moment-copy'),
+        product: requiredElement<HTMLElement>('moment-product'),
+        notes: requiredElement<HTMLElement>('moment-notes'),
+        productLink: requiredElement<HTMLAnchorElement>('moment-product-link'),
+        image: requiredElement<HTMLImageElement>('moment-image'),
+        content: requiredElement<HTMLElement>('moment-content'),
+    }
+
+    let contentTimer: number | undefined
+    let imageTimer: number | undefined
+
+    document.querySelectorAll<HTMLElement>('[data-moment]').forEach((button) => {
+        button.addEventListener('click', () => {
+            if (button.classList.contains('is-active')) return
+
+            document.querySelectorAll('[data-moment]').forEach((item) => {
+                item.classList.remove('is-active')
+                item.setAttribute('aria-pressed', 'false')
+            })
+            button.classList.add('is-active')
+            button.setAttribute('aria-pressed', 'true')
+
+            window.clearTimeout(contentTimer)
+            fields.content.classList.add('is-changing')
+            contentTimer = window.setTimeout(() => {
+                fields.label.textContent = button.dataset.label ?? ''
+                fields.eyebrow.textContent = button.dataset.eyebrow ?? ''
+                fields.name.textContent = button.dataset.name ?? ''
+                fields.copy.textContent = button.dataset.copy ?? ''
+                fields.product.textContent = button.dataset.product ?? ''
+                fields.notes.textContent = button.dataset.notes ?? ''
+                fields.productLink.setAttribute('href', button.dataset.productHref ?? '#')
+                fields.content.classList.remove('is-changing')
+            }, 150)
+
+            window.clearTimeout(imageTimer)
+            fields.image.classList.add('is-changing')
+            imageTimer = window.setTimeout(() => {
+                fields.image.setAttribute('src', button.dataset.image ?? '')
+                fields.image.setAttribute('alt', button.dataset.alt ?? '')
+                fields.image.classList.remove('is-changing')
+            }, 220)
+        })
+    })
+</script>
