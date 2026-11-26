@@ -17,8 +17,9 @@ describe('utilidades de formato', () => {
         expect(formatPrice(null)).toBe('')
     })
 
-    it('formatea números con separador de miles', () => {
+    it('formatea números con y sin separador de miles', () => {
         expect(formatNumber(1234.5)).toBe('1,234.50')
+        expect(formatNumber(1234.5, 2, false)).toBe('1234.50')
         expect(formatNumber(null)).toBeNull()
     })
 
