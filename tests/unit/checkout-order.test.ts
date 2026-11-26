@@ -5,12 +5,12 @@ import {
     PARTNER_ORDER_TYPE,
     createPaymentSchema,
     partnerOrderTypeSchema,
-} from '../../src/lib/api-schemas'
-import { buildCheckoutDraft, prepareCheckoutOrder } from '../../src/lib/server/checkout-order'
-import type { CheckoutProductData } from '../../src/lib/server/product-catalog'
-import { getMinimumDeliveryDate } from '../../src/lib/delivery-date'
+} from '../../src/lib/api/schemas'
+import { buildCheckoutDraft, prepareCheckoutOrder } from '../../src/lib/server/checkout/order'
+import type { CheckoutProductData } from '../../src/lib/server/catalog/service'
+import { getMinimumDeliveryDate } from '../../src/lib/checkout/delivery-date'
 
-vi.mock('../../src/lib/server/product-catalog', () => ({
+vi.mock('../../src/lib/server/catalog/service', () => ({
     getCheckoutProducts: vi.fn(async (ids: string[]) =>
         new Map(
             ids.map((id) => [

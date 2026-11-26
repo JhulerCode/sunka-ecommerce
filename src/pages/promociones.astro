@@ -8,7 +8,7 @@ import {
     getPromotionBenefits,
     getPromotionRequirementText,
     isMixedPromotion,
-} from '@/lib/checkout-promotions'
+} from '@/lib/checkout/promotions'
 
 const generalPromotions = CHECKOUT_PROMOTION_RULES.filter((rule) => rule.audience === 'general')
 const clubPromotions = CHECKOUT_PROMOTION_RULES.filter((rule) => rule.audience === 'club')

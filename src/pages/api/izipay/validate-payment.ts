@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro'
-import { validatePaymentSchema } from '@/lib/api-schemas'
+import { validatePaymentSchema } from '@/lib/api/schemas'
 import { getCheckoutCookie, requestWithOptionalSession } from '@/lib/server/backend'
 import { assertSameOrigin, failure, forbiddenOrigin, invalidRequest, json, parseJson } from '@/lib/server/bff'
 

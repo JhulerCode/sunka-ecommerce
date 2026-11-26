@@ -1,7 +1,7 @@
-import { validateProductContents } from '@/lib/product-content'
+import { validateProductContents } from '@/lib/catalog/product-content'
 import type { ProductContent } from '@/types/product'
 
-const modules = import.meta.glob<ProductContent>('../../data/products/*.json', {
+const modules = import.meta.glob<ProductContent>('../../../data/products/*.json', {
     eager: true,
     import: 'default',
 })

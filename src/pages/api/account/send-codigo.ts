@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro'
-import { accountCodeSchema } from '@/lib/api-schemas'
+import { accountCodeSchema } from '@/lib/api/schemas'
 import { requestWithSession } from '@/lib/server/backend'
 import { failure, invalidRequest, json, parseJson } from '@/lib/server/bff'
 import { renderVerificationCode } from '@/lib/mail/account'

@@ -1,7 +1,7 @@
 import type { APIContext } from 'astro'
-import { idSchema } from '@/lib/api-schemas'
-import { clearCheckoutCookie, getCheckoutCookie, requestWithOptionalSession } from './backend'
-import { assertSameOrigin, failure, forbiddenOrigin, json } from './bff'
+import { idSchema } from '@/lib/api/schemas'
+import { clearCheckoutCookie, getCheckoutCookie, requestWithOptionalSession } from '../backend'
+import { assertSameOrigin, failure, forbiddenOrigin, json } from '../bff'
 
 export async function cancelCheckoutIntent(context: APIContext, provider: 'izipay' | 'niubiz') {
     if (!assertSameOrigin(context.request)) return forbiddenOrigin()

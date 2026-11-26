@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro'
 import { json } from '@/lib/server/bff'
-import { getStoreProducts } from '@/lib/server/product-catalog'
+import { getStoreProducts } from '@/lib/server/catalog/service'
 
 export const GET: APIRoute = async ({ request }) => {
     const source = new URL(request.url).searchParams

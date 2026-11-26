@@ -1,9 +1,9 @@
 import type { APIRoute } from 'astro'
-import { idSchema } from '@/lib/api-schemas'
+import { idSchema } from '@/lib/api/schemas'
 import {
     clearCheckoutCookie, getCheckoutCookie, requestWithOptionalSession, setOrderCookie,
 } from '@/lib/server/backend'
-import { sendCheckoutConfirmation } from '@/lib/server/checkout-notifications'
+import { sendCheckoutConfirmation } from '@/lib/server/checkout/notifications'
 import { assertSameOrigin, failure, forbiddenOrigin, json } from '@/lib/server/bff'
 
 async function readTransactionToken(request: Request) {

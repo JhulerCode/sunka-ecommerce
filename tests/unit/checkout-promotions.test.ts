@@ -4,12 +4,12 @@ import {
     evaluateCheckoutPromotions,
     getPromotionRequirementText,
     getPromotionShopHref,
-} from '../../src/lib/checkout-promotions'
-import { buildCheckoutDraft } from '../../src/lib/server/checkout-order'
+} from '../../src/lib/checkout/promotions'
+import { buildCheckoutDraft } from '../../src/lib/server/checkout/order'
 import {
     getMinimumDeliveryDate,
     isDeliveryDateAllowed,
-} from '../../src/lib/delivery-date'
+} from '../../src/lib/checkout/delivery-date'
 
 function item(line: string, presentation: number, quantity: number, price = 1) {
     return {

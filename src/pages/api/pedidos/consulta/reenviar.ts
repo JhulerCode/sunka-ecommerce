@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro'
-import { orderResendSchema } from '@/lib/api-schemas'
+import { orderResendSchema } from '@/lib/api/schemas'
 import { backendRequest, getClientIp } from '@/lib/server/backend'
 import { failure, invalidRequest, json, parseJson } from '@/lib/server/bff'
 import { renderOrderLookupCode } from '@/lib/mail/order'

@@ -171,7 +171,7 @@ import JdInputPassword from "../components/JdInputPassword.vue";
 import JdLoading from "../components/LoadingSpin.vue";
 import JdButton from "../components/JdButton.vue";
 import { urls, post, delet } from '@/lib/api/client';
-import { CheckoutDraft } from "../lib/checkout-draft";
+import { CheckoutDraft } from "@/lib/checkout/draft";
 
 export default defineComponent({
     components: {

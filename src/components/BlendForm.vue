@@ -541,8 +541,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { Blend } from '../lib/blend'
-import { Cart } from '../lib/cart'
+import { Blend } from '@/lib/blend/blend'
+import { Cart } from '@/lib/cart/cart'
 import logoSunka from '../assets/logo-sunka-black.webp'
 import JdInput from './JdInput.vue'
 import { formatPrice } from '@/lib/utils/currency'

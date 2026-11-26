@@ -188,7 +188,7 @@ import EyeOpen from '../assets/icons/eye-open.vue'
 import EyeCancel from '../assets/icons/eye-cancel.vue'
 import Xmark from '../assets/icons/xmark.vue'
 import { urls, post, get } from '@/lib/api/client'
-import { CheckoutDraft } from '../lib/checkout-draft'
+import { CheckoutDraft } from '@/lib/checkout/draft'
 
 export default defineComponent({
     name: 'AuthModal',

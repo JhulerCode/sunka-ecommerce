@@ -6,7 +6,7 @@ import signatureDiferencia from '@/assets/lines/signature/diferencia.webp'
 import piramidalDiferencia from '@/assets/lines/premium/diferencia.webp'
 import luxuryDiferencia from '@/assets/lines/luxury/diferencia.webp'
 import tradicionalDiferencia from '@/assets/lines/tradicional/diferencia.webp'
-import { getMomentosBySlugs } from '@/data/momentos'
+import { getMomentosBySlugs } from '@/data/content/momentos'
 
 const defaultMomentos = getMomentosBySlugs(['manana', 'oficina', 'despues-de-comer', 'noche'])
 

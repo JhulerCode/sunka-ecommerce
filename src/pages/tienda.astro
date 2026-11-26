@@ -4,8 +4,8 @@ import TiendaCatalog from '@/components/tienda/TiendaCatalog.vue'
 import Beneficios from '@/components/home/Beneficios.astro'
 import bannerTienda from '@/assets/banner1.webp'
 import originImage from '@/assets/origen/andes.webp'
-import { getStoreProducts } from '@/lib/server/product-catalog'
-import { momentos } from '@/data/momentos'
+import { getStoreProducts } from '@/lib/server/catalog/service'
+import { momentos } from '@/data/content/momentos'
 
 const isAuthenticated = Astro.locals.session?.status === 'authenticated'
 

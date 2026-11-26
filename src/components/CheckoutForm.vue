@@ -861,27 +861,27 @@ import genericUrl from '../assets/icons/card-generic.svg?url'
 import logoSunkaUrl from '../assets/logo-sunka-black.webp?url&no-inline'
 import logoSunkaInline from '../assets/logo-sunka-black.webp?inline'
 
-import { Cart } from '../lib/cart'
-import { getProductPrice } from '../lib/pricing'
-import { CheckoutDraft, createCheckoutCartSignature, createCheckoutOrderSignature } from '../lib/checkout-draft'
-import { toOrderLines, toPromotionItems } from '../lib/checkout-lines'
-import { evaluateCheckoutPromotions } from '../lib/checkout-promotions'
+import { Cart } from '@/lib/cart/cart'
+import { getProductPrice } from '@/lib/catalog/pricing'
+import { CheckoutDraft, createCheckoutCartSignature, createCheckoutOrderSignature } from '@/lib/checkout/draft'
+import { toOrderLines, toPromotionItems } from '@/lib/checkout/lines'
+import { evaluateCheckoutPromotions } from '@/lib/checkout/promotions'
 import {
     formatDeliveryDate,
     getMinimumDeliveryDate,
     isDeliveryDateAllowed,
-} from '../lib/delivery-date'
+} from '@/lib/checkout/delivery-date'
 import {
     DELIVERY_TIME_RANGE,
     PICKUP_LOCATIONS,
     getPickupLocation,
-} from '../data/pickup-locations'
+} from '@/data/content/pickup-locations'
 import { urls, get, post, patch, delet } from '@/lib/api/client'
 import { formatProductos } from '@/lib/catalog/product-format'
 import { formatPrice } from '@/lib/utils/currency'
 import { formatDate } from '@/lib/utils/date'
 import { genId } from '@/lib/utils/id'
-import { formatPaymentDate } from '../lib/payment-date'
+import { formatPaymentDate } from '@/lib/checkout/payment-date'
 
 export default defineComponent({
     inheritAttrs: false,

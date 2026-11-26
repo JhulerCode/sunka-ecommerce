@@ -1,10 +1,10 @@
 import type { APIRoute } from 'astro'
-import { createPaymentSchema } from '@/lib/api-schemas'
+import { createPaymentSchema } from '@/lib/api/schemas'
 import { requestWithOptionalSession, setCheckoutCookie, setOrderCookie } from '@/lib/server/backend'
 import {
     assertSameOrigin, failure, forbiddenOrigin, invalidRequest, json, parseJson,
 } from '@/lib/server/bff'
-import { prepareCheckoutOrder } from '@/lib/server/checkout-order'
+import { prepareCheckoutOrder } from '@/lib/server/checkout/order'
 
 type CheckoutOrder = {
     checkout_intent_id?: string

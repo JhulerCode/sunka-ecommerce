@@ -1,8 +1,8 @@
 import type { APIContext } from 'astro'
-import { requestWithOptionalSession } from './backend'
-import { getProductContentById } from './product-content'
+import { requestWithOptionalSession } from '../backend'
+import { getProductContentById } from '../catalog/content'
 import { renderOrderConfirmation, type MailOrder } from '@/lib/mail/order'
-import { sendMail } from './mail'
+import { sendMail } from '../mail'
 
 type ClaimData = {
     order?: MailOrder

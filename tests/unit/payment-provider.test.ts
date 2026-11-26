@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from 'vitest'
-import { activePaymentProvider } from '@/lib/server/paymentProvider'
+import { activePaymentProvider } from '@/lib/server/payment-provider'
 
 const original = process.env.PAYMENT_PROVIDER
 

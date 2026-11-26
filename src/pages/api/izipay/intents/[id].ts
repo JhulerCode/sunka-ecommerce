@@ -1,10 +1,10 @@
 import type { APIRoute } from 'astro'
-import { idSchema } from '@/lib/api-schemas'
+import { idSchema } from '@/lib/api/schemas'
 import {
     clearCheckoutCookie, getCheckoutCookie, requestWithOptionalSession, setOrderCookie,
 } from '@/lib/server/backend'
-import { cancelCheckoutIntent } from '@/lib/server/checkout-intents'
-import { sendCheckoutConfirmation } from '@/lib/server/checkout-notifications'
+import { cancelCheckoutIntent } from '@/lib/server/checkout/intents'
+import { sendCheckoutConfirmation } from '@/lib/server/checkout/notifications'
 import { failure, json } from '@/lib/server/bff'
 
 export const DELETE: APIRoute = (context) => cancelCheckoutIntent(context, 'izipay')

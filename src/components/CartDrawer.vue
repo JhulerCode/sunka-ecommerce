@@ -234,8 +234,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import ShoppingCart from '@/assets/icons/shopping-cart-plus.vue'
-import { Cart } from '@/lib/cart'
-import { evaluateCheckoutPromotions } from '@/lib/checkout-promotions'
+import { Cart } from '@/lib/cart/cart'
+import { evaluateCheckoutPromotions } from '@/lib/checkout/promotions'
 import { formatPrice } from '@/lib/utils/currency'
 
 export default defineComponent({

@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro'
-import { complaintSchema } from '@/lib/api-schemas'
+import { complaintSchema } from '@/lib/api/schemas'
 import { backendRequest, getClientIp } from '@/lib/server/backend'
 import {
     emailDeliveryWarning,

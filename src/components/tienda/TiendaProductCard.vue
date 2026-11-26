@@ -59,9 +59,9 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import ShoppingCartPlus from '@/assets/icons/shopping-cart-plus.vue'
-import { Cart } from '@/lib/cart'
+import { Cart } from '@/lib/cart/cart'
 import { formatProductPrice } from '@/lib/utils/currency'
-import { getProductPrice, hasClubPrice } from '@/lib/pricing'
+import { getProductPrice, hasClubPrice } from '@/lib/catalog/pricing'
 
 export default defineComponent({
     name: 'TiendaProductCard',

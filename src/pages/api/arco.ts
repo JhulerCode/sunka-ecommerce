@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro'
-import { allowedUploadTypes, arcoMetadataSchema, maxUploadBytes } from '@/lib/api-schemas'
+import { allowedUploadTypes, arcoMetadataSchema, maxUploadBytes } from '@/lib/api/schemas'
 import { backendRequest, getClientIp } from '@/lib/server/backend'
 import {
     emailDeliveryWarning,

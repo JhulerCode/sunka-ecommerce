@@ -3,19 +3,19 @@ import type { ApiResult } from '@/types/api'
 import {
     CHECKOUT_POLICY_VERSION,
     evaluateCheckoutPromotions,
-} from '@/lib/checkout-promotions'
-import { getProductPrice } from '@/lib/pricing'
-import { failure } from './bff'
+} from '@/lib/checkout/promotions'
+import { getProductPrice } from '@/lib/catalog/pricing'
+import { failure } from '../bff'
 import {
     ORDER_CURRENCY,
     PARTNER_ORDER_ORIGIN,
     PARTNER_ORDER_TYPE,
-} from '@/lib/api-schemas'
-import { ACCESS_COOKIE, REFRESH_COOKIE, runtimeEnv } from './backend'
-import { isDeliveryDateAllowed } from '@/lib/delivery-date'
-import { DELIVERY_TIME_RANGE, getPickupLocation } from '@/data/pickup-locations'
-import { generateOrderCode } from './order-code'
-import { getCheckoutProducts, type CheckoutProductData } from './product-catalog'
+} from '@/lib/api/schemas'
+import { ACCESS_COOKIE, REFRESH_COOKIE, runtimeEnv } from '../backend'
+import { isDeliveryDateAllowed } from '@/lib/checkout/delivery-date'
+import { DELIVERY_TIME_RANGE, getPickupLocation } from '@/data/content/pickup-locations'
+import { generateOrderCode } from '../order-code'
+import { getCheckoutProducts, type CheckoutProductData } from '../catalog/service'
 
 type CheckoutDraft = Record<string, any>
 

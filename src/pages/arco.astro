@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArcoForm from '../components/ArcoForm.vue';
 import { serverGet as get } from '@/lib/server/public-api'
-import empresa from '../data/company';
+import empresa from '@/data/content/company';
 
 const res = await get('sistema', {
     keys: ['identity_documents'],

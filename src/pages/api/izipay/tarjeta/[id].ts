@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro'
-import { idSchema } from '@/lib/api-schemas'
+import { idSchema } from '@/lib/api/schemas'
 import { invalidRequest, proxyJson } from '@/lib/server/bff'
 
 export const DELETE: APIRoute = async (context) => {

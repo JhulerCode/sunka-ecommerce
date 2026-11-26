@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro'
-import { orderLookupSchema } from '@/lib/api-schemas'
+import { orderLookupSchema } from '@/lib/api/schemas'
 import { backendRequest, getClientIp, setOrderCookie } from '@/lib/server/backend'
 import { assertSameOrigin, failure, forbiddenOrigin, invalidRequest, json, parseJson } from '@/lib/server/bff'
 

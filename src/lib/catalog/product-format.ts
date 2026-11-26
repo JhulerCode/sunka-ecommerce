@@ -1,4 +1,4 @@
-import { productSlug } from '@/lib/product-slug'
+import { productSlug } from '@/lib/catalog/product-slug'
 import type { Product } from '@/types/api'
 
 export function formatProductos(datos: Array<Record<string, any>> = []): Product[] {

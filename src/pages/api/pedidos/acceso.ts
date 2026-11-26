@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro'
-import { idSchema } from '@/lib/api-schemas'
+import { idSchema } from '@/lib/api/schemas'
 import { backendRequest, setOrderCookie } from '@/lib/server/backend'
 
 export const GET: APIRoute = async (context) => {

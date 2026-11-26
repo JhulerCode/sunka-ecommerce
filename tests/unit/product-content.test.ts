@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest'
-import { mergeProductContent, validateProductContents } from '@/lib/product-content'
+import { mergeProductContent, validateProductContents } from '@/lib/catalog/product-content'
 import {
     findProductContentBySlug,
     getAllProductContents,
     getProductContentById,
-} from '@/lib/server/product-content'
+} from '@/lib/server/catalog/content'
 
 describe('contenido local de productos', () => {
     const contents = getAllProductContents()

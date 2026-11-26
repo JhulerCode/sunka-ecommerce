@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { toOrderLines, toPromotionItems } from '../../src/lib/checkout-lines'
-import { evaluateCheckoutPromotions } from '../../src/lib/checkout-promotions'
+import { toOrderLines, toPromotionItems } from '../../src/lib/checkout/lines'
+import { evaluateCheckoutPromotions } from '../../src/lib/checkout/promotions'
 
 function cartItem() {
     return {

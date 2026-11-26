@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { createCheckoutOrderSignature } from '../../src/lib/checkout-draft'
+import { createCheckoutOrderSignature } from '../../src/lib/checkout/draft'
 
 function snapshot(overrides: Record<string, any> = {}) {
     return {

@@ -6,8 +6,8 @@ import LineaProductosDestacados from '@/components/lineas/LineaProductosDestacad
 import LineaIdealParaTi from '@/components/lineas/LineaIdealParaTi.astro'
 import LineaDiferencia from '@/components/lineas/LineaDiferencia.astro'
 import LineaPreparacion from '@/components/lineas/LineaPreparacion.astro'
-import { getLineaBySlug } from '@/data/lineas'
-import { getStoreProducts } from '@/lib/server/product-catalog'
+import { getLineaBySlug } from '@/data/content/lineas'
+import { getStoreProducts } from '@/lib/server/catalog/service'
 
 const lineaConfig = getLineaBySlug(Astro.params.slug || '')
 

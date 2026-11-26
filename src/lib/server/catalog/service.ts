@@ -1,14 +1,14 @@
 import { formatProductos } from '@/lib/catalog/product-format'
-import { mergeProductContent } from '@/lib/product-content'
+import { mergeProductContent } from '@/lib/catalog/product-content'
 import type { Product } from '@/types/api'
 import type { ProductContent } from '@/types/product'
-import { serverGet } from './public-api'
+import { serverGet } from '../public-api'
 import {
     findProductContentBySlug,
     getFeaturedProductContents,
     getProductContentsByIds,
     getPublishedProductContents,
-} from './product-content'
+} from './content'
 
 const CHUNK_SIZE = 50
 

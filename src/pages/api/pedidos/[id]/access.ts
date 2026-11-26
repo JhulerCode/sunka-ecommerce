@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro'
-import { idSchema } from '@/lib/api-schemas'
+import { idSchema } from '@/lib/api/schemas'
 import { requestWithSession, setOrderCookie } from '@/lib/server/backend'
 import { assertSameOrigin, failure, forbiddenOrigin, invalidRequest, json } from '@/lib/server/bff'
 

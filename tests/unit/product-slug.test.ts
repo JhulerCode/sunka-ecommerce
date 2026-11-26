@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { productSlug, slugifyProductName } from '@/lib/product-slug'
+import { productSlug, slugifyProductName } from '@/lib/catalog/product-slug'
 
 describe('slug de productos', () => {
     it('genera un slug legible a partir del nombre', () => {

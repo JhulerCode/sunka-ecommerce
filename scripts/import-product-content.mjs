@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { slugifyProductName } from '../src/lib/product-slug.ts'
+import { slugifyProductName } from '../src/lib/catalog/product-slug.ts'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const outputDir = join(root, 'src/data/products')

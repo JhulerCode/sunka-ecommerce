@@ -1,6 +1,6 @@
 import { formatProductos } from '@/lib/catalog/product-format'
 import { get } from '@/lib/api/client'
-import { getProductPrice } from './pricing'
+import { getProductPrice } from '../catalog/pricing'
 import type { CartItem } from '@/types/cart'
 
 const CART_KEY = 'sunka_cart'

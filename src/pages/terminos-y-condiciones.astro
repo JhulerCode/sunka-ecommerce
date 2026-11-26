@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import empresa from '../data/company';
+import empresa from '@/data/content/company';
 
 const direccionPrincipal =
     empresa.direcciones.find((direccion) => direccion.principal) ?? empresa.direcciones[0];

@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro'
-import { signInSchema } from '@/lib/api-schemas'
+import { signInSchema } from '@/lib/api/schemas'
 import {
     backendRequest,
     getClientIp,

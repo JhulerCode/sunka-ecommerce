@@ -141,7 +141,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { urls, get, post } from '@/lib/api/client'
-import { CheckoutDraft } from "../lib/checkout-draft";
+import { CheckoutDraft } from "@/lib/checkout/draft";
 import AccountPanelPerfil from "./AccountPanelPerfil.vue";
 import AccountPanelDirecciones from "./AccountPanelDirecciones.vue";
 import AccountPanelPagoMetodos from "./AccountPanelPagoMetodos.vue";

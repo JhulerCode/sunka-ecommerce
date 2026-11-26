@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro'
-import { idSchema, jsonObjectSchema } from '@/lib/api-schemas'
+import { idSchema, jsonObjectSchema } from '@/lib/api/schemas'
 import { clearSessionCookies } from '@/lib/server/backend'
 import { invalidRequest, parseJson, proxyJson } from '@/lib/server/bff'
 

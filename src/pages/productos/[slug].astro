@@ -4,11 +4,11 @@ import BoxIcon from '@/assets/icons/icon-box.astro'
 import BotanicalMixIcon from '@/assets/icons/icon-botanical-mix.astro'
 import LeafIcon from '@/assets/icons/icon-leaf.astro'
 import { formatProductPrice } from '@/lib/utils/currency'
-import { getProductPrice, hasClubPrice } from '@/lib/pricing'
-import { slugifyProductName } from '@/lib/product-slug'
-import { getStoreProductBySlug, getStoreProducts } from '@/lib/server/product-catalog'
-import { getProductContentById } from '@/lib/server/product-content'
-import { getLineaByName } from '@/data/lineas'
+import { getProductPrice, hasClubPrice } from '@/lib/catalog/pricing'
+import { slugifyProductName } from '@/lib/catalog/product-slug'
+import { getStoreProductBySlug, getStoreProducts } from '@/lib/server/catalog/service'
+import { getProductContentById } from '@/lib/server/catalog/content'
+import { getLineaByName } from '@/data/content/lineas'
 
 const productIdPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 const { slug: rawSlug = '' } = Astro.params
@@ -598,7 +598,7 @@ const sectionTitleClass =
 </BaseLayout>
 
 <script>
-    import { Cart } from '../../lib/cart'
+    import { Cart } from '@/lib/cart/cart'
 
     document.querySelectorAll('[data-gallery]').forEach((gallery) => {
         const mainImage = gallery.querySelector('[data-gallery-main]')
