@@ -16,9 +16,9 @@ code talks to the ERP through `src/lib/server/backend.ts`.
 
 ## Tech Stack
 
-- **Astro 5** — `output: 'server'`, adapter `@astrojs/vercel` (see `astro.config.mjs`).
+- **Astro 5** — `output: 'server'`, adapter `@astrojs/vercel` (see `astro.config.ts`).
 - **Vue 3** — Options API components mounted as islands with `client:load`.
-- **Tailwind CSS 4** — via `@tailwindcss/vite`; theme tokens defined in `src/styles/global.css` using the `@theme` directive.
+- **Tailwind CSS 4** — via `@tailwindcss/vite`; theme tokens defined in `src/styles/theme.css` using the `@theme` directive. `src/styles/global.css` is the entry that imports the split styles.
 - **pnpm** — the package manager (see `packageManager` in `package.json`). Never use npm/yarn.
 - **Vitest + Playwright** — unit/contract tests and browser flows.
 
@@ -52,25 +52,63 @@ pnpm astro -- --help # Astro CLI help
 src/
   assets/          # images (.webp/.jpg/.svg/.mp4) and icon components (.astro/.vue)
     icons/         #   icons — icon-*.astro for static, *.vue for interactive
-  components/      # reusable components
+  components/
+    ui/            #   Jd* form controls and LoadingSpin
+    layout/        #   Header, HeaderTopBar, Footer
+    account/       #   AccountPanel*, AuthModal
+    cart/          #   CartDrawer
+    checkout/      #   CheckoutForm
+    blend/         #   BlendForm
+    forms/         #   ArcoForm, LibroReclamacionesForm, ConsultaPedidoForm, NewsLetterForm
+    producto/      #   sections for /productos/[slug]
+    club/          #   sections for /club
+    rituales/      #   sections for /rituales
+    origen/        #   sections for /origen
+    legal/         #   LegalLayout + long legal content
     home/          #   home page section components
-    lineas/        #   product-line page sections (+ signature/ subfolder)
-    origen/        #   "origen" page sections
+    lineas/        #   product-line page sections
     inspiracion/   #   inspiracion page sections
-    shared/        #   cross-page components (e.g. HeroPremium)
     tienda/        #   tienda page components
-    *.vue          #   interactive islands (cart, auth, forms, etc.)
-  data/            # static site data (lineas.js, momentos.js)
+    pedidos/       #   order detail components
+    shared/        #   cross-page components (e.g. HeroPremium)
+  data/
+    products/      #   one JSON file per ERP article
+    content/       #   company, lineas, momentos, pickup locations, ritual articles
+    blend-options.ts
   layouts/         # BaseLayout.astro (used by every page)
-  lib/             # typed client logic, schemas, and server-only backend client
+  lib/
+    api/           #   same-origin BFF client + Zod schemas
+    catalog/       #   product formatting, content validation, pricing, slugs, facets
+    cart/          #   localStorage cart
+    blend/         #   blend customizer state
+    checkout/      #   draft, lines, promotions, delivery/payment dates
+    utils/         #   currency, date, number and id helpers
+    server/        #   server-only ERP/BFF access, catalog service, checkout, mail
+    mail/          #   email templates
   pages/api/       # explicit BFF endpoints
   pages/           # routes; [slug].astro files are dynamic routes
-  styles/          # global.css (Tailwind theme + global utilities)
+  styles/          # global.css entry + theme/base/components/legal split
+  types/           # api, product, cart, checkout and content types
 ```
 
 - Images are imported as modules (e.g. `import banner from '@/assets/banner1.webp'`) so Astro
   optimizes them. Never reference `src/assets` via a raw URL.
 - `dist/`, `.astro/`, `.vercel/`, `node_modules/`, `mockups/` are gitignored build artifacts.
+
+### Where each thing goes
+
+| Need | Location |
+| --- | --- |
+| Page route | `src/pages/` |
+| Page section / static markup | `src/components/<page>/` |
+| Interactive Vue island | `src/components/<feature>/*.vue` |
+| Reusable form control | `src/components/ui/` |
+| API/BFF contract types | `src/types/` |
+| Pure shared logic | `src/lib/catalog`, `src/lib/checkout`, `src/lib/utils` |
+| ERP/BFF access (server only) | `src/lib/server/` |
+| Static content | `src/data/content/` |
+| Product content | `src/data/products/*.json` |
+| Design tokens | `src/styles/theme.css` |
 
 ## Code Style
 
@@ -82,17 +120,16 @@ Canonical settings (from `.prettierrc.json` and `.editorconfig`):
 - Indentation: **4 spaces** (also 4-space in templates/frontmatter), LF line endings, no final newline inserted.
 - Do NOT add code comments unless necessary. Existing files mix short Spanish comments; keep them minimal.
 
-> Note: some legacy files (`src/lib/cart.js`, `src/components/Producto.vue`,
-> `src/components/tienda/TiendaGrid.vue`, `src/pages/linea/[slug].astro`) use semicolons/double
-> quotes and predate the Prettier config. Match the **config** for new code; avoid reformatting
-> whole legacy files unless asked.
+> Note: some legacy files (`src/lib/cart/cart.ts`, `src/lib/blend/blend.ts`, the account panels)
+> still use semicolons or double quotes and predate the Prettier config. Match the **config** for
+> new code; avoid reformatting whole legacy files unless asked.
 
 ### Imports & Aliases
 
 - Prefer the alias `@/` → `src/` for cross-folder imports:
   `import BaseLayout from '@/layouts/BaseLayout.astro'`.
-- Relative imports are acceptable within the same folder or for in-page scripts (e.g.
-  `import { Cart } from '../../lib/cart.js'` inside a `<script>` tag).
+- Relative imports are acceptable within the same folder. Prefer `@/` in page-level scripts
+  (e.g. `import { Cart } from '@/lib/cart/cart'` inside a `<script>` tag).
 - Use extensionless imports for `.ts`; `.astro` and `.vue` extensions remain conventional.
 - Imports come first in the frontmatter, then constants/logic.
 
@@ -122,12 +159,13 @@ Canonical settings (from `.prettierrc.json` and `.editorconfig`):
 - Server data fetching uses `serverGet` or `backendRequest`; never call browser helpers from SSR.
 - When a record is missing, return early with `Astro.rewrite('/404')` (never a hard error).
 - Build store products with `getStoreProducts()` / `getStoreProductBySlug()` from
-  `src/lib/server/product-catalog.ts`: they merge the ERP master data with
-  `src/data/products/*.json` and normalize with `formatProductos`.
+  `src/lib/server/catalog/service.ts`: they merge the ERP master data with
+  `src/data/products/*.json` and normalize with `formatProductos` from
+  `src/lib/catalog/product-format.ts`.
 - Pass data to Vue islands via props and mount with `client:load`
-  (`<TiendaGrid client:load productos={productos} lineas={lineas} />`).
-- Interactive DOM wiring for static pages goes in a page-level `<script>` and is driven by
-  `data-*` attributes (`[data-gallery]`, `[data-quantity]`).
+  (`<TiendaCatalog client:load productos={productos} lineas={lineas} />`).
+- Interactive DOM wiring for static pages lives in the section component that owns the markup
+  and is driven by `data-*` attributes (`[data-gallery]`, `[data-quantity]`).
 
 ### Vue Components
 
@@ -145,14 +183,15 @@ Canonical settings (from `.prettierrc.json` and `.editorconfig`):
   `export const lineas`, `export const lineasBySlug`, `export const getLineaBySlug = (slug) => lineasBySlug[slug]`.
 - Reference imported assets, not hardcoded URLs.
 - Product content lives in `src/data/products/<article_id>.json` (one file per ERP article).
-  `src/lib/server/product-content.ts` loads and validates them; `published: false` hides a
-  product. Photos are MinIO URLs in the JSON, never binaries in the repo. A slug change must
-  add the old value to `previous_slugs` so the detail page can redirect with 301.
+  `src/lib/server/catalog/content.ts` loads and validates them; the schema lives in
+  `src/types/product.ts` and validation in `src/lib/catalog/product-content.ts`. `published: false`
+  hides a product. Photos are MinIO URLs in the JSON, never binaries in the repo. A slug change
+  must add the old value to `previous_slugs` so the detail page can redirect with 301.
 
 ### API Layer, BFF & Error Handling
 
-- Vue uses `src/lib/api.ts` and only same-origin `/api/*` endpoints. Astro SSR uses the server-only
-  client. Never expose `API_URL`, `ERP_API_KEY`, `X-API-Key`, or authorization headers.
+- Vue uses `src/lib/api/client.ts` and only same-origin `/api/*` endpoints. Astro SSR uses the
+  server-only client. Never expose `API_URL`, `ERP_API_KEY`, `X-API-Key`, or authorization headers.
 - The BFF sends only the fixed parameters each integration endpoint declares (`ids`, `linea`,
   `categoria`, `search`, etc.). Never forward `qry`, `cols`, `incl`, tenant, or
   upstream URLs; the legacy `{ fltr, cols, incl }` shape is removed.
@@ -199,12 +238,12 @@ Canonical settings (from `.prettierrc.json` and `.editorconfig`):
 
 ### Styling & Tailwind
 
-- Reuse the SUNKA palette tokens defined in `global.css` `@theme`:
+- Reuse the SUNKA palette tokens defined in `theme.css` `@theme`:
   `sunka-ink`, `sunka-forest`, `sunka-olive`, `sunka-brass`, `sunka-brass-light`, `sunka-cream`,
   `sunka-sand`, `sunka-stone`, `sunka-white` (e.g. `bg-sunka-cream`, `text-sunka-brass`).
 - Use `font-heading` for display type, `font-sans` otherwise.
 - Prefer utility classes inline; add shared composite classes (`.button`, `.input`, `.modal`) to
-  `global.css` only when reused widely.
+  `src/styles/components.css` only when reused widely.
 - The `.fade-up` class + IntersectionObserver (wired in `BaseLayout`) drives scroll reveals; add
   `.delay-1`/`.delay-2`/`.delay-3` for stagger.
 - Keep section markup consistent: `<section>` with a `max-w-7xl mx-auto px-5 md:px-8` container.
