@@ -178,15 +178,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import UserIcon from '../assets/icons/user.vue'
+import UserIcon from '@/assets/icons/user.vue'
 
-import JdInput from '../components/JdInput.vue'
-import JdInputPassword from '../components/JdInputPassword.vue'
-import JdButton from '../components/JdButton.vue'
+import JdInput from '@/components/ui/JdInput.vue'
+import JdInputPassword from '@/components/ui/JdInputPassword.vue'
+import JdButton from '@/components/ui/JdButton.vue'
 
-import EyeOpen from '../assets/icons/eye-open.vue'
-import EyeCancel from '../assets/icons/eye-cancel.vue'
-import Xmark from '../assets/icons/xmark.vue'
+import EyeOpen from '@/assets/icons/eye-open.vue'
+import EyeCancel from '@/assets/icons/eye-cancel.vue'
+import Xmark from '@/assets/icons/xmark.vue'
 import { urls, post, get } from '@/lib/api/client'
 import { CheckoutDraft } from '@/lib/checkout/draft'
 

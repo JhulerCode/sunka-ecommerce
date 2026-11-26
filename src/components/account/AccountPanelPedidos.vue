@@ -74,7 +74,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import JdButton from "../components/JdButton.vue";
+import JdButton from "@/components/ui/JdButton.vue";
 
 import { get, post, urls } from '@/lib/api/client';
 

@@ -81,13 +81,13 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import JdButton from "../components/JdButton.vue";
-import Trash from "../assets/icons/trash.vue";
+import JdButton from "@/components/ui/JdButton.vue";
+import Trash from '@/assets/icons/trash.vue';
 
-import visaUrl from "../assets/icons/visa.svg?url";
-import mastercardUrl from "../assets/icons/mastercard.svg?url";
-import dinersUrl from "../assets/icons/diners-club.svg?url";
-import amexUrl from "../assets/icons/american-express.svg?url";
+import visaUrl from '@/assets/icons/visa.svg?url';
+import mastercardUrl from '@/assets/icons/mastercard.svg?url';
+import dinersUrl from '@/assets/icons/diners-club.svg?url';
+import amexUrl from '@/assets/icons/american-express.svg?url';
 
 import { urls, get, delet } from '@/lib/api/client';
 

@@ -157,12 +157,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { post } from '@/lib/api/client';
-import JdInput from "./JdInput.vue";
-import JdTextArea from "./JdTextArea.vue";
-import JdSelect from "./JdSelect.vue";
-import JdCheckBox from "./JdCheckBox.vue";
-import JdRadio from "./JdRadio.vue";
-import JdButton from "./JdButton.vue";
+import JdInput from "@/components/ui/JdInput.vue";
+import JdTextArea from "@/components/ui/JdTextArea.vue";
+import JdSelect from "@/components/ui/JdSelect.vue";
+import JdCheckBox from "@/components/ui/JdCheckBox.vue";
+import JdRadio from "@/components/ui/JdRadio.vue";
+import JdButton from "@/components/ui/JdButton.vue";
 
 export default defineComponent({
     components: {

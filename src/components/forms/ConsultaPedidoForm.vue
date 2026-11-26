@@ -113,8 +113,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import JdInput from './JdInput.vue'
-import LoadingSpin from './LoadingSpin.vue'
+import JdInput from '@/components/ui/JdInput.vue'
+import LoadingSpin from '@/components/ui/LoadingSpin.vue'
 import { post, urls } from '@/lib/api/client'
 
 export default defineComponent({

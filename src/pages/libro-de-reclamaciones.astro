@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import LibroReclamacionesForm from '../components/LibroReclamacionesForm.vue';
+import LibroReclamacionesForm from '@/components/forms/LibroReclamacionesForm.vue';
 import { serverGet as get } from '@/lib/server/public-api'
 
 const res = await get('sistema', {

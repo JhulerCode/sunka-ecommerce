@@ -203,15 +203,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import JdInput from '../components/JdInput.vue';
-import JdTextArea from '../components/JdTextArea.vue';
-import JdSelectQuery from '../components/JdSelectQuery.vue';
-import JdCheckBox from '../components/JdCheckBox.vue';
-import JdButton from '../components/JdButton.vue';
-import Xmark from '../assets/icons/xmark.vue';
-import Trash from '../assets/icons/trash.vue';
-import Star from '../assets/icons/star.vue';
-import LoadingSpin from './LoadingSpin.vue';
+import JdInput from '@/components/ui/JdInput.vue';
+import JdTextArea from '@/components/ui/JdTextArea.vue';
+import JdSelectQuery from '@/components/ui/JdSelectQuery.vue';
+import JdCheckBox from '@/components/ui/JdCheckBox.vue';
+import JdButton from '@/components/ui/JdButton.vue';
+import Xmark from '@/assets/icons/xmark.vue';
+import Trash from '@/assets/icons/trash.vue';
+import Star from '@/assets/icons/star.vue';
+import LoadingSpin from '@/components/ui/LoadingSpin.vue';
 
 import { urls, get, patch } from '@/lib/api/client';
 import { genId } from '@/lib/utils/id';

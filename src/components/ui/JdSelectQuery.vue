@@ -102,8 +102,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import LoadingSpin from './LoadingSpin.vue';
-import Xmark from '../assets/icons/xmark.vue';
+import LoadingSpin from '@/components/ui/LoadingSpin.vue';
+import Xmark from '@/assets/icons/xmark.vue';
 
 export default defineComponent({
     components: {

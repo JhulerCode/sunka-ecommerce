@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import LoadingSpin from '../components/LoadingSpin.vue';
+import LoadingSpin from '@/components/ui/LoadingSpin.vue';
 
 export default defineComponent({
     components: {

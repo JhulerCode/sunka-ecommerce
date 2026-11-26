@@ -43,8 +43,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import EyeOpen from '../assets/icons/eye-open.vue';
-import EyeCancel from '../assets/icons/eye-cancel.vue';
+import EyeOpen from '@/assets/icons/eye-open.vue';
+import EyeCancel from '@/assets/icons/eye-cancel.vue';
 
 export default defineComponent({
     components: {

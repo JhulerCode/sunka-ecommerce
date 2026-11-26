@@ -57,10 +57,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import JdInput from '../components/JdInput.vue'
-import JdSelect from '../components/JdSelect.vue'
-import JdLoading from '../components/LoadingSpin.vue'
-import JdButton from '../components/JdButton.vue'
+import JdInput from '@/components/ui/JdInput.vue'
+import JdSelect from '@/components/ui/JdSelect.vue'
+import JdLoading from '@/components/ui/LoadingSpin.vue'
+import JdButton from '@/components/ui/JdButton.vue'
 import { urls, get, patch } from '@/lib/api/client'
 
 export default defineComponent({

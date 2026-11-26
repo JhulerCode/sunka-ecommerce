@@ -226,9 +226,9 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { post } from '@/lib/api/client';
-import JdInput from '../components/JdInput.vue';
-import JdSelect from './JdSelect.vue';
-import JdRadio from '../components/JdRadio.vue';
+import JdInput from '@/components/ui/JdInput.vue';
+import JdSelect from '@/components/ui/JdSelect.vue';
+import JdRadio from '@/components/ui/JdRadio.vue';
 
 export default defineComponent({
     name: 'ArcoForm',

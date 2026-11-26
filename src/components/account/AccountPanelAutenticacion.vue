@@ -166,10 +166,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import JdInput from "../components/JdInput.vue";
-import JdInputPassword from "../components/JdInputPassword.vue";
-import JdLoading from "../components/LoadingSpin.vue";
-import JdButton from "../components/JdButton.vue";
+import JdInput from "@/components/ui/JdInput.vue";
+import JdInputPassword from "@/components/ui/JdInputPassword.vue";
+import JdLoading from "@/components/ui/LoadingSpin.vue";
+import JdButton from "@/components/ui/JdButton.vue";
 import { urls, post, delet } from '@/lib/api/client';
 import { CheckoutDraft } from "@/lib/checkout/draft";
 

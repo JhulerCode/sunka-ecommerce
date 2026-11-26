@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import AccountPanel from '../components/AccountPanel.vue'
+import AccountPanel from '@/components/account/AccountPanel.vue'
 import { serverGet as get } from '@/lib/server/public-api'
 
 const res = await get('sistema', {

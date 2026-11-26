@@ -142,11 +142,11 @@
 import { defineComponent } from 'vue'
 import { urls, get, post } from '@/lib/api/client'
 import { CheckoutDraft } from "@/lib/checkout/draft";
-import AccountPanelPerfil from "./AccountPanelPerfil.vue";
-import AccountPanelDirecciones from "./AccountPanelDirecciones.vue";
-import AccountPanelPagoMetodos from "./AccountPanelPagoMetodos.vue";
-import AccountPanelPedidos from "./AccountPanelPedidos.vue";
-import AccountPanelAutenticacion from "./AccountPanelAutenticacion.vue";
+import AccountPanelPerfil from "@/components/account/AccountPanelPerfil.vue";
+import AccountPanelDirecciones from "@/components/account/AccountPanelDirecciones.vue";
+import AccountPanelPagoMetodos from "@/components/account/AccountPanelPagoMetodos.vue";
+import AccountPanelPedidos from "@/components/account/AccountPanelPedidos.vue";
+import AccountPanelAutenticacion from "@/components/account/AccountPanelAutenticacion.vue";
 
 export default defineComponent({
     components: {
