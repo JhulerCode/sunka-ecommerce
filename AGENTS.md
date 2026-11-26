@@ -52,6 +52,7 @@ pnpm astro -- --help # Astro CLI help
 src/
   assets/          # images (.webp/.jpg/.svg/.mp4) and icon components (.astro/.vue)
     icons/         #   icons — icon-*.astro for static, *.vue for interactive
+  config/          # site.ts — dominio canónico (SITE_URL)
   components/
     ui/            #   Jd* form controls and LoadingSpin
     layout/        #   Header, HeaderTopBar, Footer
@@ -109,6 +110,7 @@ src/
 | Static content | `src/data/content/` |
 | Product content | `src/data/products/*.json` |
 | Design tokens | `src/styles/theme.css` |
+| Dominio canónico del sitio | `src/config/site.ts` |
 
 ## Code Style
 
@@ -237,7 +239,8 @@ Canonical settings (from `.prettierrc.json` and `.editorconfig`):
   `ERP_DELIVERY_ARTICLE_ID`, `PAYMENT_PROVIDER`, `RECAPTCHA_SECRET_KEY`, `SMTP_HOST`,
   `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS` and `SMTP_FROM`.
 - `SITE_URL` sets the canonical origin used by `canonical`, Open Graph and the sitemap.
-  It is read at build time in `astro.config.ts` and falls back to `https://www.sunka.pe`.
+  It is read at build time in `astro.config.ts` and overrides the single default defined in
+  `src/config/site.ts`.
 - Browser vars are `PUBLIC_IZIPAY_PUBLIC_KEY` and `PUBLIC_RECAPTCHA_SITE_KEY`.
 - The BFF validates reCAPTCHA for ARCO and libro de reclamaciones with
   `RECAPTCHA_SECRET_KEY`; the ERP does not validate captcha.

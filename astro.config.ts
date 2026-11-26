@@ -2,12 +2,9 @@ import { defineConfig } from 'astro/config'
 import node from '@astrojs/node'
 import vue from '@astrojs/vue'
 import tailwindcss from '@tailwindcss/vite'
+import { SITE_URL } from './src/config/site'
 
 const isBuild = process.argv.includes('build')
-
-// Dominio canónico: se usa para canonical, Open Graph y robots.txt. El build
-// debe funcionar sin variables (Docker), así que se cae al dominio de producción.
-const SITE_URL = process.env.SITE_URL || 'https://www.sunka.pe'
 
 export default defineConfig({
     site: SITE_URL,
@@ -15,8 +12,8 @@ export default defineConfig({
     adapter: node({ mode: 'standalone' }),
     integrations: [vue()],
     vite: {
-        // Caché separada: `astro build` prebundlea dependencias en modo producción y,
-        // si comparte `node_modules/.vite` con `astro dev`, deja dos runtimes de Vue
+        // Caché separada: `astro build` prebundlea dependencias en modo producción y, si
+        // comparte `node_modules/.vite` con `astro dev`, deja dos runtimes de Vue
         // mezclados y rompe la hidratación de las islas.
         cacheDir: isBuild ? 'node_modules/.vite-build' : 'node_modules/.vite',
         plugins: [tailwindcss()],

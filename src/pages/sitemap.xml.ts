@@ -1,10 +1,10 @@
 import type { APIRoute } from 'astro'
+import { siteUrl as defaultSiteUrl } from '@/config/site'
 import { lineas } from '@/data/content/lineas'
 import { rituals } from '@/data/content/ritual-articles'
 import { getPublishedProductContents } from '@/lib/server/catalog/content'
 import { getStoreProducts } from '@/lib/server/catalog/service'
 
-const DEFAULT_SITE = 'https://www.sunka.pe'
 const CACHE_TTL_MS = 60 * 60 * 1000
 const STATIC_PATHS = [
     '/',
@@ -65,7 +65,7 @@ async function buildSitemap(siteUrl: URL): Promise<string> {
 }
 
 export const GET: APIRoute = async ({ site }) => {
-    const siteUrl = site ?? new URL(DEFAULT_SITE)
+    const siteUrl = site ?? defaultSiteUrl
     const now = Date.now()
 
     if (!cache || cache.expiresAt <= now) {

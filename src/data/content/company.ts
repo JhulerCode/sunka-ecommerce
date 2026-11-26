@@ -1,3 +1,5 @@
+import { SITE_URL } from '@/config/site'
+
 export default {
     ruc: '20557053213',
     nombre: 'EKO BUSINESS S.A.C.',
@@ -5,7 +7,7 @@ export default {
     telefono: '(01) 432 865',
     correo: 'comercial@sunkatea.com',
 
-    ecommerce_url: 'https://www.sunka.pe',
+    ecommerce_url: SITE_URL,
     facebook_url: 'https://www.facebook.com/SunkaTea',
     instagram_url: 'https://www.instagram.com/sunka.pe',
     pinterest_url: '',

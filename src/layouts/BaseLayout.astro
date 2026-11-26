@@ -2,6 +2,7 @@
 import Header from '@/components/layout/Header.astro'
 import Footer from '@/components/layout/Footer.astro'
 import NewsLetter from '@/components/home/NewsLetter.astro'
+import { siteUrl as defaultSiteUrl } from '@/config/site'
 import empresa from '@/data/content/company'
 import '../styles/global.css'
 
@@ -27,7 +28,7 @@ const {
     canonical,
 } = Astro.props
 
-const siteUrl = Astro.site ?? new URL(empresa.ecommerce_url)
+const siteUrl = Astro.site ?? defaultSiteUrl
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).href
 const ogImage = new URL(image, siteUrl).href
 const organizationId = new URL('/#organization', siteUrl).href

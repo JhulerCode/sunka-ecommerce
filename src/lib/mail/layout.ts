@@ -1,8 +1,10 @@
+import { SITE_URL } from '@/config/site'
+
 export const mailBrand = {
     name: 'SUNKA Herbal Tea',
     email: 'comercial@sunkatea.com',
     whatsapp: '+51 999 888 777',
-    siteUrl: 'https://sunka.pe',
+    siteUrl: SITE_URL,
     primary: '#2492c2',
 }
 

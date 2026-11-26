@@ -1,9 +1,8 @@
 import type { APIRoute } from 'astro'
-
-const DEFAULT_SITE = 'https://www.sunka.pe'
+import { siteUrl as defaultSiteUrl } from '@/config/site'
 
 export const GET: APIRoute = ({ site }) => {
-    const siteUrl = site ?? new URL(DEFAULT_SITE)
+    const siteUrl = site ?? defaultSiteUrl
     const lines = [
         'User-agent: *',
         'Allow: /',

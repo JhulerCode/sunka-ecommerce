@@ -2,6 +2,7 @@
 
 interface ImportMetaEnv {
     readonly API_URL: string
+    readonly SITE_URL?: string
     readonly ERP_API_KEY: string
     readonly ERP_GUEST_PARTNER_ID: string
     readonly ERP_DELIVERY_ARTICLE_ID: string
