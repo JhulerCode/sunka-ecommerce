@@ -22,6 +22,7 @@ Producción exige una API key activa con los scopes usados por la tienda.
   Debe corresponder al mismo comercio y ambiente que las credenciales privadas Izipay del backend; Astro la incorpora durante el build.
 - `PUBLIC_RECAPTCHA_SITE_KEY`: site key pública de reCAPTCHA.
 - `RECAPTCHA_SECRET_KEY`: clave privada de reCAPTCHA; el BFF valida el token de los formularios ARCO y libro de reclamaciones antes de reenviarlos al ERP. Nunca se publica en el bundle.
+- `SITE_URL`: dominio canónico usado por `canonical`, Open Graph y el sitemap. Se lee en el build; si no se define, se usa `https://www.sunka.pe`.
 
 `PUBLIC_API_URL` ya no se utiliza.
 
@@ -34,6 +35,7 @@ pnpm test
 pnpm test:e2e
 pnpm build
 pnpm verify
+pnpm generate:og
 ```
 
 La primera ejecución E2E requiere `pnpm exec playwright install chromium`.

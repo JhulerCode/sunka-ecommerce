@@ -10,7 +10,10 @@ const res = await get('sistema', {
 const identity_documents = res.ok ? res.data?.identity_documents || [] : [];
 ---
 
-<BaseLayout title="Libro de reclamaciones">
+<BaseLayout
+    title="Libro de reclamaciones"
+    description="Registra tu reclamo o queja ante SUNKA Herbal Tea conforme al Código de Protección y Defensa del Consumidor."
+>
     <main class="max-w-4xl mx-auto px-6 pt-32 pb-12 lg:pt-36">
         <header class="text-center mb-6">
             <h1

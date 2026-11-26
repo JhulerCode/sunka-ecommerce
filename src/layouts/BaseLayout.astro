@@ -2,19 +2,100 @@
 import Header from '@/components/layout/Header.astro'
 import Footer from '@/components/layout/Footer.astro'
 import NewsLetter from '@/components/home/NewsLetter.astro'
+import empresa from '@/data/content/company'
 import '../styles/global.css'
 
-const { title = 'Mi Tienda', referrerPolicy, canonical } = Astro.props
+interface Props {
+    title?: string
+    description?: string
+    image?: string
+    type?: 'website' | 'article' | 'product'
+    noindex?: boolean
+    jsonLd?: Record<string, unknown> | Record<string, unknown>[]
+    referrerPolicy?: string
+    canonical?: string
+}
+
+const {
+    title = 'Sunka Herbal Tea',
+    description = 'Infusiones, tés y hierbas naturales SUNKA. Descubre blends peruanos para cada momento del día y compra online con envío a todo el Perú.',
+    image = '/og-image.png',
+    type = 'website',
+    noindex = false,
+    jsonLd,
+    referrerPolicy,
+    canonical,
+} = Astro.props
+
+const siteUrl = Astro.site ?? new URL(empresa.ecommerce_url)
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).href
+const ogImage = new URL(image, siteUrl).href
+const organizationId = new URL('/#organization', siteUrl).href
+
+const direccion = empresa.direcciones[0]
+
+const organization = {
+    '@context': 'https://schema.org',
+    '@type': 'OnlineStore',
+    '@id': organizationId,
+    name: empresa.nombre_comercial,
+    legalName: empresa.nombre,
+    taxID: empresa.ruc,
+    url: new URL('/', siteUrl).href,
+    logo: new URL('/favicon.png', siteUrl).href,
+    image: new URL('/og-image.png', siteUrl).href,
+    email: empresa.email_soporte,
+    telephone: empresa.telefono,
+    address: {
+        '@type': 'PostalAddress',
+        streetAddress: direccion?.direccion,
+        addressLocality: 'Lima',
+        addressRegion: 'Lima',
+        addressCountry: 'PE',
+    },
+    sameAs: [empresa.facebook_url, empresa.instagram_url].filter(Boolean),
+    currenciesAccepted: 'PEN',
+    paymentAccepted: 'Tarjeta de crédito, tarjeta de débito',
+    areaServed: { '@type': 'Country', name: 'Perú' },
+}
+
+const jsonLdBlocks = [organization, ...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [])]
+const serializeJsonLd = (block: Record<string, unknown>) =>
+    JSON.stringify(block).replace(/</g, '\\u003c')
 ---
 
-<html lang="es">
+<html lang="es-PE">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {referrerPolicy && <meta name="referrer" content={referrerPolicy} />}
         <title>{title}</title>
-        {canonical && <link rel="canonical" href={canonical} />}
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta
+            name="robots"
+            content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'}
+        />
         <link rel="icon" type="image/png" href="/favicon.png" />
+
+        <meta property="og:type" content={type} />
+        <meta property="og:site_name" content={empresa.nombre_comercial} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:alt" content={title} />
+        <meta property="og:locale" content="es_PE" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+
+        {jsonLdBlocks.map((block) => (
+            <script type="application/ld+json" is:inline set:html={serializeJsonLd(block)} />
+        ))}
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link

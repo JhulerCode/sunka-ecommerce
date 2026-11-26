@@ -5,7 +5,12 @@ import tailwindcss from '@tailwindcss/vite'
 
 const isBuild = process.argv.includes('build')
 
+// Dominio canónico: se usa para canonical, Open Graph y robots.txt. El build
+// debe funcionar sin variables (Docker), así que se cae al dominio de producción.
+const SITE_URL = process.env.SITE_URL || 'https://www.sunka.pe'
+
 export default defineConfig({
+    site: SITE_URL,
     output: 'server',
     adapter: node({ mode: 'standalone' }),
     integrations: [vue()],

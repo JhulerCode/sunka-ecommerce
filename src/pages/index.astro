@@ -7,9 +7,29 @@ import CreaTuBlend from '@/components/home/CreaTuBlend.astro'
 import OrigenAndes from '@/components/home/OrigenAndes.astro'
 import RegalosDestacados from '@/components/home/RegalosDestacados.astro'
 import PromotionsPreview from '@/components/home/PromotionsPreview.astro'
+
+const siteUrl = Astro.site ?? new URL(Astro.url.origin)
+
+const jsonLd = [
+    {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        '@id': new URL('/#website', siteUrl).href,
+        name: 'SUNKA Herbal Tea',
+        url: new URL('/', siteUrl).href,
+        description:
+            'Infusiones, tés y hierbas naturales peruanas para cada momento del día.',
+        inLanguage: 'es-PE',
+        publisher: { '@id': new URL('/#organization', siteUrl).href },
+    },
+]
 ---
 
-<BaseLayout title="Sunka Herbal Tea">
+<BaseLayout
+    title="Sunka Herbal Tea"
+    description="Descubre las infusiones, tés y hierbas naturales de SUNKA. Líneas Signature, Piramidal, Luxury y Tradicional con compra online y envío a todo el Perú."
+    jsonLd={jsonLd}
+>
     <Banner />
     <Momentos />
     <Lineas />

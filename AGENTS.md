@@ -155,6 +155,15 @@ Canonical settings (from `.prettierrc.json` and `.editorconfig`):
 
 - Every page imports `BaseLayout` and passes `title` (and `description`) props:
   `<BaseLayout title={`X | SUNKA Herbal Tea`}>`.
+- `BaseLayout` also accepts `image` (absolute or site-relative URL for Open Graph),
+  `type` (`website` | `article` | `product`), `noindex`, `canonical` and `jsonLd`
+  (one object or an array of schema.org blocks). The layout always emits the
+  `OnlineStore` organization block, canonical, Open Graph and Twitter tags; pages add
+  their own `Product`, `BreadcrumbList`, `FAQPage`, `Article` or `CollectionPage` blocks.
+- Private or transactional pages (`/account`, `/checkout`, `/pedidos/*`, `/arco`,
+  `/consulta-pedido`) must set `noindex`.
+- `robots.txt` and `sitemap.xml` are endpoints in `src/pages/`; the sitemap pulls published
+  products from the ERP with a fallback to `src/data/products/*.json` and caches for one hour.
 - Dynamic pages read `Astro.params`, e.g. `const { slug } = Astro.params`.
 - Server data fetching uses `serverGet` or `backendRequest`; never call browser helpers from SSR.
 - When a record is missing, return early with `Astro.rewrite('/404')` (never a hard error).
@@ -227,6 +236,8 @@ Canonical settings (from `.prettierrc.json` and `.editorconfig`):
 - Private vars are `API_URL`, `ERP_API_KEY`, `ERP_GUEST_PARTNER_ID`,
   `ERP_DELIVERY_ARTICLE_ID`, `PAYMENT_PROVIDER`, `RECAPTCHA_SECRET_KEY`, `SMTP_HOST`,
   `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS` and `SMTP_FROM`.
+- `SITE_URL` sets the canonical origin used by `canonical`, Open Graph and the sitemap.
+  It is read at build time in `astro.config.ts` and falls back to `https://www.sunka.pe`.
 - Browser vars are `PUBLIC_IZIPAY_PUBLIC_KEY` and `PUBLIC_RECAPTCHA_SITE_KEY`.
 - The BFF validates reCAPTCHA for ARCO and libro de reclamaciones with
   `RECAPTCHA_SECRET_KEY`; the ERP does not validate captcha.

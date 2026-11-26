@@ -222,7 +222,12 @@ const orderTitle = pedido
     : `${orderError?.title || 'Pedido no encontrado'} | SUNKA Herbal Tea`
 ---
 
-<BaseLayout title={orderTitle} referrerPolicy="no-referrer">
+<BaseLayout
+    title={orderTitle}
+    description="Consulta el detalle, el estado de pago y la entrega de tu pedido SUNKA."
+    referrerPolicy="no-referrer"
+    noindex
+>
     {
         pedido ? (
             <>

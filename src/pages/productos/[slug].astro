@@ -37,12 +37,63 @@ if (rawSlug !== canonicalSlug) {
 const relatedIds = getRelatedArticleIds(producto)
 const relacionados = relatedIds.length ? await getStoreProducts(relatedIds) : []
 const view = buildProductDetailView({ producto, isAuthenticated, relacionados })
+
+const siteUrl = Astro.site ?? new URL(Astro.url.origin)
+const productUrl = new URL(`/productos/${view.canonicalSlug}`, siteUrl).href
+const productImages = view.fotos
+    .map((foto: Record<string, any>) => (typeof foto?.url === 'string' ? foto.url : ''))
+    .filter(Boolean)
+    .map((url) => new URL(url, siteUrl).href)
+const priceValue = Number(view.producto.price)
+const hasPrice = Number.isFinite(priceValue) && priceValue > 0
+const sku = String(view.producto.article_id ?? view.producto.id)
+
+const jsonLd = [
+    {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        '@id': productUrl,
+        name: view.producto.name,
+        description: view.pageDescription,
+        sku,
+        image: productImages.length ? productImages : [new URL('/og-image.png', siteUrl).href],
+        url: productUrl,
+        brand: { '@type': 'Brand', name: 'SUNKA Herbal Tea' },
+        category: view.linea || 'Infusiones',
+        offers: {
+            '@type': 'Offer',
+            url: productUrl,
+            priceCurrency: 'PEN',
+            ...(hasPrice ? { price: priceValue.toFixed(2) } : {}),
+            availability: 'https://schema.org/InStock',
+            itemCondition: 'https://schema.org/NewCondition',
+            seller: { '@id': new URL('/#organization', siteUrl).href },
+        },
+    },
+    {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Inicio', item: new URL('/', siteUrl).href },
+            {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Tienda',
+                item: new URL('/tienda', siteUrl).href,
+            },
+            { '@type': 'ListItem', position: 3, name: view.producto.name, item: productUrl },
+        ],
+    },
+]
 ---
 
 <BaseLayout
     title={view.pageTitle}
     description={view.pageDescription}
-    canonical={new URL(`/productos/${view.canonicalSlug}`, Astro.url).toString()}
+    image={view.fotoPrincipal}
+    type="product"
+    canonical={productUrl}
+    jsonLd={jsonLd}
 >
     <article class="overflow-hidden bg-sunka-white text-sunka-ink">
         <ProductBreadcrumb view={view} />

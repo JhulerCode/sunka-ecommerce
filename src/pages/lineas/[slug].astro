@@ -28,9 +28,54 @@ const productosDestacados = productosDestacadosIds.length
     : []
 
 const linea = { ...lineaConfig, productosDestacados }
+
+const siteUrl = Astro.site ?? new URL(Astro.url.origin)
+const lineaUrl = new URL(`/lineas/${linea.slug}`, siteUrl).href
+
+const jsonLd = [
+    {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        '@id': lineaUrl,
+        name: linea.title,
+        description: linea.description,
+        url: lineaUrl,
+        inLanguage: 'es-PE',
+        isPartOf: { '@id': new URL('/#website', siteUrl).href },
+        mainEntity: {
+            '@type': 'ItemList',
+            name: linea.title,
+            itemListElement: productosDestacados.map((producto, index) => ({
+                '@type': 'ListItem',
+                position: index + 1,
+                name: producto.name,
+                url: new URL(producto.href, siteUrl).href,
+            })),
+        },
+    },
+    {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Inicio', item: new URL('/', siteUrl).href },
+            {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Tienda',
+                item: new URL('/tienda', siteUrl).href,
+            },
+            { '@type': 'ListItem', position: 3, name: linea.title, item: lineaUrl },
+        ],
+    },
+]
 ---
 
-<BaseLayout title={linea.seoTitle}>
+<BaseLayout
+    title={linea.seoTitle}
+    description={linea.description}
+    image={linea.heroImage?.src}
+    jsonLd={jsonLd}
+>
     <LineaHero linea={linea} />
     <LineaMomentos linea={linea} />
     <LineaProductosDestacados linea={linea} />
